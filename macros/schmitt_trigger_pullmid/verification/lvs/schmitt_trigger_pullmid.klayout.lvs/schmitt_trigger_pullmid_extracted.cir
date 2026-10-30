@@ -1,0 +1,19 @@
+* Extracted by KLayout with SG13CMOS5L LVS runset on : 29/10/2026 20:53
+
+.SUBCKT schmitt_trigger_pullmid AIN DHT DLT DOUT MID SG_DVDD VSS
+R$1 MID AIN VSS rhigh w=0.5u l=13.31u ps=0.48u b=19 m=1
+R$2 VSS MID VSS rhigh w=0.5u l=5.42u ps=0.48u b=5 m=1
+R$3 SG_DVDD MID VSS rhigh w=0.5u l=5.42u ps=0.48u b=5 m=1
+M$4 DOUT AIN DLT VSS sg13_lv_nmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$5 VSS AIN DLT VSS sg13_lv_nmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$6 DLT DOUT SG_DVDD VSS sg13_lv_nmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$7 DHT DOUT VSS SG_DVDD sg13_lv_pmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$8 SG_DVDD AIN DHT SG_DVDD sg13_lv_pmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$9 DOUT AIN DHT SG_DVDD sg13_lv_pmos L=0.3u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+.ENDS schmitt_trigger_pullmid

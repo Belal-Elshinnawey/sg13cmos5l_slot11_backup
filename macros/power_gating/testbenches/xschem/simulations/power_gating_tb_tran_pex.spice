@@ -1,0 +1,64 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/power_gating/testbenches/xschem/power_gating_tb_tran_pex.sch
+**.subckt power_gating_tb_tran_pex
+x1 DOUT SG_AVDD DVDD EG_IBIAS SG_DVDD AVDD IBIAS EG_AVDD ENA STDBY GND power_gating_pex
+VAVDD AVDD GND {AVDD}
+VDVDD DVDD GND {DVDD}
+IBIAS IBIAS GND {IBIAS}
+VENA ENA GND PWL(0 0 2000n 0 2010n 1.2 6000n 1.2 6010n 0 8000n 0)
+VSTDBY STDBY GND PWL(0 0 4000n 0 4010n 1.2 8000n 1.2)
+Vmeas_ibias EG_IBIAS net1 0
+.save i(vmeas_ibias)
+VCOMPL net1 GND 1.0
+**** begin user architecture code
+
+
+.include ../../../netlist/pex/power_gating_magic_pex_3.spice
+.param AVDD=3.3
+.csparam AVDD=AVDD
+.param DVDD=1.2
+.csparam DVDD=DVDD
+.param IBIAS=1u
+.csparam IBIAS=IBIAS
+.temp 27
+.options savecurrents klu method=gear reltol=1e-4 abstol=1e-15 gmin=1e-15
+.control
+
+save all
+
+* Operating Point Analysis
+op
+remzerovec
+write power_gating_tb_tran_pex.raw
+set appendwrite
+
+* Transient Analysis: ENA/STDBY walk through 00 -> 10 -> 11 -> 01
+tran 1n 8u
+write power_gating_tb_tran_pex.raw
+
+* Plotting
+plot ena stdby eg_avdd sg_avdd sg_dvdd
+plot eg_ibias dout
+
+* Write Data
+unset appendwrite
+set wr_vecnames
+set wr_singlescale
+wrdata ../plot_simulations/data/power_gating_tb_tran_pex.txt v(ena) v(stdby) v(eg_avdd) v(sg_avdd) v(sg_dvdd) v(eg_ibias) v(dout) i(vmeas_ibias)
+
+*quit
+.endc
+
+
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerRES.lib res_typ
+.lib cornerCAP.lib cap_typ
+.lib cornerDIO.lib dio_tt
+
+
+.include power_gating_tb_tran_pex.save
+
+**** end user architecture code
+**.ends
+.end

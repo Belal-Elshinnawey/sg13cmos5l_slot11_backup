@@ -1,0 +1,52 @@
+* Extracted by KLayout with SG13CMOS5L LVS runset on : 29/10/2026 08:27
+
+.SUBCKT power_gating AVDD DOUT DVDD EG_AVDD EG_IBIAS ENA ENA_BH ENA_H IBIAS
++ SG_AVDD SG_DVDD STDBY STDBY_H VSS
+X$5 VSS ENA ENA_H ENA_BH DVDD AVDD level_shifter
+X$11 VSS STDBY STDBY_H \$I38 DVDD AVDD level_shifter
+M$1 DVDD STDBY SG_DVDD DVDD sg13_lv_pmos L=0.13u W=27.76u AS=5.7949p AD=5.7949p
++ PS=34.57u PD=34.57u rfmode=0
+M$9 VSS STDBY SG_DVDD VSS sg13_lv_nmos L=0.13u W=27.76u AS=5.7949p AD=5.7949p
++ PS=34.57u PD=34.57u rfmode=0
+M$17 VSS STDBY DOUT VSS sg13_lv_nmos L=0.13u W=27.76u AS=5.7949p AD=5.7949p
++ PS=34.57u PD=34.57u rfmode=0
+M$25 VSS STDBY_H SG_AVDD VSS sg13_hv_nmos L=0.45u W=28.8u AS=6.012p AD=6.012p
++ PS=35.74u PD=35.74u rfmode=0
+M$33 VSS ENA_BH EG_AVDD VSS sg13_hv_nmos L=0.45u W=28.8u AS=6.012p AD=6.012p
++ PS=35.74u PD=35.74u rfmode=0
+M$41 AVDD STDBY_H SG_AVDD AVDD sg13_hv_pmos L=0.4u W=25.6u AS=5.344p AD=5.344p
++ PS=32.14u PD=32.14u rfmode=0
+M$49 VSS ENA_H IBIAS AVDD sg13_hv_pmos L=0.4u W=25.6u AS=5.344p AD=5.344p
++ PS=32.14u PD=32.14u rfmode=0
+M$57 AVDD ENA_BH EG_AVDD AVDD sg13_hv_pmos L=0.4u W=25.6u AS=5.344p AD=5.344p
++ PS=32.14u PD=32.14u rfmode=0
+M$65 EG_IBIAS ENA_BH IBIAS AVDD sg13_hv_pmos L=0.4u W=25.6u AS=5.344p AD=5.344p
++ PS=32.14u PD=32.14u rfmode=0
+.ENDS power_gating
+
+.SUBCKT level_shifter VSS LO HI HI_B DVDD AVDD
+M$1 DVDD LO LO_B DVDD sg13_lv_pmos L=0.13u W=0.87u AS=0.2958p AD=0.2958p
++ PS=2.42u PD=2.42u rfmode=0
+M$2 DVDD LO_B LO_BB DVDD sg13_lv_pmos L=0.13u W=0.87u AS=0.2958p AD=0.2958p
++ PS=2.42u PD=2.42u rfmode=0
+M$3 VSS LO_B LO_BB VSS sg13_lv_nmos L=0.13u W=0.87u AS=0.2958p AD=0.2958p
++ PS=2.42u PD=2.42u rfmode=0
+M$4 VSS LO LO_B VSS sg13_lv_nmos L=0.13u W=0.87u AS=0.2958p AD=0.2958p PS=2.42u
++ PD=2.42u rfmode=0
+M$5 AVDD IM IM_B AVDD sg13_hv_pmos L=0.4u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u rfmode=0
+M$6 AVDD IM_B IM AVDD sg13_hv_pmos L=0.4u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u rfmode=0
+M$7 AVDD IM_B HI AVDD sg13_hv_pmos L=0.4u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u rfmode=0
+M$8 AVDD HI HI_B AVDD sg13_hv_pmos L=0.4u W=0.8u AS=0.272p AD=0.272p PS=2.28u
++ PD=2.28u rfmode=0
+M$9 VSS HI HI_B VSS sg13_hv_nmos L=0.45u W=0.9u AS=0.306p AD=0.306p PS=2.48u
++ PD=2.48u rfmode=0
+M$10 VSS LO_BB IM_B VSS sg13_hv_nmos L=0.45u W=0.9u AS=0.306p AD=0.306p
++ PS=2.48u PD=2.48u rfmode=0
+M$11 VSS LO_B IM VSS sg13_hv_nmos L=0.45u W=0.9u AS=0.306p AD=0.306p PS=2.48u
++ PD=2.48u rfmode=0
+M$12 VSS IM_B HI VSS sg13_hv_nmos L=0.45u W=0.9u AS=0.306p AD=0.306p PS=2.48u
++ PD=2.48u rfmode=0
+.ENDS level_shifter

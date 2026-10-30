@@ -1,0 +1,56 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/testbenches/xschem/level_shifter_tb_dc_hi.sch
+**.subckt level_shifter_tb_dc_hi
+x1 AVDD LO_B DVDD LO HI GND HI_B level_shifter
+V1 AVDD GND 3.3
+V2 DVDD GND 1.2
+V3 LO GND 0
+**** begin user architecture code
+
+.param temp=27
+.control
+save all
+dc V3 0 1.2 1m
+remzerovec
+write tb__level_shifter_dc_hi.raw
+.endc
+
+
+
+
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerRES.lib res_typ
+.lib cornerCAP.lib cap_typ
+.lib cornerDIO.lib dio_tt
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  level_shifter.sym # of pins=7
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/schematic/xschem/level_shifter.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/schematic/xschem/level_shifter.sch
+.subckt level_shifter AVDD LO_B DVDD LO HI VSS HI_B
+*.iopin DVDD
+*.iopin VSS
+*.iopin AVDD
+*.ipin LO
+*.opin LO_B
+*.opin HI
+*.opin HI_B
+XM1 IM_B IM AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM2 IM_B LO_BB VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM3 IM IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM4 IM LO_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM5 LO_B LO DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM6 LO_B LO VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM7 LO_BB LO_B DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM8 LO_BB LO_B VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM9 HI IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM10 HI IM_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM11 HI_B HI AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM12 HI_B HI VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+.ends
+
+.end

@@ -1,0 +1,13 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/schmitt_trigger_pullmid/schematic/xschem/schmitt_trigger_pullmid.sch
+.subckt schmitt_trigger_pullmid SG_DVDD AIN DOUT VSS
+*.PININFO SG_DVDD:B VSS:B AIN:I DOUT:O
+RR1 SG_DVDD MID 101.2k $SUB=VSS $[rhigh] w=0.5e-6 l=3.412e-05 b=0
+RR2 MID VSS 101.2k $SUB=VSS $[rhigh] w=0.5e-6 l=3.412e-05 b=0
+RR3 AIN MID 803.67k $SUB=VSS $[rhigh] w=0.5e-6 l=2.7172e-04 b=0
+MM4 DOUT AIN DLT VSS sg13_lv_nmos w=1u l=0.3u ng=1
+MM5 DHT AIN SG_DVDD SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1
+MM3 DOUT AIN DHT SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1
+MM7 VSS DOUT DHT SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1
+MM6 DLT AIN VSS VSS sg13_lv_nmos w=1u l=0.3u ng=1
+MM8 SG_DVDD DOUT DLT VSS sg13_lv_nmos w=1u l=0.3u ng=1
+.ends

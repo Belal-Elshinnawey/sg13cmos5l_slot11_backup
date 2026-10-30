@@ -1,0 +1,87 @@
+magic
+tech ihp-sg13cmos5l
+timestamp 1793064332
+<< pwell >>
+rect -157 -155 157 155
+<< nmos >>
+rect -15 -50 15 50
+<< ndiff >>
+rect -49 43 -15 50
+rect -49 -43 -42 43
+rect -26 -43 -15 43
+rect -49 -50 -15 -43
+rect 15 43 49 50
+rect 15 -43 26 43
+rect 42 -43 49 43
+rect 15 -50 49 -43
+<< ndiffc >>
+rect -42 -43 -26 43
+rect 26 -43 42 43
+<< psubdiff >>
+rect -126 117 126 124
+rect -126 101 -80 117
+rect 80 101 126 117
+rect -126 94 126 101
+rect -126 78 -96 94
+rect -126 -78 -119 78
+rect -103 -78 -96 78
+rect 96 78 126 94
+rect -126 -94 -96 -78
+rect 96 -78 103 78
+rect 119 -78 126 78
+rect 96 -94 126 -78
+rect -126 -101 126 -94
+rect -126 -117 -80 -101
+rect 80 -117 126 -101
+rect -126 -124 126 -117
+<< psubdiffcont >>
+rect -80 101 80 117
+rect -119 -78 -103 78
+rect 103 -78 119 78
+rect -80 -117 80 -101
+<< poly >>
+rect -15 80 15 87
+rect -15 64 -8 80
+rect 8 64 15 80
+rect -15 50 15 64
+rect -15 -64 15 -50
+rect -15 -80 -8 -64
+rect 8 -80 15 -64
+rect -15 -87 15 -80
+<< polycont >>
+rect -8 64 8 80
+rect -8 -80 8 -64
+<< metal1 >>
+rect -119 101 -80 117
+rect 80 101 119 117
+rect -119 78 -103 101
+rect -119 -101 -103 -78
+rect -83 64 -8 80
+rect 8 64 83 80
+rect -83 -64 -67 64
+rect -47 -43 -42 43
+rect -26 -43 -21 43
+rect 21 -43 26 43
+rect 42 -43 47 43
+rect 67 -64 83 64
+rect -83 -80 -8 -64
+rect 8 -80 83 -64
+rect 103 78 119 101
+rect 103 -101 119 -78
+rect -119 -117 -80 -101
+rect 80 -117 119 -101
+<< labels >>
+rlabel psubdiffcont 0 -109 0 -109 0 B
+port 1 nsew
+rlabel ndiffc -34 0 -34 0 0 D
+port 2 nsew
+rlabel ndiffc 34 0 34 0 0 S
+port 3 nsew
+rlabel polycont 0 72 0 72 0 G
+port 4 nsew
+<< properties >>
+string FIXED_BBOX -111 -109 111 109
+string gencell sg13_lv_nmos
+string library sg13cmos5l
+string parameters w 1.0 l 0.3 m 1 ng 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.13 wmin 0.15 class mosfet compatible {sg13_lv_nmos sg13_hv_nmos} full_metal 1 conn_gates 1 gate_ring 1 doports 1 viasrc 0 viadrn 0 viagate 0 ccols 1 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>

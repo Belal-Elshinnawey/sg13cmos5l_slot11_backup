@@ -1,0 +1,471 @@
+# SPDX-FileCopyrightText: 2026 Tim Edwards and Simon Dorrer
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
+#
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           schmitt_trigger_pullmid
+description:    AC-coupled, self-biased Schmitt-trigger squaring buffer for the ihp-sg13cmos5l Chipalooza slot_3 design (sg13cmos5l_ht_ip__hsxo_cpz2), driven in the real chip by vittoz_pierce_osc's AOUT through a coupling cap
+PDK:            ihp-sg13cmos5l
+
+cace_format:    5.2
+
+authorship:
+  designer:         Chipalooza slot_3 team
+  company:          N/A
+  creation_date:    October 28, 2026
+  license:          Apache-2.0 WITH SHL-2.1
+
+paths:
+  root:             ..
+  schematic:        ../schematic/xschem
+  netlist:          cace/netlist
+  documentation:    cace/_docs
+  runs:             cace/_runs
+
+pins:
+  DVDD:
+    description: Digital supply (SG_DVDD in the real chip, gated by power_gating)
+    type: power
+    direction: inout
+    Vmin: 1.08
+    Vmax: 1.32
+  GND:
+    description: Simulation reference, tied to the DUT's VSS pin
+    type: ground
+    direction: inout
+  AIN:
+    description: AC-coupled input (self-biased internally by R1/R2/R3)
+    type: signal
+    direction: input
+  DOUT:
+    description: Squared digital output
+    type: signal
+    direction: output
+
+default_conditions:
+  dvdd:
+    description: Digital supply voltage
+    display: DVDD
+    unit: V
+    typical: 1.2
+  corner_mos:
+    description: Process corner MOSFET
+    display: Corner MOSFET
+    typical: tt
+  corner_r:
+    description: Process corner resistor
+    display: Corner R
+    typical: typ
+  temp:
+    description: Ambient temperature
+    display: Temperature
+    unit: °C
+    typical: 27
+
+parameters:
+  tran_params:
+    spec:
+      v_plus:
+        display: Upper trip point (V+)
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point (V-)
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band (V+ - V-)
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran.sch
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+    plot:
+      v_plus_vs_dvdd:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: v_plus
+        limits: auto
+      v_minus_vs_dvdd:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: v_minus
+        limits: auto
+      hysteresis_vs_dvdd:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: hysteresis
+        limits: auto
+      hysteresis_vs_corner_mos:
+        type: xyplot
+        xaxis: corner_mos
+        yaxis: hysteresis
+        limits: auto
+      hysteresis_vs_temp:
+        type: xyplot
+        xaxis: temp
+        yaxis: hysteresis
+        limits: auto
+    conditions:
+      dvdd:
+        minimum: 1.08
+        typical: 1.2
+        maximum: 1.32
+      corner_mos:
+        enumerate: [ss, sf, tt, fs, ff]
+      corner_r:
+        typical: typ
+      temp:
+        minimum: -40
+        typical: 27
+        maximum: 85
+
+  tran_mc_params:
+    spec:
+      v_plus:
+        display: Upper trip point - Monte Carlo
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point - Monte Carlo
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band - Monte Carlo
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran.sch
+        collate: iterations
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+        script: schmitt_trigger_pullmid_tb_tran.py
+        script_variables: [v_plus_arr, v_minus_arr, hysteresis_arr]
+    plot:
+      v_plus_mc:
+        type: histogram
+        xaxis: v_plus_arr
+      v_minus_mc:
+        type: histogram
+        xaxis: v_minus_arr
+      hysteresis_mc:
+        type: histogram
+        xaxis: hysteresis_arr
+    conditions:
+      dvdd:
+        typical: 1.2
+      iterations:
+        description: Iterations to run
+        display: Iterations
+        minimum: 1
+        maximum: 200
+        step: linear
+        stepsize: 1
+      corner_mos:
+        typical: tt_stat
+      corner_r:
+        typical: stat
+      temp:
+        typical: 27
+
+  tran_mm_params:
+    spec:
+      v_plus:
+        display: Upper trip point - Mismatch
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point - Mismatch
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band - Mismatch
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran.sch
+        collate: iterations
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+        script: schmitt_trigger_pullmid_tb_tran.py
+        script_variables: [v_plus_arr, v_minus_arr, hysteresis_arr]
+    plot:
+      v_plus_mm:
+        type: histogram
+        xaxis: v_plus_arr
+      v_minus_mm:
+        type: histogram
+        xaxis: v_minus_arr
+      hysteresis_mm:
+        type: histogram
+        xaxis: hysteresis_arr
+    conditions:
+      dvdd:
+        typical: 1.2
+      iterations:
+        description: Iterations to run
+        display: Iterations
+        minimum: 1
+        maximum: 200
+        step: linear
+        stepsize: 1
+      corner_mos:
+        typical: tt_mismatch
+      corner_r:
+        typical: typ_mismatch
+      temp:
+        typical: 27
+
+  tran_pex_params:
+    spec:
+      v_plus:
+        display: Upper trip point (V+) - PEX
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point (V-) - PEX
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band (V+ - V-) - PEX
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran_pex.sch
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+    plot:
+      v_plus_vs_dvdd_pex:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: v_plus
+        limits: auto
+      v_minus_vs_dvdd_pex:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: v_minus
+        limits: auto
+      hysteresis_vs_dvdd_pex:
+        type: xyplot
+        xaxis: dvdd
+        yaxis: hysteresis
+        limits: auto
+      hysteresis_vs_corner_mos_pex:
+        type: xyplot
+        xaxis: corner_mos
+        yaxis: hysteresis
+        limits: auto
+    conditions:
+      dvdd:
+        minimum: 1.08
+        typical: 1.2
+        maximum: 1.32
+      corner_mos:
+        enumerate: [ss, sf, tt, fs, ff]
+      corner_r:
+        typical: typ
+      temp:
+        minimum: -40
+        typical: 27
+        maximum: 85
+
+  tran_pex_mc_params:
+    spec:
+      v_plus:
+        display: Upper trip point - PEX Monte Carlo
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point - PEX Monte Carlo
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band - PEX Monte Carlo
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran_pex.sch
+        collate: iterations
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+        script: schmitt_trigger_pullmid_tb_tran.py
+        script_variables: [v_plus_arr, v_minus_arr, hysteresis_arr]
+    plot:
+      v_plus_mc_pex:
+        type: histogram
+        xaxis: v_plus_arr
+      v_minus_mc_pex:
+        type: histogram
+        xaxis: v_minus_arr
+      hysteresis_mc_pex:
+        type: histogram
+        xaxis: hysteresis_arr
+    conditions:
+      dvdd:
+        typical: 1.2
+      iterations:
+        description: Iterations to run
+        display: Iterations
+        minimum: 1
+        maximum: 200
+        step: linear
+        stepsize: 1
+      corner_mos:
+        typical: tt_stat
+      corner_r:
+        typical: stat
+      temp:
+        typical: 27
+
+  tran_pex_mm_params:
+    spec:
+      v_plus:
+        display: Upper trip point - PEX Mismatch
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      v_minus:
+        display: Lower trip point - PEX Mismatch
+        unit: V
+        minimum:
+          value: any
+        typical:
+          value: any
+        maximum:
+          value: any
+      hysteresis:
+        display: Hysteresis band - PEX Mismatch
+        unit: V
+        minimum:
+          value: 0.01
+        typical:
+          value: any
+        maximum:
+          value: any
+    tool:
+      ngspice:
+        template: schmitt_trigger_pullmid_tb_tran_pex.sch
+        collate: iterations
+        format: ascii
+        suffix: .data
+        variables: [v_plus, v_minus, hysteresis]
+        script: schmitt_trigger_pullmid_tb_tran.py
+        script_variables: [v_plus_arr, v_minus_arr, hysteresis_arr]
+    plot:
+      v_plus_mm_pex:
+        type: histogram
+        xaxis: v_plus_arr
+      v_minus_mm_pex:
+        type: histogram
+        xaxis: v_minus_arr
+      hysteresis_mm_pex:
+        type: histogram
+        xaxis: hysteresis_arr
+    conditions:
+      dvdd:
+        typical: 1.2
+      iterations:
+        description: Iterations to run
+        display: Iterations
+        minimum: 1
+        maximum: 200
+        step: linear
+        stepsize: 1
+      corner_mos:
+        typical: tt_mismatch
+      corner_r:
+        typical: typ_mismatch
+      temp:
+        typical: 27

@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2026 Tim Edwards and Simon Dorrer
+# SPDX-License-Identifier: Apache-2.0 WITH SHL-2.1
+#
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:           vittoz_pierce_osc
+description:    Vittoz/Pierce crystal-oscillator core macro for the ihp-sg13cmos5l Chipalooza slot_3 design (sg13cmos5l_ht_ip__hsxo_cpz2)
+PDK:            ihp-sg13cmos5l
+
+cace_format:    5.2
+
+authorship:
+  designer:         Chipalooza slot_3 team
+  company:          N/A
+  creation_date:    October 28, 2026
+  license:          Apache-2.0 WITH SHL-2.1
+
+paths:
+  root:             ..
+  schematic:        ../schematic/xschem
+  netlist:          cace/netlist
+  documentation:    cace/_docs
+  runs:             cace/_runs
+
+pins:
+  AVDD:
+    description: Oscillator core supply (ties EG_AVDD and SG_AVDD together)
+    type: power
+    direction: inout
+    Vmin: 3.0
+    Vmax: 3.6
+  GND:
+    description: Simulation reference, tied to the DUT's VSS pin
+    type: ground
+    direction: inout
+  XIN:
+    description: Crystal terminal 1 (loaded with the crystal_model_p_res testbench model)
+    type: signal
+    direction: inout
+  XOUT:
+    description: Crystal terminal 2 / sustaining-amplifier output
+    type: signal
+    direction: inout
+  AOUT:
+    description: Buffer-stage input tap, left unterminated in this macro-level testbench
+    type: signal
+    direction: output
+  EG_IBIAS:
+    description: Bias-current input, driven by an ideal current source
+    type: signal
+    direction: input
+
+default_conditions:
+  vdd:
+    description: Oscillator core supply voltage
+    display: AVDD
+    unit: V
+    typical: 3.3
+  ibias:
+    description: Bias reference current into EG_IBIAS
+    display: IBIAS
+    unit: A
+    typical: 1e-6
+  corner_mos:
+    description: Process corner MOSFET
+    display: Corner MOSFET
+    typical: tt
+  corner_r:
+    description: Process corner resistor
+    display: Corner R
+    typical: typ
+  temp:
+    description: Ambient temperature
+    display: Temperature
+    unit: °C
+    typical: 27
+
+parameters:
+  # No parameter sets defined for this block.

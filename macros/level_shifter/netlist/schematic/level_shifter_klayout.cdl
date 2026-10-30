@@ -1,0 +1,16 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/schematic/xschem/level_shifter.sch
+.subckt level_shifter AVDD LO_B DVDD LO HI VSS HI_B
+*.PININFO DVDD:B VSS:B AVDD:B LO:I LO_B:O HI:O HI_B:O
+MM1 IM_B IM AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1
+MM2 IM_B LO_BB VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1
+MM3 IM IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1
+MM4 IM LO_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1
+MM5 LO_B LO DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1
+MM6 LO_B LO VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1
+MM7 LO_BB LO_B DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1
+MM8 LO_BB LO_B VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1
+MM9 HI IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1
+MM10 HI IM_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1
+MM11 HI_B HI AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1
+MM12 HI_B HI VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1
+.ends

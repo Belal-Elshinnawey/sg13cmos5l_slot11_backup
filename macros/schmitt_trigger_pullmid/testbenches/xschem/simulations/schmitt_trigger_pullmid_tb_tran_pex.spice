@@ -1,0 +1,54 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/schmitt_trigger_pullmid/testbenches/xschem/schmitt_trigger_pullmid_tb_tran_pex.sch
+**.subckt schmitt_trigger_pullmid_tb_tran_pex
+x1 DVDD AIN DOUT GND schmitt_trigger_pullmid_pex
+XC1 AIN_SRC AIN cap_cmomf w=30.0e-6 l=75.0e-6 mmin=1 mmax=4 subblock=0 m=1 mm_ok=1
+VAIN AIN_SRC GND SIN(0 0.5 12MEG)
+VDVDD DVDD GND {DVDD}
+**** begin user architecture code
+
+
+.include ../../../netlist/pex/schmitt_trigger_pullmid_magic_pex_3.spice
+.param DVDD=1.2
+.csparam DVDD=DVDD
+.temp 27
+.options savecurrents klu method=gear reltol=1e-3 abstol=1e-12 gmin=1e-12
+.control
+
+save all
+
+* Operating Point Analysis
+op
+remzerovec
+write schmitt_trigger_pullmid_tb_tran_pex.raw
+set appendwrite
+
+* Transient Analysis: AC-coupled 12MHz sine drive through the real C3 cap value
+tran 100p 5u
+write schmitt_trigger_pullmid_tb_tran_pex.raw
+
+* Plotting
+plot ain dout
+
+* Write Data
+unset appendwrite
+set wr_vecnames
+set wr_singlescale
+wrdata ../plot_simulations/data/schmitt_trigger_pullmid_tb_tran_pex.txt v(ain) v(dout)
+
+*quit
+.endc
+
+
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerRES.lib res_typ
+.lib cornerCAP.lib cap_typ
+.lib cornerDIO.lib dio_tt
+
+
+.include schmitt_trigger_pullmid_tb_tran_pex.save
+
+**** end user architecture code
+**.ends
+.end

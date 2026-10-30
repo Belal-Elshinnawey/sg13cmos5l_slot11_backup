@@ -1,0 +1,87 @@
+magic
+tech ihp-sg13cmos5l
+timestamp 1793149006
+<< nwell >>
+rect -193 -176 193 176
+<< hvpmos >>
+rect -20 -40 20 40
+<< hvpdiff >>
+rect -54 33 -20 40
+rect -54 -33 -47 33
+rect -31 -33 -20 33
+rect -54 -40 -20 -33
+rect 20 33 54 40
+rect 20 -33 31 33
+rect 47 -33 54 33
+rect 20 -40 54 -33
+<< hvpdiffc >>
+rect -47 -33 -31 33
+rect 31 -33 47 33
+<< hvnsubdiff >>
+rect -131 107 131 114
+rect -131 91 -85 107
+rect 85 91 131 107
+rect -131 84 131 91
+rect -131 68 -101 84
+rect -131 -68 -124 68
+rect -108 -68 -101 68
+rect 101 68 131 84
+rect -131 -84 -101 -68
+rect 101 -68 108 68
+rect 124 -68 131 68
+rect 101 -84 131 -68
+rect -131 -91 131 -84
+rect -131 -107 -85 -91
+rect 85 -107 131 -91
+rect -131 -114 131 -107
+<< hvnsubdiffcont >>
+rect -85 91 85 107
+rect -124 -68 -108 68
+rect 108 -68 124 68
+rect -85 -107 85 -91
+<< poly >>
+rect -20 70 20 77
+rect -20 54 -13 70
+rect 13 54 20 70
+rect -20 40 20 54
+rect -20 -54 20 -40
+rect -20 -70 -13 -54
+rect 13 -70 20 -54
+rect -20 -77 20 -70
+<< polycont >>
+rect -13 54 13 70
+rect -13 -70 13 -54
+<< metal1 >>
+rect -124 91 -85 107
+rect 85 91 124 107
+rect -124 68 -108 91
+rect -124 -91 -108 -68
+rect -88 54 -13 70
+rect 13 54 88 70
+rect -88 -54 -72 54
+rect -52 -33 -47 33
+rect -31 -33 -26 33
+rect 26 -33 31 33
+rect 47 -33 52 33
+rect 72 -54 88 54
+rect -88 -70 -13 -54
+rect 13 -70 88 -54
+rect 108 68 124 91
+rect 108 -91 124 -68
+rect -124 -107 -85 -91
+rect 85 -107 124 -91
+<< labels >>
+rlabel hvnsubdiffcont 0 -99 0 -99 0 B
+port 1 nsew
+rlabel hvpdiffc -39 0 -39 0 0 D
+port 2 nsew
+rlabel hvpdiffc 39 0 39 0 0 S
+port 3 nsew
+rlabel polycont 0 62 0 62 0 G
+port 4 nsew
+<< properties >>
+string FIXED_BBOX -116 -99 116 99
+string gencell sg13_hv_pmos
+string library sg13cmos5l
+string parameters w 0.8 l 0.4 m 1 ng 1 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.4 wmin 0.15 class mosfet compatible {sg13_lv_pmos sg13_hv_pmos} full_metal 1 conn_gates 1 gate_ring 1 ccols 1 viasrc 0 viadrn 0 viagate 0 viagb 0 viagr 0 viagl 0 viagt 0 doports 1
+<< end >>

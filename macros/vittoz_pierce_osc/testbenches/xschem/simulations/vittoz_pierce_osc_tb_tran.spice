@@ -1,0 +1,125 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/testbenches/xschem/vittoz_pierce_osc_tb_tran.sch
+**.subckt vittoz_pierce_osc_tb_tran
+x1 XOUT AVDD AVDD XIN EG_IBIAS AOUT GND vittoz_pierce_osc
+X2 XIN XOUT crystal_model_p_res f=12Meg Cm=20f Rm=15 C0=4p icLm=0m
+C1 XIN GND 11p
+C2 XOUT GND 11p
+VAVDD AVDD GND {AVDD}
+IBIAS GND EG_IBIAS {IBIAS}
+**** begin user architecture code
+
+
+.include ../../../netlist/pex/vittoz_pierce_osc_magic_pex_3.spice
+.param AVDD=3.3
+.csparam AVDD=AVDD
+.param IBIAS=1u
+.csparam IBIAS=IBIAS
+.temp 27
+.options savecurrents klu method=gear reltol=1e-3 abstol=1e-12 gmin=1e-12
+.control
+
+save all
+
+* Operating Point Analysis
+op
+remzerovec
+write vittoz_pierce_osc_tb_tran.raw
+set appendwrite
+
+* Transient Analysis: oscillator startup through steady-state (crystal-driven)
+iplot xin xout aout
+tran 1n 10m uic
+write vittoz_pierce_osc_tb_tran.raw
+
+* Plotting
+plot xin xout aout
+plot i(vavdd)
+
+* Write Data
+unset appendwrite
+set wr_vecnames
+set wr_singlescale
+wrdata ../plot_simulations/data/vittoz_pierce_osc_tb_tran.txt v(xin) v(xout) v(aout) i(vavdd)
+
+*quit
+.endc
+
+
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerRES.lib res_typ
+.lib cornerCAP.lib cap_typ
+.lib cornerDIO.lib dio_tt
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  vittoz_pierce_osc.sym # of pins=7
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/schematic/xschem/vittoz_pierce_osc.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/schematic/xschem/vittoz_pierce_osc.sch
+.subckt vittoz_pierce_osc XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT VSS
+*.iopin EG_AVDD
+*.iopin VSS
+*.iopin SG_AVDD
+*.ipin XIN
+*.ipin EG_IBIAS
+*.opin XOUT
+*.opin AOUT
+Vmeas3 net6 XOUT 0
+.save i(vmeas3)
+Vmeas4 net7 net1 0
+.save i(vmeas4)
+Vmeas2 PBIAS net3 0
+.save i(vmeas2)
+Vmeas5 net8 AOUT 0
+.save i(vmeas5)
+Vmeas1 EG_IBIAS net4 0
+.save i(vmeas1)
+XC3 VSS EG_AVDD cap_cmomf w=30.0e-6 l=75.0e-6 mmin=1 mmax=4 subblock=0 m=1 mm_ok=1
+XC4 VSS SG_AVDD cap_cmomf w=30.0e-6 l=75.0e-6 mmin=1 mmax=4 subblock=0 m=1 mm_ok=1
+XR1 net1 net2 VSS rhigh w=0.5e-6 l=1.342e-5 m=1 b=0 mm_ok=1
+XR2 XOUT XIN VSS rhigh w=0.5e-6 l=5.305e-6 m=1 b=0 mm_ok=1
+XC2 XIN net2 cap_cmomf w=30.0e-6 l=75.0e-6 mmin=1 mmax=4 subblock=0 m=1 mm_ok=1
+XC7 net2 VSS cap_cmomf w=30.0e-6 l=75.0e-6 mmin=1 mmax=4 subblock=0 m=1 mm_ok=1
+XC1 VSS net1 cap_cmomf w=4.0e-6 l=4.0e-6 mmin=1 mmax=1 subblock=0 m=1 mm_ok=1
+XC8 VSS AOUT cap_cmomf w=4.0e-6 l=4.0e-6 mmin=1 mmax=1 subblock=0 m=1 mm_ok=1
+XM11 PBIAS PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM10 net7 PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM9 net6 PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=819.2u l=0.4u ng=128 m=1 mm_ok=1
+XM14 net3 net2 net5 VSS sg13_hv_nmos w=921.6u l=0.45u ng=128 m=1 mm_ok=1
+XM12 net1 net2 VSS VSS sg13_hv_nmos w=115.2u l=0.45u ng=16 m=1 mm_ok=1
+XM13 XOUT XIN VSS VSS sg13_hv_nmos w=28.8u l=0.45u ng=32 m=1 mm_ok=1
+XM15 net5 net4 VSS VSS sg13_hv_nmos w=115.2u l=0.45u ng=16 m=1 mm_ok=1
+XM16 net4 net4 VSS VSS sg13_hv_nmos w=7.2u l=0.45u ng=4 m=1 mm_ok=1
+XM18 net8 PBIAS SG_AVDD SG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM17 AOUT XIN VSS VSS sg13_hv_nmos w=3.6u l=0.45u ng=4 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  crystal_model_p_res.sym # of pins=2
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/testbenches/xschem/crystal_model_p_res.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/testbenches/xschem/crystal_model_p_res.sch
+.subckt crystal_model_p_res XIN XOUT  f=12Meg Cm=20f Rm=15 C0=4p icLm=0m
+*.iopin XIN
+*.iopin XOUT
+X1 XIN XOUT crystal_model Lm=(1/Cm+1/C0)/(4*pi^2*f^2) Cm=Cm Rm=Rm C0=C0 icLm=icLm
+**** begin user architecture code
+.param pi=4*atan(1)
+**** end user architecture code
+.ends
+
+
+* expanding   symbol:  crystal_model.sym # of pins=2
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/testbenches/xschem/crystal_model.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/testbenches/xschem/crystal_model.sch
+.subckt crystal_model XIN XOUT  Lm=8.8m Cm=20f Rm=15 C0=4p icLm=0m
+*.iopin XIN
+*.iopin XOUT
+Cm net1 net2 C=Cm
+Lm XIN net1 L=Lm ic=icLm
+Rm net2 XOUT R=Rm
+C0 XIN XOUT C=C0
+.ends
+
+.end

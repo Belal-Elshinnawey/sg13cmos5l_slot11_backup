@@ -1,0 +1,254 @@
+magic
+tech ihp-sg13cmos5l
+magscale 1 2
+timestamp 1793155492
+<< pwell >>
+rect -910 -570 910 570
+<< hvnmos >>
+rect -626 -360 -536 360
+rect -460 -360 -370 360
+rect -294 -360 -204 360
+rect -128 -360 -38 360
+rect 38 -360 128 360
+rect 204 -360 294 360
+rect 370 -360 460 360
+rect 536 -360 626 360
+<< hvndiff >>
+rect -694 346 -626 360
+rect -694 -346 -680 346
+rect -648 -346 -626 346
+rect -694 -360 -626 -346
+rect -536 346 -460 360
+rect -536 -346 -514 346
+rect -482 -346 -460 346
+rect -536 -360 -460 -346
+rect -370 346 -294 360
+rect -370 -346 -348 346
+rect -316 -346 -294 346
+rect -370 -360 -294 -346
+rect -204 346 -128 360
+rect -204 -346 -182 346
+rect -150 -346 -128 346
+rect -204 -360 -128 -346
+rect -38 346 38 360
+rect -38 -346 -16 346
+rect 16 -346 38 346
+rect -38 -360 38 -346
+rect 128 346 204 360
+rect 128 -346 150 346
+rect 182 -346 204 346
+rect 128 -360 204 -346
+rect 294 346 370 360
+rect 294 -346 316 346
+rect 348 -346 370 346
+rect 294 -360 370 -346
+rect 460 346 536 360
+rect 460 -346 482 346
+rect 514 -346 536 346
+rect 460 -360 536 -346
+rect 626 346 694 360
+rect 626 -346 648 346
+rect 680 -346 694 346
+rect 626 -360 694 -346
+<< hvndiffc >>
+rect -680 -346 -648 346
+rect -514 -346 -482 346
+rect -348 -346 -316 346
+rect -182 -346 -150 346
+rect -16 -346 16 346
+rect 150 -346 182 346
+rect 316 -346 348 346
+rect 482 -346 514 346
+rect 648 -346 680 346
+<< hvpsubdiff >>
+rect -848 494 848 508
+rect -848 462 -756 494
+rect 756 462 848 494
+rect -848 448 848 462
+rect -848 416 -788 448
+rect -848 -416 -834 416
+rect -802 -416 -788 416
+rect 788 416 848 448
+rect -848 -448 -788 -416
+rect 788 -416 802 416
+rect 834 -416 848 416
+rect 788 -448 848 -416
+rect -848 -462 848 -448
+rect -848 -494 -756 -462
+rect 756 -494 848 -462
+rect -848 -508 848 -494
+<< hvpsubdiffcont >>
+rect -756 462 756 494
+rect -834 -416 -802 416
+rect 802 -416 834 416
+rect -756 -494 756 -462
+<< poly >>
+rect -626 420 -536 434
+rect -626 388 -612 420
+rect -550 388 -536 420
+rect -626 360 -536 388
+rect -460 420 -370 434
+rect -460 388 -446 420
+rect -384 388 -370 420
+rect -460 360 -370 388
+rect -294 420 -204 434
+rect -294 388 -280 420
+rect -218 388 -204 420
+rect -294 360 -204 388
+rect -128 420 -38 434
+rect -128 388 -114 420
+rect -52 388 -38 420
+rect -128 360 -38 388
+rect 38 420 128 434
+rect 38 388 52 420
+rect 114 388 128 420
+rect 38 360 128 388
+rect 204 420 294 434
+rect 204 388 218 420
+rect 280 388 294 420
+rect 204 360 294 388
+rect 370 420 460 434
+rect 370 388 384 420
+rect 446 388 460 420
+rect 370 360 460 388
+rect 536 420 626 434
+rect 536 388 550 420
+rect 612 388 626 420
+rect 536 360 626 388
+rect -626 -388 -536 -360
+rect -626 -420 -612 -388
+rect -550 -420 -536 -388
+rect -626 -434 -536 -420
+rect -460 -388 -370 -360
+rect -460 -420 -446 -388
+rect -384 -420 -370 -388
+rect -460 -434 -370 -420
+rect -294 -388 -204 -360
+rect -294 -420 -280 -388
+rect -218 -420 -204 -388
+rect -294 -434 -204 -420
+rect -128 -388 -38 -360
+rect -128 -420 -114 -388
+rect -52 -420 -38 -388
+rect -128 -434 -38 -420
+rect 38 -388 128 -360
+rect 38 -420 52 -388
+rect 114 -420 128 -388
+rect 38 -434 128 -420
+rect 204 -388 294 -360
+rect 204 -420 218 -388
+rect 280 -420 294 -388
+rect 204 -434 294 -420
+rect 370 -388 460 -360
+rect 370 -420 384 -388
+rect 446 -420 460 -388
+rect 370 -434 460 -420
+rect 536 -388 626 -360
+rect 536 -420 550 -388
+rect 612 -420 626 -388
+rect 536 -434 626 -420
+<< polycont >>
+rect -612 388 -550 420
+rect -446 388 -384 420
+rect -280 388 -218 420
+rect -114 388 -52 420
+rect 52 388 114 420
+rect 218 388 280 420
+rect 384 388 446 420
+rect 550 388 612 420
+rect -612 -420 -550 -388
+rect -446 -420 -384 -388
+rect -280 -420 -218 -388
+rect -114 -420 -52 -388
+rect 52 -420 114 -388
+rect 218 -420 280 -388
+rect 384 -420 446 -388
+rect 550 -420 612 -388
+<< metal1 >>
+rect -834 462 -756 494
+rect 756 462 834 494
+rect -834 416 -802 462
+rect -834 -462 -802 -416
+rect -762 388 -612 420
+rect -550 388 -446 420
+rect -384 388 -280 420
+rect -218 388 -114 420
+rect -52 388 52 420
+rect 114 388 218 420
+rect 280 388 384 420
+rect 446 388 550 420
+rect 612 388 762 420
+rect -762 -388 -730 388
+rect -690 -346 -680 346
+rect -648 -346 -638 346
+rect -524 -346 -514 346
+rect -482 -346 -472 346
+rect -358 -346 -348 346
+rect -316 -346 -306 346
+rect -192 -346 -182 346
+rect -150 -346 -140 346
+rect -26 -346 -16 346
+rect 16 -346 26 346
+rect 140 -346 150 346
+rect 182 -346 192 346
+rect 306 -346 316 346
+rect 348 -346 358 346
+rect 472 -346 482 346
+rect 514 -346 524 346
+rect 638 -346 648 346
+rect 680 -346 690 346
+rect 730 -388 762 388
+rect -762 -420 -612 -388
+rect -550 -420 -446 -388
+rect -384 -420 -280 -388
+rect -218 -420 -114 -388
+rect -52 -420 52 -388
+rect 114 -420 218 -388
+rect 280 -420 384 -388
+rect 446 -420 550 -388
+rect 612 -420 762 -388
+rect 802 416 834 462
+rect 802 -462 834 -416
+rect -834 -494 -756 -462
+rect 756 -494 834 -462
+<< labels >>
+rlabel hvpsubdiffcont 0 -478 0 -478 0 B
+port 1 nsew
+rlabel hvndiffc -664 0 -664 0 0 D0
+port 2 nsew
+rlabel polycont -581 404 -581 404 0 G
+port 3 nsew
+rlabel hvndiffc -498 0 -498 0 0 S1
+port 4 nsew
+rlabel polycont -415 404 -415 404 0 G
+port 3 nsew
+rlabel hvndiffc -332 0 -332 0 0 D2
+port 5 nsew
+rlabel polycont -249 404 -249 404 0 G
+port 3 nsew
+rlabel hvndiffc -166 0 -166 0 0 S3
+port 6 nsew
+rlabel polycont -83 404 -83 404 0 G
+port 3 nsew
+rlabel hvndiffc 0 0 0 0 0 D4
+port 7 nsew
+rlabel polycont 83 404 83 404 0 G
+port 3 nsew
+rlabel hvndiffc 166 0 166 0 0 S5
+port 8 nsew
+rlabel polycont 249 404 249 404 0 G
+port 3 nsew
+rlabel hvndiffc 332 0 332 0 0 D6
+port 9 nsew
+rlabel polycont 415 404 415 404 0 G
+port 3 nsew
+rlabel hvndiffc 498 0 498 0 0 S7
+port 10 nsew
+rlabel polycont 581 404 581 404 0 G
+port 3 nsew
+<< properties >>
+string FIXED_BBOX -818 -478 818 478
+string gencell sg13_hv_nmos
+string library sg13cmos5l
+string parameters w 3.6 l 0.45 m 1 ng 8 diffcov 100 polycov 100 guard 1 glc 1 grc 1 gtc 1 gbc 1 tbcov 100 rlcov 100 topc 1 botc 1 poverlap 0 doverlap 1 lmin 0.45 wmin 0.15 class mosfet compatible {sg13_lv_nmos sg13_hv_nmos} full_metal 1 conn_gates 1 gate_ring 1 doports 1 viasrc 0 viadrn 0 viagate 0 ccols 1 viagb 0 viagr 0 viagl 0 viagt 0
+<< end >>

@@ -1,0 +1,33 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/testbenches/xschem/level_shifter_tb_tran_pex.sch
+**.subckt level_shifter_tb_tran_pex
+x1 AVDD LO_B DVDD LO HI GND HI_B level_shifter_pex
+V1 AVDD GND 3.3
+V2 DVDD GND 1.2
+V3 LO GND PULSE(0 1.2 100u 0 0 100u 200u)
+**** begin user architecture code
+
+.include ../../../netlist/pex/level_shifter_magic_pex_3.spice
+.param temp=27
+.control
+save all
+*save xout dout x1.x1.aout x1.x1.ain xin
+*+ x1.xinpad x1.xoutpad
+tran 1n 1000u uic
+remzerovec
+write tb__level_shifter_pex.raw
+.endc
+
+
+
+
+
+.lib cornerMOSlv.lib mos_tt
+.lib cornerMOShv.lib mos_tt
+.lib cornerRES.lib res_typ
+.lib cornerCAP.lib cap_typ
+.lib cornerDIO.lib dio_tt
+
+
+**** end user architecture code
+**.ends
+.end

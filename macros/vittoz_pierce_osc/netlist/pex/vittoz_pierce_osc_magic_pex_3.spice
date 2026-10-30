@@ -1,0 +1,1715 @@
+* PEX produced on Fri Oct 30 01:09:54 AM CET 2026 using /foss/tools/sak/sak-pex.sh with m=3 and s=1 (extresist threshold=10000 mOhm, minres=1000 mOhm, mindelay=1 ps)
+* NGSPICE file created from vittoz_pierce_osc_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt vittoz_pierce_osc_pex XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT VSS
+X0 EG_AVDD.t6 MM10.G.t133 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X1 VSS.t26 XIN.t5 XOUT VSS.t28 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X2 XOUT MM10.G.t138 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X3 XOUT MM10.G.t66 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X4 MM15.D0 CC2.c2 MM10.G VSS.t136 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X5 XOUT MM10.G.t134 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X6 EG_AVDD.t12 MM10.G.t71 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X7 MM15.D0 CC2.c2 MM10.G VSS.t104 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X8 VSS.t24 XIN.t1 AOUT VSS.t31 sg13_hv_nmos ad=0.171p pd=1.28u as=0.171p ps=1.28u w=0.9u l=0.45u
+X9 MM10.G CC2.c2 MM15.D0 VSS.t147 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X10 EG_AVDD.t2 MM10.G.t139 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X11 XOUT MM10.G.t76 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X12 EG_AVDD.t9 MM10.G.t81 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X13 XOUT MM10.G.t176 EG_AVDD EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=2.176p ps=13.48u w=6.4u l=0.4u
+X14 EG_AVDD.t9 MM10.G.t77 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X15 AOUT MM10.G.t30 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X16 CC1.c2 CC2.c2 VSS.t38 VSS.t39 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X17 XOUT MM10.G.t82 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X18 VSS.t26 XIN.t7 XOUT VSS.t25 sg13_hv_nmos ad=1.368p pd=7.58u as=2.448p ps=15.08u w=7.2u l=0.45u
+X19 EG_AVDD.t9 MM10.G.t87 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X20 XOUT MM10.G.t124 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X21 VSS.t1 EG_IBIAS MM15.D0 VSS.t11 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X22 MM10.G CC2.c2 MM15.D0 VSS.t153 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X23 EG_AVDD.t6 MM10.G.t125 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X24 CC1.c2 CC2.c2 VSS.t38 VSS.t45 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X25 MM10.G CC2.c2 MM15.D0 VSS.t57 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X26 MM10.G CC2.c2 MM15.D0 VSS.t95 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X27 MM10.G CC2.c2 MM15.D0 VSS.t87 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X28 MM15.D0 CC2.c2 MM10.G VSS.t142 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X29 EG_AVDD.t2 MM10.G.t143 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X30 SG_AVDD MM10.G.t21 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X31 VSS.t1 EG_IBIAS MM15.D0 VSS.t18 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X32 MM10.G CC2.c2 MM15.D0 VSS.t159 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X33 MM15.D0 CC2.c2 MM10.G VSS.t110 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X34 XOUT MM10.G.t148 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X35 EG_AVDD.t2 MM10.G.t153 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X36 AOUT MM10.G.t22 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X37 MM10.G CC2.c2 MM15.D0 VSS.t63 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X38 EG_IBIAS EG_IBIAS VSS.t15 VSS.t19 sg13_hv_nmos ad=0.342p pd=2.18u as=0.342p ps=2.18u w=1.8u l=0.45u
+X39 XOUT MM10.G.t158 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X40 XOUT MM10.G.t86 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X41 CC1.c2 CC2.c2 VSS.t38 VSS.t51 sg13_hv_nmos ad=2.448p pd=15.08u as=1.368p ps=7.58u w=7.2u l=0.45u
+X42 MM10.G CC2.c2 MM15.D0 VSS.t55 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X43 MM10.G CC2.c2 MM15.D0 VSS.t93 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X44 MM10.G CC2.c2 MM15.D0 VSS.t101 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X45 EG_AVDD.t10 MM10.G.t91 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X46 CC1.c2 MM10.G.t38 EG_AVDD.t48 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X47 MM10.G MM10.G.t12 EG_AVDD.t57 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X48 XOUT MM10.G.t164 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X49 EG_AVDD.t22 MM10.G.t159 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X50 XOUT MM10.G.t96 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X51 MM15.D0 CC2.c2 MM10.G VSS.t54 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X52 MM15.D0 CC2.c2 MM10.G VSS.t140 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X53 XOUT MM10.G.t106 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X54 EG_AVDD.t10 MM10.G.t101 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X55 EG_AVDD.t57 MM10.G.t11 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X56 MM15.D0 CC2.c2 MM10.G VSS.t116 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X57 XOUT MM10.G.t102 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X58 CC1.c2 MM10.G.t44 EG_AVDD.t68 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X59 MM10.G MM10.G.t6 EG_AVDD.t84 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X60 VSS.t24 XIN.t3 AOUT VSS.t23 sg13_hv_nmos ad=0.171p pd=1.28u as=0.306p ps=2.48u w=0.9u l=0.45u
+X61 EG_AVDD.t1 MM10.G.t107 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X62 EG_AVDD.t58 MM10.G.t1 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X63 MM10.G CC2.c2 MM15.D0 VSS.t61 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X64 MM10.G CC2.c2 MM15.D0 VSS.t69 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X65 MM15.D0 CC2.c2 MM10.G VSS.t150 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X66 MM10.G CC2.c2 MM15.D0 VSS.t99 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X67 MM10.G CC2.c2 MM15.D0 VSS.t165 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X68 XOUT XIN.t4 VSS.t26 VSS.t29 sg13_hv_nmos ad=2.448p pd=15.08u as=1.368p ps=7.58u w=7.2u l=0.45u
+X69 MM10.G CC2.c2 MM15.D0 VSS.t107 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X70 XOUT MM10.G.t68 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X71 CC1.c2 CC2.c2 VSS.t38 VSS.t49 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X72 MM15.D0 CC2.c2 MM10.G VSS.t156 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X73 AOUT MM10.G.t26 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X74 MM15.D0 CC2.c2 MM10.G VSS.t60 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X75 EG_AVDD MM10.G.t173 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X76 XOUT MM10.G.t168 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X77 MM15.D0.t1 CC2.c2 MM10.G VSS.t52 sg13_hv_nmos ad=1.368p pd=7.58u as=2.448p ps=15.08u w=7.2u l=0.45u
+X78 MM10.G CC2.c2 MM15.D0 VSS.t171 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X79 MM15.D0 CC2.c2 MM10.G VSS.t122 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X80 SG_AVDD MM10.G.t27 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X81 MM15.D0 CC2.c2 MM10.G VSS.t90 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X82 AOUT MM10.G.t32 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=2.176p ps=13.48u w=6.4u l=0.4u
+X83 VSS.t38 CC2.c2 CC1.c2 VSS.t40 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X84 MM10.G CC2.c2 MM15.D0 VSS.t75 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X85 MM10.G CC2.c2 MM15.D0 VSS.t137 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X86 XOUT MM10.G.t116 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X87 EG_AVDD.t1 MM10.G.t111 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X88 EG_AVDD.t83 MM10.G.t49 XOUT EG_AVDD.t0 sg13_hv_pmos ad=2.176p pd=13.48u as=1.216p ps=6.78u w=6.4u l=0.4u
+X89 MM10.G CC2.c2 MM15.D0 VSS.t67 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X90 MM10.G CC2.c2 MM15.D0 VSS.t113 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X91 EG_AVDD.t6 MM10.G.t129 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X92 EG_AVDD.t1 MM10.G.t121 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X93 MM10.G CC2.c2 MM15.D0 VSS.t105 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X94 XOUT MM10.G.t50 EG_AVDD.t78 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X95 MM15.D0 CC2.c2 MM10.G VSS.t66 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X96 XOUT MM10.G.t130 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X97 EG_AVDD.t12 MM10.G.t67 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X98 EG_AVDD.t80 MM10.G.t55 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X99 MM15.D0 CC2.c2 MM10.G VSS.t58 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X100 MM15.D0 CC2.c2 MM10.G VSS.t96 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X101 MM15.D0 CC2.c2 MM10.G VSS.t128 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X102 EG_AVDD.t6 MM10.G.t135 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X103 XOUT MM10.G.t72 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X104 XOUT MM10.G.t140 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X105 VSS.t38 CC2.c2 CC1.c2 VSS.t46 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X106 MM10.G CC2.c2 MM15.D0 VSS.t81 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X107 MM15.D0 CC2.c2 MM10.G VSS.t162 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X108 MM10.G CC2.c2 MM15.D0 VSS.t143 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X109 MM10.G CC2.c2 MM15.D0 VSS.t119 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X110 EG_AVDD.t2 MM10.G.t145 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X111 AOUT MM10.G.t18 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X112 MM10.G CC2.c2 MM15.D0 VSS.t73 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X113 MM10.G CC2.c2 MM15.D0 VSS.t111 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X114 MM15.D0 CC2.c2 MM10.G VSS.t64 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X115 MM10.G CC2.c2 MM15.D0 VSS.t177 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X116 MM15.D0 CC2.c2 MM10.G VSS.t134 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X117 EG_AVDD.t106 MM10.G.t53 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X118 EG_AVDD.t100 MM10.G.t35 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X119 EG_AVDD.t136 MM10.G.t15 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=2.176p pd=13.48u as=1.216p ps=6.78u w=6.4u l=0.4u
+X120 AOUT XIN.t2 VSS.t24 VSS.t30 sg13_hv_nmos ad=0.171p pd=1.28u as=0.171p ps=1.28u w=0.9u l=0.45u
+X121 VSS.t1 EG_IBIAS MM15.D0 VSS.t4 sg13_hv_nmos ad=1.368p pd=7.58u as=2.448p ps=15.08u w=7.2u l=0.45u
+X122 MM10.G CC2.c2 MM15.D0 VSS.t145 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X123 XOUT MM10.G.t58 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X124 CC1.c2 MM10.G.t40 EG_AVDD.t19 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X125 MM10.G CC2.c2 MM15.D0 VSS.t79 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X126 MM15.D0 CC2.c2 MM10.G VSS.t168 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X127 EG_AVDD.t68 MM10.G.t45 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X128 CC1.c2 CC2.c2 VSS.t26 VSS.t36 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X129 EG_AVDD.t12 MM10.G.t59 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X130 EG_AVDD.t19 MM10.G.t41 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X131 EG_AVDD.t4 MM10.G.t9 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X132 MM15.D0 CC2.c2 MM10.G VSS.t72 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X133 CC1.c2 MM10.G.t46 EG_AVDD.t18 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X134 SG_AVDD MM10.G.t17 AOUT SG_AVDD sg13_hv_pmos ad=2.176p pd=13.48u as=1.216p ps=6.78u w=6.4u l=0.4u
+X135 MM15.D0 CC2.c2 MM10.G VSS.t102 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X136 XOUT MM10.G.t144 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X137 VSS.t1 EG_IBIAS MM15.D0 VSS.t8 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X138 MM10.G CC2.c2 MM15.D0 VSS.t151 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X139 EG_AVDD.t2 MM10.G.t149 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X140 MM15.D0 CC2.c2 MM10.G VSS.t174 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X141 MM10.G CC2.c2 MM15.D0 VSS.t125 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X142 XOUT MM10.G.t154 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X143 MM10.G CC2.c2 MM15.D0 VSS.t117 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X144 XOUT MM10.G.t150 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X145 CC1.c2 CC2.c2 VSS.t38 VSS.t43 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X146 MM15.D0 CC2.c2 MM10.G VSS.t78 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X147 MM10.G CC2.c2 MM15.D0 VSS.t85 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X148 EG_AVDD.t22 MM10.G.t155 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X149 XOUT MM10.G.t92 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X150 MM15.D0 CC2.c2 MM10.G VSS.t70 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X151 MM15.D0 CC2.c2 MM10.G VSS.t108 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X152 EG_AVDD.t22 MM10.G.t165 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X153 XOUT MM10.G.t160 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X154 EG_AVDD.t10 MM10.G.t97 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X155 XOUT MM10.G.t170 EG_AVDD EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X156 VSS.t1 EG_IBIAS MM15.D0 VSS.t13 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X157 MM10.G CC2.c2 MM15.D0 VSS.t131 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X158 MM10.G CC2.c2 MM15.D0 VSS.t123 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X159 MM10.G MM10.G.t0 EG_AVDD.t152 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=2.176p ps=13.48u w=6.4u l=0.4u
+X160 CC1.c2 CC2.c2 VSS.t38 VSS.t41 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X161 MM15.D0 CC2.c2 MM10.G VSS.t76 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X162 MM15.D0 CC2.c2 MM10.G VSS.t84 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X163 MM10.G CC2.c2 MM15.D0 VSS.t91 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X164 MM15.D0 CC2.c2 MM10.G VSS.t114 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X165 XOUT MM10.G.t126 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X166 EG_AVDD.t12 MM10.G.t63 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X167 AOUT XIN.t0 VSS.t24 VSS.t32 sg13_hv_nmos ad=0.306p pd=2.48u as=0.171p ps=1.28u w=0.9u l=0.45u
+X168 MM10.G CC2.c2 MM15.D0 VSS.t157 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X169 EG_AVDD.t22 MM10.G.t163 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X170 EG_AVDD.t6 MM10.G.t127 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X171 XOUT MM10.G.t64 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X172 MM15.D0 CC2.c2 MM10.G VSS.t148 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X173 MM10.G CC2.c2 MM15.D0 VSS.t129 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X174 XOUT MM10.G.t132 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X175 EG_AVDD.t12 MM10.G.t69 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X176 MM15.D0 EG_IBIAS VSS.t1 VSS.t0 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X177 XOUT MM10.G.t74 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X178 XOUT MM10.G.t174 EG_AVDD EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X179 EG_AVDD.t22 MM10.G.t169 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X180 MM10.G CC2.c2 MM15.D0 VSS.t163 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X181 EG_AVDD.t9 MM10.G.t75 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X182 XOUT XIN.t6 VSS.t26 VSS.t27 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X183 EG_AVDD MM10.G.t175 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X184 EG_AVDD.t1 MM10.G.t117 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X185 XOUT MM10.G.t112 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X186 MM15.D0 EG_IBIAS VSS.t1 VSS.t9 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X187 MM15.D0 CC2.c2 MM10.G VSS.t154 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X188 XOUT MM10.G.t122 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X189 CC1.c2 CC2.c2 VSS.t38 VSS.t47 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X190 MM15.D0 CC2.c2 MM10.G VSS.t82 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X191 MM10.G CC2.c2 MM15.D0 VSS.t97 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X192 MM15.D0 EG_IBIAS VSS.t1 VSS.t3 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X193 MM15.D0 CC2.c2 MM10.G VSS.t146 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X194 MM15.D0 CC2.c2 MM10.G VSS.t120 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X195 MM15.D0 CC2.c2 MM10.G VSS.t88 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X196 MM10.G CC2.c2 MM15.D0 VSS.t169 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X197 XOUT XIN VSS.t33 rhigh l=5.9u w=0.5u
+X198 VSS.t38 CC2.c2 CC1.c2 VSS.t37 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X199 XOUT MM10.G.t136 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X200 EG_AVDD.t12 MM10.G.t73 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X201 MM10.G CC2.c2 MM15.D0 VSS.t135 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X202 EG_AVDD.t2 MM10.G.t141 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X203 XOUT MM10.G.t78 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X204 SG_AVDD MM10.G.t19 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X205 MM10.G CC2.c2 MM15.D0 VSS.t103 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X206 MM15.D0 EG_IBIAS VSS.t1 VSS.t10 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X207 XOUT MM10.G.t146 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X208 EG_AVDD.t9 MM10.G.t83 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X209 MM15.D0 CC2.c2 MM10.G VSS.t126 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X210 EG_AVDD.t2 MM10.G.t151 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X211 XOUT MM10.G.t88 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X212 AOUT MM10.G.t20 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X213 MM15.D0 CC2.c2 MM10.G VSS.t56 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X214 XOUT MM10.G.t84 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X215 MM15.D0 CC2.c2 MM10.G VSS.t94 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X216 XOUT MM10.G.t152 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X217 EG_AVDD.t9 MM10.G.t89 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X218 XOUT MM10.G.t54 EG_AVDD.t80 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X219 CC1.c2 MM10.G.t36 EG_AVDD.t153 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X220 MM10.G MM10.G.t14 EG_AVDD.t103 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X221 MM10.G CC2.c2 MM15.D0 VSS.t141 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X222 XOUT MM10.G.t94 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X223 MM15.D0.t0 EG_IBIAS VSS.t1 VSS.t17 sg13_hv_nmos ad=2.448p pd=15.08u as=1.368p ps=7.58u w=7.2u l=0.45u
+X224 MM15.D0 CC2.c2 MM10.G VSS.t160 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X225 MM15.D0 CC2.c2 MM10.G VSS.t152 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X226 EG_AVDD.t153 MM10.G.t37 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X227 EG_AVDD.t103 MM10.G.t13 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X228 VSS.t21 EG_IBIAS EG_IBIAS VSS.t20 sg13_hv_nmos ad=0.342p pd=2.18u as=0.342p ps=2.18u w=1.8u l=0.45u
+X229 MM10.G CC2.c2 MM15.D0 VSS.t109 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X230 XOUT MM10.G.t100 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X231 XOUT MM10.G.t60 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X232 CC1.c2 MM10.G.t42 EG_AVDD.t146 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X233 EG_AVDD.t77 MM10.G.t3 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X234 MM10.G MM10.G.t8 EG_AVDD.t65 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X235 EG_AVDD.t18 MM10.G.t47 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X236 VSS.t38 CC2.c2 CC1.c2 VSS.t44 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X237 MM10.G CC2.c2 MM15.D0 VSS.t175 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X238 SG_AVDD MM10.G.t23 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X239 MM15.D0 CC2.c2 MM10.G VSS.t166 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X240 MM15.D0 EG_IBIAS VSS.t1 VSS.t16 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X241 MM15.D0 CC2.c2 MM10.G VSS.t158 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X242 MM15.D0 CC2.c2 MM10.G VSS.t132 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X243 MM15.D0 CC2.c2 MM10.G VSS.t62 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X244 MM15.D0 CC2.c2 MM10.G VSS.t100 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X245 VSS.t15 EG_IBIAS EG_IBIAS VSS.t14 sg13_hv_nmos ad=0.342p pd=2.18u as=0.612p ps=4.28u w=1.8u l=0.45u
+X246 EG_AVDD.t10 MM10.G.t93 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X247 MM10.G MM10.G.t10 EG_AVDD.t4 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X248 VSS.t38 CC2.c2 CC1.c2 VSS.t50 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X249 VSS.t1 EG_IBIAS MM15.D0 VSS.t6 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X250 MM10.G CC2.c2 MM15.D0 VSS.t149 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X251 XOUT MM10.G.t166 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X252 EG_AVDD.t22 MM10.G.t161 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X253 XOUT MM10.G.t98 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X254 EG_AVDD.t84 MM10.G.t5 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X255 AOUT MM10.G.t24 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X256 MM10.G CC2.c2 MM15.D0.t1 VSS.t53 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X257 EG_AVDD MM10.G.t171 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X258 EG_AVDD.t10 MM10.G.t103 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X259 MM10.G CC2.c2 MM15.D0 VSS.t115 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X260 EG_AVDD.t1 MM10.G.t113 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X261 XOUT MM10.G.t108 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X262 MM10.G MM10.G.t4 EG_AVDD.t77 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X263 SG_AVDD MM10.G.t25 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X264 MM15.D0 CC2.c2 MM10.G VSS.t164 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X265 MM15.D0 CC2.c2 MM10.G VSS.t138 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X266 CC2.c2 CC1.c2 VSS.t34 rhigh l=15.04u w=0.5u
+X267 EG_AVDD.t1 MM10.G.t109 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X268 MM15.D0 CC2.c2 MM10.G VSS.t68 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X269 XOUT MM10.G.t114 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X270 MM15.D0 CC2.c2 MM10.G VSS.t106 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X271 EG_AVDD.t1 MM10.G.t119 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X272 MM10.G CC2.c2 MM15.D0 VSS.t59 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X273 MM15.D0 CC2.c2 MM10.G VSS.t172 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X274 EG_AVDD.t12 MM10.G.t65 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X275 MM10.G CC2.c2 MM15.D0 VSS.t121 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X276 XOUT MM10.G.t70 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X277 MM15.D0 CC2.c2 MM10.G VSS.t144 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X278 MM15.D0 CC2.c2 MM10.G VSS.t74 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X279 VSS.t1 EG_IBIAS MM15.D0 VSS.t2 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X280 MM10.G CC2.c2 MM15.D0 VSS.t155 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X281 AOUT MM10.G.t28 SG_AVDD SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X282 MM15.D0 CC2.c2 MM10.G VSS.t178 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X283 SG_AVDD MM10.G.t29 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X284 MM15.D0 CC2.c2 MM10.G VSS.t170 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X285 XOUT MM10.G.t118 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X286 EG_AVDD.t78 MM10.G.t51 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X287 EG_AVDD.t139 MM10.G.t33 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=2.176p pd=13.48u as=1.216p ps=6.78u w=6.4u l=0.4u
+X288 EG_AVDD.t6 MM10.G.t131 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X289 EG_AVDD.t6 MM10.G.t123 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X290 XOUT MM10.G.t56 EG_AVDD.t88 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X291 MM10.G CC2.c2 MM15.D0 VSS.t161 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X292 MM15.D0 CC2.c2 MM10.G VSS.t112 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X293 XOUT MM10.G.t52 EG_AVDD.t106 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X294 CC1.c2 MM10.G.t34 EG_AVDD.t100 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X295 EG_AVDD.t88 MM10.G.t57 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X296 EG_AVDD.t48 MM10.G.t39 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X297 MM10.G CC2.c2 MM15.D0 VSS.t65 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X298 EG_IBIAS EG_IBIAS VSS.t21 VSS.t22 sg13_hv_nmos ad=0.612p pd=4.28u as=0.342p ps=2.18u w=1.8u l=0.45u
+X299 MM10.G CC2.c2 MM15.D0 VSS.t127 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X300 EG_AVDD.t6 MM10.G.t137 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X301 MM15.D0 CC2.c2 MM10.G VSS.t176 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X302 XOUT MM10.G.t142 EG_AVDD.t2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X303 EG_AVDD.t9 MM10.G.t79 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X304 EG_AVDD.t2 MM10.G.t147 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X305 MM15.D0 CC2.c2 MM10.G VSS.t80 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X306 MM15.D0 CC2.c2 MM10.G VSS.t118 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X307 XOUT MM10.G.t80 EG_AVDD.t9 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X308 EG_AVDD.t9 MM10.G.t85 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X309 VSS.t26 CC2.c2 CC1.c2 VSS.t35 sg13_hv_nmos ad=1.368p pd=7.58u as=2.448p ps=15.08u w=7.2u l=0.45u
+X310 MM10.G CC2.c2 MM15.D0 VSS.t71 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X311 MM15.D0 CC2.c2 MM10.G VSS.t86 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X312 XOUT MM10.G.t90 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X313 MM10.G CC2.c2 MM15.D0 VSS.t133 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X314 EG_AVDD.t10 MM10.G.t95 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X315 MM10.G CC2.c2 MM15.D0 VSS.t167 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X316 MM15.D0 CC2.c2 MM10.G VSS.t124 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X317 EG_AVDD.t12 MM10.G.t61 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X318 EG_AVDD.t146 MM10.G.t43 CC1.c2 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X319 MM10.G MM10.G.t2 EG_AVDD.t58 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X320 EG_AVDD.t65 MM10.G.t7 MM10.G EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X321 CC1.c2 MM10.G.t48 EG_AVDD.t16 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=2.176p ps=13.48u w=6.4u l=0.4u
+X322 MM10.G CC2.c2 MM15.D0 VSS.t139 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X323 MM15.D0 EG_IBIAS VSS.t1 VSS.t7 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X324 XOUT MM10.G.t156 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X325 MM10.G CC2.c2 MM15.D0 VSS.t173 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X326 XOUT MM10.G.t62 EG_AVDD.t12 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X327 MM15.D0 CC2.c2 MM10.G VSS.t92 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X328 EG_AVDD.t22 MM10.G.t157 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X329 VSS.t38 CC2.c2 CC1.c2 VSS.t42 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X330 MM10.G CC2.c2 MM15.D0 VSS.t77 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X331 XOUT MM10.G.t162 EG_AVDD.t22 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X332 EG_AVDD.t10 MM10.G.t99 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X333 XOUT MM10.G.t172 EG_AVDD EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X334 EG_AVDD.t22 MM10.G.t167 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X335 XOUT MM10.G.t104 EG_AVDD.t10 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X336 MM15.D0 EG_IBIAS VSS.t1 VSS.t12 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X337 MM15.D0 CC2.c2 MM10.G VSS.t130 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X338 XOUT MM10.G.t110 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X339 EG_AVDD.t10 MM10.G.t105 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X340 MM10.G.t16 CC2.c2 MM15.D0 VSS.t179 sg13_hv_nmos ad=2.448p pd=15.08u as=1.368p ps=7.58u w=7.2u l=0.45u
+X341 EG_AVDD.t1 MM10.G.t115 XOUT EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X342 SG_AVDD MM10.G.t31 AOUT SG_AVDD sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X343 VSS.t38 CC2.c2 CC1.c2 VSS.t48 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X344 MM10.G CC2.c2 MM15.D0 VSS.t83 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X345 MM15.D0 CC2.c2 MM10.G VSS.t98 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X346 VSS.t1 EG_IBIAS MM15.D0 VSS.t5 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+X347 XOUT MM10.G.t120 EG_AVDD.t1 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X348 XOUT MM10.G.t128 EG_AVDD.t6 EG_AVDD.t0 sg13_hv_pmos ad=1.216p pd=6.78u as=1.216p ps=6.78u w=6.4u l=0.4u
+X349 MM10.G CC2.c2 MM15.D0 VSS.t89 sg13_hv_nmos ad=1.368p pd=7.58u as=1.368p ps=7.58u w=7.2u l=0.45u
+R0 XIN XIN.n1 26.9138
+R1 XIN.t2 XIN.n2 7.029
+R2 XIN.t1 XIN.n6 15.0005
+R3 XIN.n3 XIN.n2 0.944991
+R4 XIN.n3 XIN.t1 15.0005
+R5 XIN.n4 XIN.t6 15.0005
+R6 XIN.n4 XIN.t5 15.0005
+R7 XIN.t6 XIN.n0 15.0005
+R8 XIN.t5 XIN.n0 15.0005
+R9 XIN.n1 XIN.t3 7.06449
+R10 XIN.n5 XIN.t0 7.04422
+R11 XIN.t7 XIN.n4 3.72645
+R12 XIN.n4 XIN.t4 3.15582
+R13 XIN.n0 XIN 2.88516
+R14 XIN.n0 XIN.t4 2.8324
+R15 XIN.n0 XIN.t7 2.83138
+R16 XIN.n1 XIN.n2 0.944991
+R17 XIN.n6 XIN.n1 1.92361
+R18 XIN.n3 XIN.n5 1.48519
+R19 XIN.n6 XIN.n5 1.48519
+R20 EG_AVDD.t0 EG_AVDD.n7 0.141361
+R21 EG_AVDD.n5 EG_AVDD.n0 0.00563859
+R22 EG_AVDD EG_AVDD.n1 5.49008
+R23 EG_AVDD.n12 EG_AVDD.n11 0.0426628
+R24 EG_AVDD.n22 EG_AVDD.t84 5.76276
+R25 EG_AVDD.n45 EG_AVDD.t83 5.76276
+R26 EG_AVDD.n37 EG_AVDD.t18 5.76261
+R27 EG_AVDD.n35 EG_AVDD.t146 5.7626
+R28 EG_AVDD.n18 EG_AVDD.t103 5.76256
+R29 EG_AVDD.n42 EG_AVDD.t80 5.7623
+R30 EG_AVDD.n36 EG_AVDD.t68 5.76222
+R31 EG_AVDD.n32 EG_AVDD.t153 5.76218
+R32 EG_AVDD.n19 EG_AVDD.t57 5.76214
+R33 EG_AVDD.n38 EG_AVDD.t16 5.7621
+R34 EG_AVDD.n21 EG_AVDD.t65 5.76209
+R35 EG_AVDD.n25 EG_AVDD.t152 5.76206
+R36 EG_AVDD.n23 EG_AVDD.t77 5.762
+R37 EG_AVDD.n44 EG_AVDD.t78 5.762
+R38 EG_AVDD.n17 EG_AVDD.t136 5.76187
+R39 EG_AVDD.n24 EG_AVDD.t58 5.76187
+R40 EG_AVDD.n43 EG_AVDD.t106 5.76187
+R41 EG_AVDD.n41 EG_AVDD.t88 5.76187
+R42 EG_AVDD.n20 EG_AVDD.t4 5.76176
+R43 EG_AVDD.n33 EG_AVDD.t48 5.76176
+R44 EG_AVDD.n30 EG_AVDD.t139 5.76164
+R45 EG_AVDD.n34 EG_AVDD.t19 5.7613
+R46 EG_AVDD.n31 EG_AVDD.t100 5.76118
+R47 EG_AVDD.t0 EG_AVDD.n3 0.317577
+R48 EG_AVDD.n5 EG_AVDD.n4 0.0547394
+R49 EG_AVDD.t0 EG_AVDD.n5 0.0248345
+R50 EG_AVDD.n40 EG_AVDD.n39 4.5005
+R51 EG_AVDD.n27 EG_AVDD.n26 4.5005
+R52 EG_AVDD.n47 EG_AVDD.n46 4.5005
+R53 EG_AVDD.n29 EG_AVDD.n28 4.5005
+R54 EG_AVDD.n0 EG_AVDD.n1 0.00401305
+R55 EG_AVDD.n16 EG_AVDD.n11 2.626
+R56 EG_AVDD.n47 EG_AVDD.n13 0.996784
+R57 EG_AVDD.n15 EG_AVDD.n11 2.626
+R58 EG_AVDD.n13 EG_AVDD.n0 1.05003
+R59 EG_AVDD.n49 EG_AVDD.n48 2.23444
+R60 EG_AVDD.n50 EG_AVDD.n49 2.22053
+R61 EG_AVDD.n8 EG_AVDD.n7 0.0172917
+R62 EG_AVDD.n51 EG_AVDD.n6 1.5098
+R63 EG_AVDD.n53 EG_AVDD.n10 1.5098
+R64 EG_AVDD.n52 EG_AVDD.n14 1.50819
+R65 EG_AVDD.n53 EG_AVDD.n2 1.39334
+R66 EG_AVDD.n28 EG_AVDD.n14 1.29945
+R67 EG_AVDD.n26 EG_AVDD.n6 1.29855
+R68 EG_AVDD.n39 EG_AVDD.n10 1.29855
+R69 EG_AVDD.n41 EG_AVDD.t12 1.09874
+R70 EG_AVDD.t12 EG_AVDD.t9 1.09874
+R71 EG_AVDD.t9 EG_AVDD.t10 1.09874
+R72 EG_AVDD.t10 EG_AVDD.t1 1.09874
+R73 EG_AVDD.t1 EG_AVDD.t6 1.09874
+R74 EG_AVDD.t6 EG_AVDD.t2 1.09874
+R75 EG_AVDD.t2 EG_AVDD.t22 1.09874
+R76 EG_AVDD.n50 EG_AVDD.n9 0.939252
+R77 EG_AVDD.n48 EG_AVDD.n16 0.765724
+R78 EG_AVDD.n50 EG_AVDD.n15 0.765724
+R79 EG_AVDD.n48 EG_AVDD.n13 0.939248
+R80 EG_AVDD.n7 EG_AVDD.n6 0.713761
+R81 EG_AVDD.n11 EG_AVDD.n10 0.713761
+R82 EG_AVDD.n14 EG_AVDD.n11 0.713368
+R83 EG_AVDD.n47 EG_AVDD.n2 1.54003
+R84 EG_AVDD.n26 EG_AVDD.n9 0.996781
+R85 EG_AVDD.n28 EG_AVDD.n15 0.640504
+R86 EG_AVDD.n39 EG_AVDD.n16 0.640504
+R87 EG_AVDD.n52 EG_AVDD.n51 0.633
+R88 EG_AVDD.n0 EG_AVDD.n2 0.360256
+R89 EG_AVDD.n1 EG_AVDD.n4 4.11529
+R90 EG_AVDD.n4 EG_AVDD.n3 0.0214638
+R91 EG_AVDD.n3 EG_AVDD.n0 0.08567
+R92 EG_AVDD.n53 EG_AVDD.n12 2.22302
+R93 EG_AVDD.n12 EG_AVDD.n52 2.22548
+R94 EG_AVDD.t0 EG_AVDD.n11 0.141798
+R95 EG_AVDD.n8 EG_AVDD.n17 5.54228
+R96 EG_AVDD.n42 EG_AVDD.n41 0.13778
+R97 EG_AVDD.n43 EG_AVDD.n42 0.13778
+R98 EG_AVDD.n44 EG_AVDD.n43 0.13778
+R99 EG_AVDD.n45 EG_AVDD.n44 0.13778
+R100 EG_AVDD.n38 EG_AVDD.n37 0.13778
+R101 EG_AVDD.n37 EG_AVDD.n36 0.13778
+R102 EG_AVDD.n36 EG_AVDD.n35 0.13778
+R103 EG_AVDD.n35 EG_AVDD.n34 0.13778
+R104 EG_AVDD.n34 EG_AVDD.n33 0.13778
+R105 EG_AVDD.n33 EG_AVDD.n32 0.13778
+R106 EG_AVDD.n32 EG_AVDD.n31 0.13778
+R107 EG_AVDD.n31 EG_AVDD.n30 0.13778
+R108 EG_AVDD.n25 EG_AVDD.n24 0.13778
+R109 EG_AVDD.n24 EG_AVDD.n23 0.13778
+R110 EG_AVDD.n23 EG_AVDD.n22 0.13778
+R111 EG_AVDD.n22 EG_AVDD.n21 0.13778
+R112 EG_AVDD.n21 EG_AVDD.n20 0.13778
+R113 EG_AVDD.n20 EG_AVDD.n19 0.13778
+R114 EG_AVDD.n19 EG_AVDD.n18 0.13778
+R115 EG_AVDD.n18 EG_AVDD.n17 0.13778
+R116 EG_AVDD.n46 EG_AVDD.n40 0.07706
+R117 EG_AVDD.n29 EG_AVDD.n27 0.07706
+R118 EG_AVDD.n46 EG_AVDD.n45 0.07046
+R119 EG_AVDD.n40 EG_AVDD.n38 0.07046
+R120 EG_AVDD.n30 EG_AVDD.n29 0.07046
+R121 EG_AVDD.n27 EG_AVDD.n25 0.07046
+R122 EG_AVDD.n9 EG_AVDD.n7 1.05004
+R123 EG_AVDD.t22 EG_AVDD 0.61958
+R124 EG_AVDD.n49 EG_AVDD.n11 0.0462972
+R125 EG_AVDD.n51 EG_AVDD.n8 2.27492
+R126 VSS.n106 VSS.n9 44135.1
+R127 VSS.n46 VSS.n106 21261.4
+R128 VSS.n106 VSS.n105 5315.8
+R129 VSS.n0 VSS.n14 1.05945
+R130 VSS.t179 VSS.n0 8.74632
+R131 VSS.n0 VSS.t52 8.74797
+R132 VSS.t77 VSS.n0 8.70499
+R133 VSS.n0 VSS.t120 8.70664
+R134 VSS.t153 VSS.n0 30.766
+R135 VSS.t12 VSS.n5 11.3037
+R136 VSS.t136 VSS.n0 11.49
+R137 VSS.t102 VSS.n0 11.3037
+R138 VSS.n0 VSS.t61 11.3053
+R139 VSS.n0 VSS.t163 11.3053
+R140 VSS.t0 VSS.n5 30.8554
+R141 VSS.t93 VSS.n0 13.8628
+R142 VSS.t59 VSS.n0 13.8633
+R143 VSS.n0 VSS.t70 13.871
+R144 VSS.n13 VSS.t104 13.871
+R145 VSS.t137 VSS.n0 30.8547
+R146 VSS.n0 VSS.t172 13.871
+R147 VSS.n5 VSS.t16 13.7406
+R148 VSS.t118 VSS.n0 16.0598
+R149 VSS.t84 VSS.n0 16.0598
+R150 VSS.n0 VSS.t79 16.0612
+R151 VSS.n0 VSS.t113 16.0612
+R152 VSS.n0 VSS.t147 16.0612
+R153 VSS.n7 VSS.t40 11.3047
+R154 VSS.t75 VSS.n0 18.1794
+R155 VSS.t53 VSS.n0 30.4363
+R156 VSS.n0 VSS.t122 18.1798
+R157 VSS.t155 VSS.n0 30.4352
+R158 VSS.n7 VSS.t49 13.9541
+R159 VSS.t134 VSS.n0 20.1364
+R160 VSS.t66 VSS.n0 20.1364
+R161 VSS.n0 VSS.t63 20.1367
+R162 VSS.n0 VSS.t97 20.1367
+R163 VSS.t130 VSS.n0 29.9418
+R164 VSS.n0 VSS.t165 20.1376
+R165 VSS.n5 VSS.t7 29.9418
+R166 VSS.t91 VSS.n0 21.9309
+R167 VSS.t57 VSS.n0 21.9309
+R168 VSS.n5 VSS.t4 21.954
+R169 VSS.n0 VSS.t72 21.9311
+R170 VSS.t105 VSS.n0 29.284
+R171 VSS.n0 VSS.t140 21.9311
+R172 VSS.n0 VSS.t174 21.932
+R173 VSS.t18 VSS.n5 29.2839
+R174 VSS.t116 VSS.n0 23.5628
+R175 VSS.t82 VSS.n0 23.5628
+R176 VSS.t114 VSS.n0 28.4646
+R177 VSS.t148 VSS.n0 28.4655
+R178 VSS.t107 VSS.n0 25.0323
+R179 VSS.t123 VSS.n0 27.4827
+R180 VSS.t64 VSS.n0 26.3392
+R181 VSS.n0 VSS.t65 26.3392
+R182 VSS.t98 VSS.n0 26.3392
+R183 VSS.n0 VSS.t133 26.3401
+R184 VSS.n15 VSS.t167 26.3392
+R185 VSS.n5 VSS.t11 26.3401
+R186 VSS.n40 VSS.t19 91.6521
+R187 VSS.t157 VSS.n16 27.4836
+R188 VSS.t89 VSS.n0 27.4836
+R189 VSS.t55 VSS.n0 27.4836
+R190 VSS.t73 VSS.n0 25.0323
+R191 VSS.n0 VSS.t108 27.4835
+R192 VSS.n0 VSS.t142 27.4844
+R193 VSS.t175 VSS.n0 25.0323
+R194 VSS.t80 VSS.n0 28.4655
+R195 VSS.n0 VSS.t151 28.4663
+R196 VSS.n0 VSS.t126 29.2846
+R197 VSS.n0 VSS.t160 29.2855
+R198 VSS.t96 VSS.n0 29.9418
+R199 VSS.t62 VSS.n0 29.9418
+R200 VSS.n0 VSS.t101 29.9423
+R201 VSS.n0 VSS.t169 29.9423
+R202 VSS.t2 VSS.n5 29.9423
+R203 VSS.t32 VSS.n45 78.9275
+R204 VSS.t87 VSS.n0 30.4361
+R205 VSS.n0 VSS.t110 30.4366
+R206 VSS.n0 VSS.t144 30.4357
+R207 VSS.t177 VSS.n0 18.1785
+R208 VSS.n60 VSS.n55 68.3992
+R209 VSS.n58 VSS.n54 68.3992
+R210 VSS.n61 VSS.n56 68.3992
+R211 VSS.n108 VSS.n53 68.3992
+R212 VSS.n109 VSS.n50 68.3992
+R213 VSS.n0 VSS.t85 30.766
+R214 VSS.t152 VSS.n0 16.0598
+R215 VSS.n0 VSS.t60 30.8898
+R216 VSS.n0 VSS.t94 30.8901
+R217 VSS.n0 VSS.t128 30.8868
+R218 VSS.t161 VSS.n0 13.8685
+R219 VSS.n0 VSS.t69 30.8867
+R220 VSS.n0 VSS.t78 30.766
+R221 VSS.n0 VSS.t112 30.766
+R222 VSS.n0 VSS.t146 30.766
+R223 VSS.n59 VSS.n55 55.6739
+R224 VSS.n57 VSS.n50 55.6739
+R225 VSS.t178 VSS.n0 30.4377
+R226 VSS.t76 VSS.n0 30.4357
+R227 VSS.n0 VSS.t121 30.4361
+R228 VSS.n97 VSS.n67 53.3939
+R229 VSS.n6 VSS.n67 53.3939
+R230 VSS.t135 VSS.n0 29.9414
+R231 VSS.t67 VSS.n0 29.9414
+R232 VSS.n83 VSS.t34 48.518
+R233 VSS.t92 VSS.n0 29.2846
+R234 VSS.t58 VSS.n0 29.2846
+R235 VSS.n5 VSS.t3 29.2846
+R236 VSS.n0 VSS.t71 29.2849
+R237 VSS.n0 VSS.t139 29.2849
+R238 VSS.n0 VSS.t173 29.284
+R239 VSS.n86 VSS.n69 46.9008
+R240 VSS.n100 VSS.n99 46.9008
+R241 VSS.n92 VSS.t35 44.4749
+R242 VSS.t117 VSS.n0 28.4653
+R243 VSS.t83 VSS.n0 28.4653
+R244 VSS.n27 VSS.n29 12.3427
+R245 VSS.n51 VSS.t33 43.6663
+R246 VSS.n62 VSS.t27 42.8576
+R247 VSS.t176 VSS.n0 27.4835
+R248 VSS.t74 VSS.n0 27.4835
+R249 VSS.t50 VSS.n7 29.2843
+R250 VSS.n60 VSS.n54 39.7672
+R251 VSS.n109 VSS.n108 39.7672
+R252 VSS.t99 VSS.n0 26.3392
+R253 VSS.n0 VSS.t132 26.3383
+R254 VSS.n15 VSS.t166 26.3392
+R255 VSS.n39 VSS.t14 44.5069
+R256 VSS.t22 VSS.n56 36.5859
+R257 VSS.n61 VSS.t23 36.5859
+R258 VSS.t158 VSS.n16 25.0324
+R259 VSS.t124 VSS.n0 25.0332
+R260 VSS.t90 VSS.n0 25.0324
+R261 VSS.t56 VSS.n0 25.0324
+R262 VSS.t36 VSS.n12 13.6288
+R263 VSS.n74 VSS.n64 33.9628
+R264 VSS.t149 VSS.n0 23.563
+R265 VSS.t115 VSS.n0 23.5639
+R266 VSS.t81 VSS.n0 23.563
+R267 VSS.n33 VSS.n22 35.6051
+R268 VSS.n59 VSS.t20 28.6325
+R269 VSS.t30 VSS.n57 28.6325
+R270 VSS.t106 VSS.n0 21.932
+R271 VSS.n0 VSS.t125 21.9309
+R272 VSS.n0 VSS.t159 21.93
+R273 VSS.t44 VSS.n7 26.3386
+R274 VSS.t131 VSS.n0 20.1367
+R275 VSS.n5 VSS.t8 20.1367
+R276 VSS.n0 VSS.t100 20.1355
+R277 VSS.n0 VSS.t168 20.1355
+R278 VSS.t9 VSS.n5 20.1355
+R279 VSS.n103 VSS.t25 25.0679
+R280 VSS.n7 VSS.n12 3.33211
+R281 VSS.t20 VSS.n41 31.7429
+R282 VSS.t31 VSS.n44 31.7429
+R283 VSS.t156 VSS.n0 18.1807
+R284 VSS.t88 VSS.n0 18.1798
+R285 VSS.t54 VSS.n0 18.1806
+R286 VSS.n0 VSS.t109 18.1785
+R287 VSS.n0 VSS.t143 18.1794
+R288 VSS.n74 VSS.n24 27.5182
+R289 VSS.t25 VSS.n27 23.829
+R290 VSS.n92 VSS.n91 17.7903
+R291 VSS.n26 VSS.n21 0.630615
+R292 VSS.n23 VSS.n21 1.005
+R293 VSS.t29 VSS.n23 25.0923
+R294 VSS.t28 VSS.n22 49.3511
+R295 VSS.n21 VSS.n24 1.005
+R296 VSS.n7 VSS.t51 21.9553
+R297 VSS.t48 VSS.n7 30.8461
+R298 VSS.t45 VSS.n7 20.1362
+R299 VSS.t43 VSS.n7 26.3398
+R300 VSS.t41 VSS.n7 29.9421
+R301 VSS.t39 VSS.n7 30.8504
+R302 VSS.t37 VSS.n7 13.9349
+R303 VSS.n91 VSS.n12 41.3508
+R304 VSS.n92 VSS.n7 8.5005
+R305 VSS.n86 VSS.n7 8.4995
+R306 VSS.n21 VSS.n102 8.49813
+R307 VSS.n21 VSS.n64 8.49842
+R308 VSS.n21 VSS.n62 8.49788
+R309 VSS.n21 VSS.n51 8.49867
+R310 VSS.n7 VSS.n52 8.50075
+R311 VSS.n99 VSS.n7 8.5
+R312 VSS.n38 VSS.n109 8.50138
+R313 VSS.n38 VSS.n53 8.50038
+R314 VSS.n38 VSS.n56 8.50075
+R315 VSS.n38 VSS.n54 8.50013
+R316 VSS.n38 VSS.n55 8.49988
+R317 VSS.n38 VSS.n40 0.578592
+R318 VSS.n4 VSS.n3 0.744346
+R319 VSS.n45 VSS.n43 0.578592
+R320 VSS.t31 VSS.n45 91.6521
+R321 VSS.t30 VSS.n44 31.7429
+R322 VSS.n61 VSS.n43 8.50021
+R323 VSS.n43 VSS.n50 8.50166
+R324 VSS.n108 VSS.n43 8.49996
+R325 VSS.n43 VSS.n58 8.50075
+R326 VSS.n43 VSS.n60 8.50046
+R327 VSS.n29 VSS.n103 8.50025
+R328 VSS.n104 VSS.n29 8.50075
+R329 VSS.t33 VSS.n29 8.5005
+R330 VSS.n9 VSS.n5 8.92696
+R331 VSS.t138 VSS.n0 13.7406
+R332 VSS.n0 VSS.t127 13.8694
+R333 VSS.n5 VSS.t5 13.7392
+R334 VSS.n6 VSS.n68 14.5799
+R335 VSS.n86 VSS.n68 14.5799
+R336 VSS.n7 VSS.t42 20.1363
+R337 VSS.n7 VSS.t46 29.9422
+R338 VSS.n40 VSS.t14 78.9275
+R339 VSS.t19 VSS.n41 31.7429
+R340 VSS.n46 VSS.t32 44.5074
+R341 VSS.t129 VSS.n0 11.3053
+R342 VSS.t95 VSS.n0 11.3053
+R343 VSS.t6 VSS.n5 11.4903
+R344 VSS.n0 VSS.t68 11.3037
+R345 VSS.n0 VSS.t170 11.3037
+R346 VSS.t28 VSS.n64 12.1299
+R347 VSS.n21 VSS.n27 2.2527
+R348 VSS.n103 VSS.n51 11.3213
+R349 VSS.n62 VSS.t33 11.3213
+R350 VSS.t35 VSS.n52 10.5126
+R351 VSS.n24 VSS.n105 8.11182
+R352 VSS.n105 VSS.n104 9.704
+R353 VSS.t154 VSS.n0 8.70664
+R354 VSS.t86 VSS.n0 8.70664
+R355 VSS.n0 VSS.t111 8.70499
+R356 VSS.n0 VSS.t145 8.70499
+R357 VSS.n5 VSS.n39 295.812
+R358 VSS.n74 VSS.n30 0.773138
+R359 VSS.n30 VSS.n49 4.11219
+R360 VSS.n30 VSS.n29 0.00491819
+R361 VSS.n91 VSS.n35 0.894719
+R362 VSS.n35 VSS.n100 8.5005
+R363 VSS.n35 VSS.n83 8.5005
+R364 VSS.n35 VSS.n69 8.5005
+R365 VSS.n80 VSS.n37 0.584633
+R366 VSS.n21 VSS.n47 2.18766
+R367 VSS.n37 VSS.n49 1.22893
+R368 VSS.n29 VSS.n48 1.36894
+R369 VSS.n49 VSS.n48 1.51779
+R370 VSS.n35 VSS.n84 8.44296
+R371 VSS.n36 VSS.n35 0.139785
+R372 VSS.n97 VSS.n83 8.08675
+R373 VSS.n99 VSS.n69 8.08675
+R374 VSS.n100 VSS.n52 8.08675
+R375 VSS.n33 VSS.t29 7.27813
+R376 VSS.n102 VSS.n101 6.49457
+R377 VSS.n101 VSS.n23 12.988
+R378 VSS.n102 VSS.t34 6.4695
+R379 VSS.n21 VSS.n66 5.56542
+R380 VSS.n21 VSS.n65 5.56542
+R381 VSS.n78 VSS.n29 5.56542
+R382 VSS.n29 VSS.n37 2.19237
+R383 VSS.n35 VSS.n82 5.56542
+R384 VSS.n7 VSS.t47 11.3047
+R385 VSS.t26 VSS.n95 4.6435
+R386 VSS.t26 VSS.n94 4.5005
+R387 VSS.n96 VSS.t26 4.5005
+R388 VSS.t15 VSS.n3 4.5005
+R389 VSS.t21 VSS.n107 4.5005
+R390 VSS.n11 VSS.n0 1.30566
+R391 VSS.n97 VSS.n21 0.737108
+R392 VSS.n43 VSS.n59 4.251
+R393 VSS.n5 VSS.n2 1.31178
+R394 VSS.n42 VSS.n107 1.56468
+R395 VSS.n35 VSS.n85 4.10883
+R396 VSS.n21 VSS.n22 1.005
+R397 VSS.n21 VSS.n63 3.22124
+R398 VSS.n58 VSS.t22 3.18184
+R399 VSS.t23 VSS.n53 3.18184
+R400 VSS.n29 VSS.n31 0.177982
+R401 VSS.n31 VSS.n73 2.11037
+R402 VSS.n7 VSS.n8 0.285224
+R403 VSS.n57 VSS.n38 2.4294
+R404 VSS.n94 VSS.n19 1.11856
+R405 VSS.n7 VSS.n19 0.905974
+R406 VSS.n1 VSS.n42 1.79577
+R407 VSS.n38 VSS.n41 0.04043
+R408 VSS.n39 VSS.n38 0.00174592
+R409 VSS.n44 VSS.n43 0.04043
+R410 VSS.n7 VSS.n17 1.26889
+R411 VSS.n43 VSS.n46 0.0022393
+R412 VSS.n25 VSS.n98 1.83388
+R413 VSS.n77 VSS.n31 1.9714
+R414 VSS.t1 VSS.n14 2.30328
+R415 VSS.n81 VSS.n34 1.77493
+R416 VSS.n72 VSS.n34 1.77027
+R417 VSS.n36 VSS.n72 2.14035
+R418 VSS.n5 VSS.t17 21.9574
+R419 VSS.n76 VSS.n20 1.68428
+R420 VSS.n107 VSS.n4 1.8623
+R421 VSS.n94 VSS.n32 1.35873
+R422 VSS.n95 VSS.n20 1.471
+R423 VSS.t15 VSS.n10 1.28621
+R424 VSS.n101 VSS.n35 1.005
+R425 VSS.n35 VSS.n68 1.00466
+R426 VSS.n35 VSS.n67 1.00466
+R427 VSS.t24 VSS.n43 1.99262
+R428 VSS.n90 VSS.n87 0.94925
+R429 VSS.n89 VSS.n88 0.94925
+R430 VSS.n17 VSS.n93 1.07921
+R431 VSS.n98 VSS.n19 1.01011
+R432 VSS.n35 VSS.n33 0.895237
+R433 VSS.n3 VSS.n1 0.887628
+R434 VSS.n104 VSS.t27 0.809125
+R435 VSS.n38 VSS.n4 0.389719
+R436 VSS.n7 VSS.n6 0.740131
+R437 VSS.n73 VSS.n72 0.736125
+R438 VSS.n81 VSS.n80 0.736125
+R439 VSS.n79 VSS.n71 0.736125
+R440 VSS.n42 VSS.n38 0.415678
+R441 VSS.n93 VSS.n85 0.688108
+R442 VSS.n17 VSS.n90 0.911297
+R443 VSS.n76 VSS.n63 0.640048
+R444 VSS.n90 VSS.n89 0.633
+R445 VSS.t1 VSS.n11 3.45805
+R446 VSS.n77 VSS.n76 0.6055
+R447 VSS.n79 VSS.n75 0.6055
+R448 VSS.n71 VSS.n70 0.6055
+R449 VSS.n78 VSS.n77 0.603496
+R450 VSS.n79 VSS.n78 0.60315
+R451 VSS.n26 VSS.n89 1.60646
+R452 VSS.t171 VSS.n0 30.8867
+R453 VSS.t164 VSS.n0 29.9408
+R454 VSS.t162 VSS.n0 30.8873
+R455 VSS.t150 VSS.n0 23.562
+R456 VSS.t141 VSS.n0 25.0314
+R457 VSS.t119 VSS.n0 30.766
+R458 VSS.t103 VSS.n13 30.8867
+R459 VSS.n9 VSS.t13 22.024
+R460 VSS.n5 VSS.t10 26.3383
+R461 VSS.n82 VSS.n81 0.575996
+R462 VSS.n75 VSS.n63 0.543779
+R463 VSS.n1 VSS.n28 0.649095
+R464 VSS.n89 VSS.n66 0.500371
+R465 VSS.t24 VSS.t21 0.494986
+R466 VSS.n2 VSS.n10 0.704865
+R467 VSS.n21 VSS.n20 0.481827
+R468 VSS.n26 VSS.n96 1.35604
+R469 VSS.n36 VSS.n93 2.03059
+R470 VSS.n87 VSS.n85 0.379518
+R471 VSS.n75 VSS.n65 0.376621
+R472 VSS.n8 VSS.n18 1.82104
+R473 VSS.n70 VSS.n65 0.35565
+R474 VSS.n70 VSS.n66 0.3419
+R475 VSS.t38 VSS.n18 0.32742
+R476 VSS.n88 VSS.n84 0.316452
+R477 VSS.n87 VSS.n84 0.316452
+R478 VSS.n10 VSS.n28 0.521191
+R479 VSS.n48 VSS.n73 1.11848
+R480 VSS.n88 VSS.n82 0.266275
+R481 VSS.n98 VSS.n47 0.910188
+R482 VSS.n90 VSS.n32 1.60445
+R483 VSS.n81 VSS.n71 0.23425
+R484 VSS.n80 VSS.n79 0.23425
+R485 VSS.n28 VSS.n5 1.26984
+R486 VSS.n47 VSS.n96 0.741756
+R487 VSS.n21 VSS.n25 0.377781
+R488 VSS.n35 VSS.n34 0.43959
+R489 VSS.n95 VSS.n25 1.68286
+R490 VSS.t15 VSS.t1 1.35086
+R491 VSS.t21 VSS.t15 0.55886
+R492 VSS.n18 VSS.n11 3.54329
+R493 VSS.n0 VSS.n8 1.89027
+R494 VSS.n3 VSS.n2 1.62405
+R495 VSS.n15 VSS.n0 1.47784
+R496 VSS.n0 VSS.n16 1.41898
+R497 VSS.t26 VSS.t38 1.38562
+R498 VSS.n32 VSS.n7 1.25174
+R499 VSS.n0 VSS.n13 1.24643
+R500 VSS.n14 VSS.n5 1.00904
+R501 VSS VSS.n0 0.0005
+R502 MM15.D0.n8 MM15.D0.t0 5.78431
+R503 MM15.D0.n0 MM15.D0 4.8174
+R504 MM15.D0.n8 MM15.D0 4.81734
+R505 MM15.D0.n0 MM15.D0 4.81731
+R506 MM15.D0.n0 MM15.D0 4.81728
+R507 MM15.D0.n8 MM15.D0 4.81728
+R508 MM15.D0.n0 MM15.D0 4.81688
+R509 MM15.D0.n0 MM15.D0 4.81686
+R510 MM15.D0.n0 MM15.D0 4.81655
+R511 MM15.D0.n5 MM15.D0 4.81611
+R512 MM15.D0.n6 MM15.D0 4.81603
+R513 MM15.D0.n2 MM15.D0 4.81601
+R514 MM15.D0.n0 MM15.D0 4.81596
+R515 MM15.D0.n3 MM15.D0 4.81595
+R516 MM15.D0.n3 MM15.D0 4.81594
+R517 MM15.D0.n4 MM15.D0 4.81594
+R518 MM15.D0.n4 MM15.D0 4.81593
+R519 MM15.D0.n2 MM15.D0 4.81593
+R520 MM15.D0.n7 MM15.D0 4.81593
+R521 MM15.D0.n0 MM15.D0 4.81593
+R522 MM15.D0.n4 MM15.D0 4.81593
+R523 MM15.D0.n5 MM15.D0 4.81592
+R524 MM15.D0.n7 MM15.D0 4.81592
+R525 MM15.D0.n0 MM15.D0 4.81592
+R526 MM15.D0.n6 MM15.D0 4.81591
+R527 MM15.D0.n5 MM15.D0 4.81591
+R528 MM15.D0.n5 MM15.D0 4.81591
+R529 MM15.D0.n5 MM15.D0 4.81591
+R530 MM15.D0.n6 MM15.D0 4.81591
+R531 MM15.D0.n1 MM15.D0 4.8159
+R532 MM15.D0.n7 MM15.D0 4.8159
+R533 MM15.D0.n5 MM15.D0 4.8159
+R534 MM15.D0.n3 MM15.D0 4.81589
+R535 MM15.D0.n6 MM15.D0 4.81589
+R536 MM15.D0.n2 MM15.D0 4.81589
+R537 MM15.D0.n5 MM15.D0 4.81588
+R538 MM15.D0.n0 MM15.D0 4.81588
+R539 MM15.D0.n7 MM15.D0 4.81588
+R540 MM15.D0.n7 MM15.D0 4.81588
+R541 MM15.D0.n6 MM15.D0 4.81588
+R542 MM15.D0.n3 MM15.D0 4.81587
+R543 MM15.D0.n4 MM15.D0 4.8158
+R544 MM15.D0.n2 MM15.D0 4.8158
+R545 MM15.D0.n4 MM15.D0 4.81579
+R546 MM15.D0 MM15.D0.n0 4.81577
+R547 MM15.D0.n3 MM15.D0 4.81577
+R548 MM15.D0.n7 MM15.D0 4.81577
+R549 MM15.D0.n3 MM15.D0 4.81576
+R550 MM15.D0.n2 MM15.D0 4.81576
+R551 MM15.D0.n3 MM15.D0 4.81576
+R552 MM15.D0.n0 MM15.D0 4.81575
+R553 MM15.D0.n6 MM15.D0 4.81575
+R554 MM15.D0.n2 MM15.D0 4.81575
+R555 MM15.D0.n1 MM15.D0 4.81575
+R556 MM15.D0.n0 MM15.D0 4.81575
+R557 MM15.D0.n2 MM15.D0 4.81575
+R558 MM15.D0.n7 MM15.D0 4.81575
+R559 MM15.D0.n4 MM15.D0 4.81574
+R560 MM15.D0.n5 MM15.D0 4.81574
+R561 MM15.D0.n1 MM15.D0 4.81573
+R562 MM15.D0.n1 MM15.D0 4.81573
+R563 MM15.D0.n4 MM15.D0 4.81572
+R564 MM15.D0.n6 MM15.D0 4.81572
+R565 MM15.D0.n1 MM15.D0 4.8157
+R566 MM15.D0.n0 MM15.D0 4.81554
+R567 MM15.D0.n7 MM15.D0 4.81551
+R568 MM15.D0.n1 MM15.D0 4.8155
+R569 MM15.D0.n6 MM15.D0 4.81549
+R570 MM15.D0.n4 MM15.D0 4.81548
+R571 MM15.D0.n2 MM15.D0 4.81547
+R572 MM15.D0.n1 MM15.D0 4.81547
+R573 MM15.D0.n3 MM15.D0 4.81545
+R574 MM15.D0.n1 MM15.D0 4.80057
+R575 MM15.D0.t1 MM15.D0 2.23326
+R576 MM15.D0 MM15.D0.t1 1.97572
+R577 MM15.D0.n0 MM15.D0.n8 1.77546
+R578 MM15.D0.n2 MM15.D0.n1 1.75346
+R579 MM15.D0.n0 MM15.D0.n7 1.16914
+R580 MM15.D0.n7 MM15.D0.n6 1.16914
+R581 MM15.D0.n6 MM15.D0.n5 1.16914
+R582 MM15.D0.n5 MM15.D0.n4 1.16914
+R583 MM15.D0.n4 MM15.D0.n3 1.16914
+R584 MM15.D0.n3 MM15.D0.n2 1.16914
+R585 MM10.G MM10.G.t31 15.0005
+R586 MM10.G.t30 MM10.G 15.0005
+R587 MM10.G MM10.G.t29 15.0005
+R588 MM10.G MM10.G.t28 15.0005
+R589 MM10.G MM10.G.t27 15.0005
+R590 MM10.G.t26 MM10.G 15.0005
+R591 MM10.G MM10.G.t25 15.0005
+R592 MM10.G MM10.G.t24 15.0005
+R593 MM10.G MM10.G.t23 15.0005
+R594 MM10.G.t22 MM10.G 15.0005
+R595 MM10.G MM10.G.t21 15.0005
+R596 MM10.G MM10.G.t20 15.0005
+R597 MM10.G MM10.G.t19 15.0005
+R598 MM10.G.t18 MM10.G 15.0005
+R599 MM10.G.n68 MM10.G.t31 15.0005
+R600 MM10.G.n68 MM10.G.t30 15.0005
+R601 MM10.G.n47 MM10.G.t29 15.0005
+R602 MM10.G.n47 MM10.G.t28 15.0005
+R603 MM10.G.n47 MM10.G.t27 15.0005
+R604 MM10.G.n47 MM10.G.t26 15.0005
+R605 MM10.G.n46 MM10.G.t25 15.0005
+R606 MM10.G.n46 MM10.G.t24 15.0005
+R607 MM10.G.n46 MM10.G.t23 15.0005
+R608 MM10.G.n46 MM10.G.t22 15.0005
+R609 MM10.G.n45 MM10.G.t21 15.0005
+R610 MM10.G.n45 MM10.G.t20 15.0005
+R611 MM10.G.n45 MM10.G.t19 15.0005
+R612 MM10.G.n45 MM10.G.t18 15.0005
+R613 MM10.G MM10.G.t1 15.0005
+R614 MM10.G MM10.G.t2 15.0005
+R615 MM10.G MM10.G.t3 15.0005
+R616 MM10.G.t4 MM10.G 15.0005
+R617 MM10.G MM10.G.t5 15.0005
+R618 MM10.G MM10.G.t6 15.0005
+R619 MM10.G MM10.G.t7 15.0005
+R620 MM10.G.t8 MM10.G 15.0005
+R621 MM10.G MM10.G.t9 15.0005
+R622 MM10.G MM10.G.t10 15.0005
+R623 MM10.G MM10.G.t11 15.0005
+R624 MM10.G.t12 MM10.G 15.0005
+R625 MM10.G MM10.G.t13 15.0005
+R626 MM10.G MM10.G.t14 15.0005
+R627 MM10.G.n70 MM10.G.t1 15.0005
+R628 MM10.G.n70 MM10.G.t2 15.0005
+R629 MM10.G.n44 MM10.G.t3 15.0005
+R630 MM10.G.n44 MM10.G.t4 15.0005
+R631 MM10.G.n44 MM10.G.t5 15.0005
+R632 MM10.G.n44 MM10.G.t6 15.0005
+R633 MM10.G.n43 MM10.G.t7 15.0005
+R634 MM10.G.n43 MM10.G.t8 15.0005
+R635 MM10.G.n43 MM10.G.t9 15.0005
+R636 MM10.G.n43 MM10.G.t10 15.0005
+R637 MM10.G.n42 MM10.G.t11 15.0005
+R638 MM10.G.n42 MM10.G.t12 15.0005
+R639 MM10.G.n42 MM10.G.t13 15.0005
+R640 MM10.G.n42 MM10.G.t14 15.0005
+R641 MM10.G.t47 MM10.G 15.0005
+R642 MM10.G.t46 MM10.G 15.0005
+R643 MM10.G MM10.G.t45 15.0005
+R644 MM10.G MM10.G.t44 15.0005
+R645 MM10.G.t43 MM10.G 15.0005
+R646 MM10.G.t42 MM10.G 15.0005
+R647 MM10.G MM10.G.t41 15.0005
+R648 MM10.G MM10.G.t40 15.0005
+R649 MM10.G.t39 MM10.G 15.0005
+R650 MM10.G.t38 MM10.G 15.0005
+R651 MM10.G MM10.G.t37 15.0005
+R652 MM10.G MM10.G.t36 15.0005
+R653 MM10.G.t35 MM10.G 15.0005
+R654 MM10.G.t34 MM10.G 15.0005
+R655 MM10.G.n73 MM10.G.t47 15.0005
+R656 MM10.G.n73 MM10.G.t46 15.0005
+R657 MM10.G.t45 MM10.G.n41 15.0005
+R658 MM10.G.t44 MM10.G.n41 15.0005
+R659 MM10.G.n41 MM10.G.t43 15.0005
+R660 MM10.G.n41 MM10.G.t42 15.0005
+R661 MM10.G.t41 MM10.G.n40 15.0005
+R662 MM10.G.t40 MM10.G.n40 15.0005
+R663 MM10.G.n40 MM10.G.t39 15.0005
+R664 MM10.G.n40 MM10.G.t38 15.0005
+R665 MM10.G.t37 MM10.G.n39 15.0005
+R666 MM10.G.t36 MM10.G.n39 15.0005
+R667 MM10.G.n39 MM10.G.t35 15.0005
+R668 MM10.G.n39 MM10.G.t34 15.0005
+R669 MM10.G MM10.G.t175 15.0005
+R670 MM10.G MM10.G.t174 15.0005
+R671 MM10.G.t173 MM10.G 15.0005
+R672 MM10.G MM10.G.t172 15.0005
+R673 MM10.G MM10.G.t171 15.0005
+R674 MM10.G MM10.G.t170 15.0005
+R675 MM10.G.t169 MM10.G 15.0005
+R676 MM10.G.t168 MM10.G 15.0005
+R677 MM10.G MM10.G.t167 15.0005
+R678 MM10.G MM10.G.t166 15.0005
+R679 MM10.G.t165 MM10.G 15.0005
+R680 MM10.G.t164 MM10.G 15.0005
+R681 MM10.G MM10.G.t163 15.0005
+R682 MM10.G MM10.G.t162 15.0005
+R683 MM10.G.t161 MM10.G 15.0005
+R684 MM10.G.t160 MM10.G 15.0005
+R685 MM10.G MM10.G.t159 15.0005
+R686 MM10.G MM10.G.t158 15.0005
+R687 MM10.G.t157 MM10.G 15.0005
+R688 MM10.G.t156 MM10.G 15.0005
+R689 MM10.G MM10.G.t155 15.0005
+R690 MM10.G MM10.G.t154 15.0005
+R691 MM10.G.t153 MM10.G 15.0005
+R692 MM10.G.t152 MM10.G 15.0005
+R693 MM10.G MM10.G.t151 15.0005
+R694 MM10.G MM10.G.t150 15.0005
+R695 MM10.G.t149 MM10.G 15.0005
+R696 MM10.G.t148 MM10.G 15.0005
+R697 MM10.G MM10.G.t147 15.0005
+R698 MM10.G MM10.G.t146 15.0005
+R699 MM10.G.t145 MM10.G 15.0005
+R700 MM10.G.t144 MM10.G 15.0005
+R701 MM10.G MM10.G.t143 15.0005
+R702 MM10.G MM10.G.t142 15.0005
+R703 MM10.G.t141 MM10.G 15.0005
+R704 MM10.G.t140 MM10.G 15.0005
+R705 MM10.G MM10.G.t139 15.0005
+R706 MM10.G MM10.G.t138 15.0005
+R707 MM10.G.t137 MM10.G 15.0005
+R708 MM10.G.t136 MM10.G 15.0005
+R709 MM10.G MM10.G.t135 15.0005
+R710 MM10.G MM10.G.t134 15.0005
+R711 MM10.G.t133 MM10.G 15.0005
+R712 MM10.G.t132 MM10.G 15.0005
+R713 MM10.G MM10.G.t131 15.0005
+R714 MM10.G MM10.G.t130 15.0005
+R715 MM10.G.t129 MM10.G 15.0005
+R716 MM10.G.t128 MM10.G 15.0005
+R717 MM10.G MM10.G.t127 15.0005
+R718 MM10.G MM10.G.t126 15.0005
+R719 MM10.G.t125 MM10.G 15.0005
+R720 MM10.G.t124 MM10.G 15.0005
+R721 MM10.G MM10.G.t123 15.0005
+R722 MM10.G MM10.G.t122 15.0005
+R723 MM10.G.t121 MM10.G 15.0005
+R724 MM10.G.t120 MM10.G 15.0005
+R725 MM10.G MM10.G.t119 15.0005
+R726 MM10.G MM10.G.t118 15.0005
+R727 MM10.G.t117 MM10.G 15.0005
+R728 MM10.G.t116 MM10.G 15.0005
+R729 MM10.G MM10.G.t115 15.0005
+R730 MM10.G MM10.G.t114 15.0005
+R731 MM10.G.t113 MM10.G 15.0005
+R732 MM10.G.t112 MM10.G 15.0005
+R733 MM10.G MM10.G.t111 15.0005
+R734 MM10.G MM10.G.t110 15.0005
+R735 MM10.G.t109 MM10.G 15.0005
+R736 MM10.G.t108 MM10.G 15.0005
+R737 MM10.G MM10.G.t107 15.0005
+R738 MM10.G MM10.G.t106 15.0005
+R739 MM10.G.t105 MM10.G 15.0005
+R740 MM10.G.t104 MM10.G 15.0005
+R741 MM10.G MM10.G.t103 15.0005
+R742 MM10.G MM10.G.t102 15.0005
+R743 MM10.G.t101 MM10.G 15.0005
+R744 MM10.G.t100 MM10.G 15.0005
+R745 MM10.G MM10.G.t99 15.0005
+R746 MM10.G MM10.G.t98 15.0005
+R747 MM10.G.t97 MM10.G 15.0005
+R748 MM10.G.t96 MM10.G 15.0005
+R749 MM10.G MM10.G.t95 15.0005
+R750 MM10.G MM10.G.t94 15.0005
+R751 MM10.G.t93 MM10.G 15.0005
+R752 MM10.G.t92 MM10.G 15.0005
+R753 MM10.G MM10.G.t91 15.0005
+R754 MM10.G MM10.G.t90 15.0005
+R755 MM10.G.t89 MM10.G 15.0005
+R756 MM10.G.t88 MM10.G 15.0005
+R757 MM10.G MM10.G.t87 15.0005
+R758 MM10.G MM10.G.t86 15.0005
+R759 MM10.G.t85 MM10.G 15.0005
+R760 MM10.G.t84 MM10.G 15.0005
+R761 MM10.G MM10.G.t83 15.0005
+R762 MM10.G MM10.G.t82 15.0005
+R763 MM10.G.t81 MM10.G 15.0005
+R764 MM10.G.t80 MM10.G 15.0005
+R765 MM10.G MM10.G.t79 15.0005
+R766 MM10.G MM10.G.t78 15.0005
+R767 MM10.G.t77 MM10.G 15.0005
+R768 MM10.G.t76 MM10.G 15.0005
+R769 MM10.G MM10.G.t75 15.0005
+R770 MM10.G MM10.G.t74 15.0005
+R771 MM10.G.t73 MM10.G 15.0005
+R772 MM10.G.t72 MM10.G 15.0005
+R773 MM10.G MM10.G.t71 15.0005
+R774 MM10.G MM10.G.t70 15.0005
+R775 MM10.G.t69 MM10.G 15.0005
+R776 MM10.G.t68 MM10.G 15.0005
+R777 MM10.G MM10.G.t67 15.0005
+R778 MM10.G MM10.G.t66 15.0005
+R779 MM10.G.t65 MM10.G 15.0005
+R780 MM10.G.t64 MM10.G 15.0005
+R781 MM10.G MM10.G.t63 15.0005
+R782 MM10.G MM10.G.t62 15.0005
+R783 MM10.G.t61 MM10.G 15.0005
+R784 MM10.G.t60 MM10.G 15.0005
+R785 MM10.G MM10.G.t59 15.0005
+R786 MM10.G MM10.G.t58 15.0005
+R787 MM10.G.t57 MM10.G 15.0005
+R788 MM10.G.t56 MM10.G 15.0005
+R789 MM10.G MM10.G.t55 15.0005
+R790 MM10.G MM10.G.t54 15.0005
+R791 MM10.G.t53 MM10.G 15.0005
+R792 MM10.G.t52 MM10.G 15.0005
+R793 MM10.G MM10.G.t51 15.0005
+R794 MM10.G MM10.G.t50 15.0005
+R795 MM10.G.t175 MM10.G.n37 15.0005
+R796 MM10.G.t174 MM10.G.n37 15.0005
+R797 MM10.G.n38 MM10.G.t173 15.0005
+R798 MM10.G.n38 MM10.G.t172 15.0005
+R799 MM10.G.t171 MM10.G.n38 15.0005
+R800 MM10.G.t170 MM10.G.n38 15.0005
+R801 MM10.G.n36 MM10.G.t169 15.0005
+R802 MM10.G.n36 MM10.G.t168 15.0005
+R803 MM10.G.t167 MM10.G.n36 15.0005
+R804 MM10.G.t166 MM10.G.n36 15.0005
+R805 MM10.G.n35 MM10.G.t165 15.0005
+R806 MM10.G.n35 MM10.G.t164 15.0005
+R807 MM10.G.t163 MM10.G.n35 15.0005
+R808 MM10.G.t162 MM10.G.n35 15.0005
+R809 MM10.G.n34 MM10.G.t161 15.0005
+R810 MM10.G.n34 MM10.G.t160 15.0005
+R811 MM10.G.t159 MM10.G.n34 15.0005
+R812 MM10.G.t158 MM10.G.n34 15.0005
+R813 MM10.G.n33 MM10.G.t157 15.0005
+R814 MM10.G.n33 MM10.G.t156 15.0005
+R815 MM10.G.t155 MM10.G.n33 15.0005
+R816 MM10.G.t154 MM10.G.n33 15.0005
+R817 MM10.G.n32 MM10.G.t153 15.0005
+R818 MM10.G.n32 MM10.G.t152 15.0005
+R819 MM10.G.t151 MM10.G.n32 15.0005
+R820 MM10.G.t150 MM10.G.n32 15.0005
+R821 MM10.G.n31 MM10.G.t149 15.0005
+R822 MM10.G.n31 MM10.G.t148 15.0005
+R823 MM10.G.t147 MM10.G.n31 15.0005
+R824 MM10.G.t146 MM10.G.n31 15.0005
+R825 MM10.G.n30 MM10.G.t145 15.0005
+R826 MM10.G.n30 MM10.G.t144 15.0005
+R827 MM10.G.t143 MM10.G.n30 15.0005
+R828 MM10.G.t142 MM10.G.n30 15.0005
+R829 MM10.G.n29 MM10.G.t141 15.0005
+R830 MM10.G.n29 MM10.G.t140 15.0005
+R831 MM10.G.t139 MM10.G.n29 15.0005
+R832 MM10.G.t138 MM10.G.n29 15.0005
+R833 MM10.G.n28 MM10.G.t137 15.0005
+R834 MM10.G.n28 MM10.G.t136 15.0005
+R835 MM10.G.t135 MM10.G.n28 15.0005
+R836 MM10.G.t134 MM10.G.n28 15.0005
+R837 MM10.G.n27 MM10.G.t133 15.0005
+R838 MM10.G.n27 MM10.G.t132 15.0005
+R839 MM10.G.t131 MM10.G.n27 15.0005
+R840 MM10.G.t130 MM10.G.n27 15.0005
+R841 MM10.G.n26 MM10.G.t129 15.0005
+R842 MM10.G.n26 MM10.G.t128 15.0005
+R843 MM10.G.t127 MM10.G.n26 15.0005
+R844 MM10.G.t126 MM10.G.n26 15.0005
+R845 MM10.G.n25 MM10.G.t125 15.0005
+R846 MM10.G.n25 MM10.G.t124 15.0005
+R847 MM10.G.t123 MM10.G.n25 15.0005
+R848 MM10.G.t122 MM10.G.n25 15.0005
+R849 MM10.G.n24 MM10.G.t121 15.0005
+R850 MM10.G.n24 MM10.G.t120 15.0005
+R851 MM10.G.t119 MM10.G.n24 15.0005
+R852 MM10.G.t118 MM10.G.n24 15.0005
+R853 MM10.G.n23 MM10.G.t117 15.0005
+R854 MM10.G.n23 MM10.G.t116 15.0005
+R855 MM10.G.t115 MM10.G.n23 15.0005
+R856 MM10.G.t114 MM10.G.n23 15.0005
+R857 MM10.G.n22 MM10.G.t113 15.0005
+R858 MM10.G.n22 MM10.G.t112 15.0005
+R859 MM10.G.t111 MM10.G.n22 15.0005
+R860 MM10.G.t110 MM10.G.n22 15.0005
+R861 MM10.G.n21 MM10.G.t109 15.0005
+R862 MM10.G.n21 MM10.G.t108 15.0005
+R863 MM10.G.t107 MM10.G.n21 15.0005
+R864 MM10.G.t106 MM10.G.n21 15.0005
+R865 MM10.G.n20 MM10.G.t105 15.0005
+R866 MM10.G.n20 MM10.G.t104 15.0005
+R867 MM10.G.t103 MM10.G.n20 15.0005
+R868 MM10.G.t102 MM10.G.n20 15.0005
+R869 MM10.G.n19 MM10.G.t101 15.0005
+R870 MM10.G.n19 MM10.G.t100 15.0005
+R871 MM10.G.t99 MM10.G.n19 15.0005
+R872 MM10.G.t98 MM10.G.n19 15.0005
+R873 MM10.G.n18 MM10.G.t97 15.0005
+R874 MM10.G.n18 MM10.G.t96 15.0005
+R875 MM10.G.t95 MM10.G.n18 15.0005
+R876 MM10.G.t94 MM10.G.n18 15.0005
+R877 MM10.G.n17 MM10.G.t93 15.0005
+R878 MM10.G.n17 MM10.G.t92 15.0005
+R879 MM10.G.t91 MM10.G.n17 15.0005
+R880 MM10.G.t90 MM10.G.n17 15.0005
+R881 MM10.G.n16 MM10.G.t89 15.0005
+R882 MM10.G.n16 MM10.G.t88 15.0005
+R883 MM10.G.t87 MM10.G.n16 15.0005
+R884 MM10.G.t86 MM10.G.n16 15.0005
+R885 MM10.G.n15 MM10.G.t85 15.0005
+R886 MM10.G.n15 MM10.G.t84 15.0005
+R887 MM10.G.t83 MM10.G.n15 15.0005
+R888 MM10.G.t82 MM10.G.n15 15.0005
+R889 MM10.G.n14 MM10.G.t81 15.0005
+R890 MM10.G.n14 MM10.G.t80 15.0005
+R891 MM10.G.t79 MM10.G.n14 15.0005
+R892 MM10.G.t78 MM10.G.n14 15.0005
+R893 MM10.G.n13 MM10.G.t77 15.0005
+R894 MM10.G.n13 MM10.G.t76 15.0005
+R895 MM10.G.t75 MM10.G.n13 15.0005
+R896 MM10.G.t74 MM10.G.n13 15.0005
+R897 MM10.G.n12 MM10.G.t73 15.0005
+R898 MM10.G.n12 MM10.G.t72 15.0005
+R899 MM10.G.t71 MM10.G.n12 15.0005
+R900 MM10.G.t70 MM10.G.n12 15.0005
+R901 MM10.G.n11 MM10.G.t69 15.0005
+R902 MM10.G.n11 MM10.G.t68 15.0005
+R903 MM10.G.t67 MM10.G.n11 15.0005
+R904 MM10.G.t66 MM10.G.n11 15.0005
+R905 MM10.G.n10 MM10.G.t65 15.0005
+R906 MM10.G.n10 MM10.G.t64 15.0005
+R907 MM10.G.t63 MM10.G.n10 15.0005
+R908 MM10.G.t62 MM10.G.n10 15.0005
+R909 MM10.G.n9 MM10.G.t61 15.0005
+R910 MM10.G.n9 MM10.G.t60 15.0005
+R911 MM10.G.t59 MM10.G.n9 15.0005
+R912 MM10.G.t58 MM10.G.n9 15.0005
+R913 MM10.G.n8 MM10.G.t57 15.0005
+R914 MM10.G.n8 MM10.G.t56 15.0005
+R915 MM10.G.t55 MM10.G.n8 15.0005
+R916 MM10.G.t54 MM10.G.n8 15.0005
+R917 MM10.G.n7 MM10.G.t53 15.0005
+R918 MM10.G.n7 MM10.G.t52 15.0005
+R919 MM10.G.t51 MM10.G.n7 15.0005
+R920 MM10.G.t50 MM10.G.n7 15.0005
+R921 MM10.G.n0 MM10.G.n38 14.6941
+R922 MM10.G.n63 MM10.G 2.03716
+R923 MM10.G.n63 MM10.G 2.01607
+R924 MM10.G.n63 MM10.G 2.01607
+R925 MM10.G MM10.G.n62 2.01607
+R926 MM10.G.n62 MM10.G 4.40112
+R927 MM10.G.n62 MM10.G 2.01607
+R928 MM10.G MM10.G.n62 4.40112
+R929 MM10.G MM10.G.n62 2.01607
+R930 MM10.G.n61 MM10.G 2.01607
+R931 MM10.G.n61 MM10.G 2.01607
+R932 MM10.G.n61 MM10.G 2.01607
+R933 MM10.G MM10.G.n61 2.01607
+R934 MM10.G MM10.G.n60 2.01607
+R935 MM10.G.n60 MM10.G 2.01607
+R936 MM10.G MM10.G.n60 2.01607
+R937 MM10.G MM10.G.n60 2.01607
+R938 MM10.G MM10.G.n59 2.01607
+R939 MM10.G.n59 MM10.G 2.01607
+R940 MM10.G MM10.G.n59 2.01607
+R941 MM10.G MM10.G.n59 2.01607
+R942 MM10.G MM10.G.n58 2.01607
+R943 MM10.G.n58 MM10.G 2.01607
+R944 MM10.G.n58 MM10.G 2.01607
+R945 MM10.G MM10.G.n58 2.01607
+R946 MM10.G.n56 MM10.G 2.01607
+R947 MM10.G.n56 MM10.G 2.01607
+R948 MM10.G.n56 MM10.G 2.01607
+R949 MM10.G MM10.G.n56 2.01607
+R950 MM10.G MM10.G.n57 2.01607
+R951 MM10.G.n57 MM10.G 2.01607
+R952 MM10.G.n57 MM10.G 2.01607
+R953 MM10.G MM10.G.n57 2.01607
+R954 MM10.G.n1 MM10.G 2.01607
+R955 MM10.G.n1 MM10.G.n65 1.93546
+R956 MM10.G.n65 MM10.G 0.532714
+R957 MM10.G.n64 MM10.G.n1 2.01607
+R958 MM10.G MM10.G.n1 4.40112
+R959 MM10.G.n2 MM10.G.n4 1.0735
+R960 MM10.G MM10.G.n4 0.592555
+R961 MM10.G MM10.G.n2 4.40112
+R962 MM10.G.n2 MM10.G.n6 1.16865
+R963 MM10.G.n6 MM10.G 0.314113
+R964 MM10.G MM10.G.n5 0.684624
+R965 MM10.G.n5 MM10.G.n2 1.16865
+R966 MM10.G.n2 MM10.G 4.40112
+R967 MM10.G.n2 MM10.G.n3 1.11018
+R968 MM10.G.n67 MM10.G.n66 2.01607
+R969 MM10.G MM10.G.n66 2.01607
+R970 MM10.G.n69 MM10.G.t17 6.34937
+R971 MM10.G.n71 MM10.G.t15 6.34937
+R972 MM10.G.n72 MM10.G.t33 6.34937
+R973 MM10.G.n76 MM10.G.t49 6.34937
+R974 MM10.G.n78 MM10.G.t32 6.34919
+R975 MM10.G.n74 MM10.G.t0 6.34919
+R976 MM10.G.n75 MM10.G.t48 6.34919
+R977 MM10.G.n77 MM10.G.t176 6.34919
+R978 MM10.G.n54 MM10.G.t16 5.78431
+R979 MM10.G.n55 MM10.G 4.96954
+R980 MM10.G.n2 MM10.G.n55 4.92355
+R981 MM10.G.n0 MM10.G 4.84739
+R982 MM10.G.n55 MM10.G 4.83227
+R983 MM10.G.n55 MM10.G 4.83226
+R984 MM10.G.n55 MM10.G 4.83225
+R985 MM10.G.n55 MM10.G 4.83225
+R986 MM10.G.n55 MM10.G 4.83224
+R987 MM10.G.n55 MM10.G 4.83222
+R988 MM10.G.n55 MM10.G 4.83201
+R989 MM10.G.n54 MM10.G 4.8174
+R990 MM10.G.n50 MM10.G 4.8174
+R991 MM10.G.n53 MM10.G 4.81739
+R992 MM10.G.n52 MM10.G 4.81739
+R993 MM10.G.n51 MM10.G 4.81739
+R994 MM10.G.n49 MM10.G 4.81739
+R995 MM10.G.n52 MM10.G 4.81738
+R996 MM10.G.n51 MM10.G 4.81738
+R997 MM10.G.n51 MM10.G 4.81737
+R998 MM10.G.n0 MM10.G 4.81737
+R999 MM10.G.n54 MM10.G 4.81737
+R1000 MM10.G.n49 MM10.G 4.81736
+R1001 MM10.G.n0 MM10.G 4.81735
+R1002 MM10.G.n50 MM10.G 4.81735
+R1003 MM10.G.n48 MM10.G 4.81735
+R1004 MM10.G.n0 MM10.G 4.81735
+R1005 MM10.G.n0 MM10.G 4.81734
+R1006 MM10.G.n0 MM10.G 4.81734
+R1007 MM10.G.n48 MM10.G 4.81734
+R1008 MM10.G.n48 MM10.G 4.81734
+R1009 MM10.G.n51 MM10.G 4.81733
+R1010 MM10.G.n48 MM10.G 4.81733
+R1011 MM10.G.n50 MM10.G 4.81732
+R1012 MM10.G.n50 MM10.G 4.81731
+R1013 MM10.G.n0 MM10.G 4.8173
+R1014 MM10.G.n52 MM10.G 4.81729
+R1015 MM10.G.n50 MM10.G 4.81729
+R1016 MM10.G.n53 MM10.G 4.81729
+R1017 MM10.G.n52 MM10.G 4.81728
+R1018 MM10.G.n52 MM10.G 4.81728
+R1019 MM10.G.n0 MM10.G 4.81728
+R1020 MM10.G.n49 MM10.G 4.81727
+R1021 MM10.G.n53 MM10.G 4.81727
+R1022 MM10.G.n49 MM10.G 4.81696
+R1023 MM10.G.n51 MM10.G 4.81692
+R1024 MM10.G.n48 MM10.G 4.81688
+R1025 MM10.G.n54 MM10.G 4.81685
+R1026 MM10.G.n48 MM10.G 4.81663
+R1027 MM10.G.n54 MM10.G 4.81663
+R1028 MM10.G.n49 MM10.G 4.81663
+R1029 MM10.G.n0 MM10.G 4.81663
+R1030 MM10.G.n0 MM10.G 4.81662
+R1031 MM10.G.n51 MM10.G 4.81662
+R1032 MM10.G.n54 MM10.G 4.81662
+R1033 MM10.G.n50 MM10.G 4.81662
+R1034 MM10.G.n52 MM10.G 4.81661
+R1035 MM10.G.n48 MM10.G 4.8166
+R1036 MM10.G.n51 MM10.G 4.8166
+R1037 MM10.G.n53 MM10.G 4.8166
+R1038 MM10.G.n50 MM10.G 4.81659
+R1039 MM10.G.n53 MM10.G 4.81659
+R1040 MM10.G.n53 MM10.G 4.81658
+R1041 MM10.G.n54 MM10.G 4.81658
+R1042 MM10.G.n52 MM10.G 4.81658
+R1043 MM10.G.n50 MM10.G 4.81657
+R1044 MM10.G.n49 MM10.G 4.81657
+R1045 MM10.G.n51 MM10.G 4.81656
+R1046 MM10.G.n53 MM10.G 4.81656
+R1047 MM10.G.n53 MM10.G 4.81656
+R1048 MM10.G.n48 MM10.G 4.81656
+R1049 MM10.G.n49 MM10.G 4.81655
+R1050 MM10.G.n49 MM10.G 4.81654
+R1051 MM10.G.n52 MM10.G 4.81653
+R1052 MM10.G MM10.G.n66 4.48685
+R1053 MM10.G.n78 MM10.G.n68 2.7132
+R1054 MM10.G.n74 MM10.G.n70 2.7132
+R1055 MM10.G.n75 MM10.G.n73 2.7132
+R1056 MM10.G.n37 MM10.G.n77 2.7132
+R1057 MM10.G.n45 MM10.G.n69 2.71284
+R1058 MM10.G.n42 MM10.G.n71 2.71284
+R1059 MM10.G.n39 MM10.G.n72 2.71284
+R1060 MM10.G.n7 MM10.G.n76 2.71284
+R1061 MM10.G.n46 MM10.G.n45 2.45193
+R1062 MM10.G.n43 MM10.G.n42 2.45193
+R1063 MM10.G.n40 MM10.G.n39 2.45193
+R1064 MM10.G.n8 MM10.G.n7 2.45193
+R1065 MM10.G.n4 MM10.G 1.18411
+R1066 MM10.G MM10.G.n78 2.30462
+R1067 MM10.G MM10.G.n74 2.30462
+R1068 MM10.G MM10.G.n75 2.30462
+R1069 MM10.G.n77 MM10.G 2.30462
+R1070 MM10.G MM10.G.n69 2.30427
+R1071 MM10.G MM10.G.n71 2.30427
+R1072 MM10.G MM10.G.n72 2.30427
+R1073 MM10.G.n76 MM10.G 2.30427
+R1074 MM10.G.n48 MM10.G.n0 2.1609
+R1075 MM10.G.n2 MM10.G.n1 1.93298
+R1076 MM10.G.n66 MM10.G.n2 1.6989
+R1077 MM10.G.n47 MM10.G.n46 1.63479
+R1078 MM10.G.n44 MM10.G.n43 1.63479
+R1079 MM10.G.n41 MM10.G.n40 1.63479
+R1080 MM10.G.n38 MM10.G.n36 1.63479
+R1081 MM10.G.n36 MM10.G.n35 1.63479
+R1082 MM10.G.n35 MM10.G.n34 1.63479
+R1083 MM10.G.n34 MM10.G.n33 1.63479
+R1084 MM10.G.n33 MM10.G.n32 1.63479
+R1085 MM10.G.n32 MM10.G.n31 1.63479
+R1086 MM10.G.n31 MM10.G.n30 1.63479
+R1087 MM10.G.n30 MM10.G.n29 1.63479
+R1088 MM10.G.n29 MM10.G.n28 1.63479
+R1089 MM10.G.n28 MM10.G.n27 1.63479
+R1090 MM10.G.n27 MM10.G.n26 1.63479
+R1091 MM10.G.n26 MM10.G.n25 1.63479
+R1092 MM10.G.n25 MM10.G.n24 1.63479
+R1093 MM10.G.n24 MM10.G.n23 1.63479
+R1094 MM10.G.n23 MM10.G.n22 1.63479
+R1095 MM10.G.n22 MM10.G.n21 1.63479
+R1096 MM10.G.n21 MM10.G.n20 1.63479
+R1097 MM10.G.n20 MM10.G.n19 1.63479
+R1098 MM10.G.n19 MM10.G.n18 1.63479
+R1099 MM10.G.n18 MM10.G.n17 1.63479
+R1100 MM10.G.n17 MM10.G.n16 1.63479
+R1101 MM10.G.n16 MM10.G.n15 1.63479
+R1102 MM10.G.n15 MM10.G.n14 1.63479
+R1103 MM10.G.n14 MM10.G.n13 1.63479
+R1104 MM10.G.n13 MM10.G.n12 1.63479
+R1105 MM10.G.n12 MM10.G.n11 1.63479
+R1106 MM10.G.n11 MM10.G.n10 1.63479
+R1107 MM10.G.n10 MM10.G.n9 1.63479
+R1108 MM10.G.n9 MM10.G.n8 1.63479
+R1109 MM10.G.n55 MM10.G.n54 1.45162
+R1110 MM10.G MM10.G.n3 0.769869
+R1111 MM10.G.n1 MM10.G.n57 1.24658
+R1112 MM10.G.n38 MM10.G.n37 1.22621
+R1113 MM10.G.n73 MM10.G.n41 1.22621
+R1114 MM10.G.n70 MM10.G.n44 1.22621
+R1115 MM10.G.n68 MM10.G.n47 1.22621
+R1116 MM10.G.n65 MM10.G 0.532714
+R1117 MM10.G.n67 MM10.G 1.18055
+R1118 MM10.G.n67 MM10.G 1.18055
+R1119 MM10.G MM10.G.n6 0.684624
+R1120 MM10.G MM10.G.n5 0.314113
+R1121 MM10.G.n64 MM10.G 1.18055
+R1122 MM10.G.n64 MM10.G 1.18055
+R1123 MM10.G MM10.G.n3 0.871286
+R1124 MM10.G.n54 MM10.G.n53 1.16914
+R1125 MM10.G.n53 MM10.G.n52 1.16914
+R1126 MM10.G.n52 MM10.G.n51 1.16914
+R1127 MM10.G.n51 MM10.G.n50 1.16914
+R1128 MM10.G.n50 MM10.G.n49 1.16914
+R1129 MM10.G.n49 MM10.G.n48 1.16914
+R1130 MM10.G.n61 MM10.G.n62 1.09874
+R1131 MM10.G.n60 MM10.G.n61 1.09874
+R1132 MM10.G.n59 MM10.G.n60 1.09874
+R1133 MM10.G.n58 MM10.G.n59 1.09874
+R1134 MM10.G.n56 MM10.G.n58 1.09874
+R1135 MM10.G.n57 MM10.G.n56 1.09874
+R1136 MM10.G.n62 MM10.G.n63 1.0301
+C0 CC2.c2 a_944_2288# 0.05279f
+C1 XOUT MM10.G 23.0981f
+C2 SG_AVDD AOUT 6.53365f
+C3 MM15.D0 MM10.G 47.2856f
+C4 MM10.G AOUT 3.13333f
+C5 EG_IBIAS MM15.D0 5.39177f
+C6 EG_IBIAS AOUT 0.0546f
+C7 EG_AVDD SG_AVDD 0.20714f
+C8 XOUT CC1.c2 2.68345f
+C9 EG_AVDD MM10.G 0.13316p
+C10 SG_AVDD XIN 0.77271f
+C11 CC1.c2 a_378_2188# 0.0682f
+C12 MM10.G XIN 1.44227f
+C13 EG_AVDD EG_IBIAS 0.14928f
+C14 EG_IBIAS XIN 0.01634f
+C15 EG_AVDD CC1.c2 10.7267f
+C16 CC1.c2 XIN 0.53426f
+C17 MM10.G CC2.c2 33.2055f
+C18 XOUT a_378_2188# 0.06393f
+C19 EG_IBIAS CC2.c2 0.0107f
+C20 CC2.c2 CC1.c2 8.36942f
+C21 XOUT EG_AVDD 46.0441f
+C22 XOUT XIN 3.03934f
+C23 XIN a_378_2188# 0.06846f
+C24 XIN AOUT 1.14189f
+C25 a_944_2288# CC1.c2 0.09603f
+C26 EG_AVDD XIN 1.42204f
+C27 XOUT CC2.c2 1.13973f
+C28 MM15.D0 CC2.c2 26.5884f
+C29 SG_AVDD MM10.G 15.4655f
+C30 XOUT a_944_2288# 0.1631f
+C31 a_944_2288# a_378_2188# 0.02498f
+C32 EG_AVDD CC2.c2 2.55746f
+C33 EG_IBIAS SG_AVDD 0.08917f
+C34 CC2.c2 XIN 2.80915p
+C35 EG_IBIAS MM10.G 0.17831f
+C36 EG_AVDD a_944_2288# 0.0374f
+C37 MM10.G CC1.c2 5.45112f
+C38 a_944_2288# XIN 0.02496f
+C39 AOUT VSS 24.01033f
+C40 XIN VSS 2.09196p
+C41 XOUT VSS 53.15069f
+C42 SG_AVDD VSS 2.88203p
+C43 EG_AVDD VSS 2.87696p
+C44 MM15.D0 VSS 1.59233p
+C45 MM10.G VSS 1.61145p
+C46 CC1.c2 VSS 31.63875f
+C47 MM10.G.n0 VSS 6.69521f
+C48 MM10.G.n1 VSS 2.9274f
+C49 MM10.G.n2 VSS 6.80981f
+C50 MM10.G.n7 VSS 0.29083f
+C51 MM10.G.n8 VSS 0.14335f
+C52 MM10.G.n9 VSS 0.14335f
+C53 MM10.G.n10 VSS 0.14335f
+C54 MM10.G.n11 VSS 0.14335f
+C55 MM10.G.n12 VSS 0.14335f
+C56 MM10.G.n13 VSS 0.14335f
+C57 MM10.G.n14 VSS 0.14335f
+C58 MM10.G.n15 VSS 0.14335f
+C59 MM10.G.n16 VSS 0.14335f
+C60 MM10.G.n17 VSS 0.14335f
+C61 MM10.G.n18 VSS 0.14335f
+C62 MM10.G.n19 VSS 0.14335f
+C63 MM10.G.n20 VSS 0.14335f
+C64 MM10.G.n21 VSS 0.14335f
+C65 MM10.G.n22 VSS 0.14335f
+C66 MM10.G.n23 VSS 0.14335f
+C67 MM10.G.n24 VSS 0.14335f
+C68 MM10.G.n25 VSS 0.14335f
+C69 MM10.G.n26 VSS 0.14335f
+C70 MM10.G.n27 VSS 0.14335f
+C71 MM10.G.n28 VSS 0.14335f
+C72 MM10.G.n29 VSS 0.14335f
+C73 MM10.G.n30 VSS 0.14335f
+C74 MM10.G.n31 VSS 0.14335f
+C75 MM10.G.n32 VSS 0.14335f
+C76 MM10.G.n33 VSS 0.14335f
+C77 MM10.G.n34 VSS 0.14335f
+C78 MM10.G.n35 VSS 0.14335f
+C79 MM10.G.n36 VSS 0.14335f
+C80 MM10.G.n37 VSS 0.21915f
+C81 MM10.G.n38 VSS 1.19804f
+C82 MM10.G.n39 VSS 0.29083f
+C83 MM10.G.n40 VSS 0.14335f
+C84 MM10.G.n41 VSS 0.14335f
+C85 MM10.G.n42 VSS 0.29083f
+C86 MM10.G.n43 VSS 0.14335f
+C87 MM10.G.n44 VSS 0.14335f
+C88 MM10.G.n45 VSS 0.29083f
+C89 MM10.G.n46 VSS 0.14335f
+C90 MM10.G.n47 VSS 0.14335f
+C91 MM10.G.n48 VSS 2.98147f
+C92 MM10.G.n49 VSS 2.98145f
+C93 MM10.G.n50 VSS 2.98149f
+C94 MM10.G.n51 VSS 2.98148f
+C95 MM10.G.n52 VSS 2.98149f
+C96 MM10.G.n53 VSS 2.98144f
+C97 MM10.G.n54 VSS 3.11124f
+C98 MM10.G.n55 VSS 4.54852f
+C99 MM10.G.n56 VSS 2.73049f
+C100 MM10.G.n57 VSS 2.73049f
+C101 MM10.G.n58 VSS 2.73049f
+C102 MM10.G.n59 VSS 2.73049f
+C103 MM10.G.n60 VSS 2.73049f
+C104 MM10.G.n61 VSS 2.73049f
+C105 MM10.G.n62 VSS 2.73049f
+C106 MM10.G.n63 VSS 2.28939f
+C107 MM10.G.n66 VSS 1.8818f
+C108 MM10.G.n68 VSS 0.21915f
+C109 MM10.G.n69 VSS 0.02616f
+C110 MM10.G.n70 VSS 0.21915f
+C111 MM10.G.n71 VSS 0.02616f
+C112 MM10.G.n72 VSS 0.02616f
+C113 MM10.G.n73 VSS 0.21915f
+C114 MM10.G.n74 VSS 0.02615f
+C115 MM10.G.t16 VSS 0.88579f
+C116 MM10.G.n75 VSS 0.02615f
+C117 MM10.G.n76 VSS 0.02616f
+C118 MM10.G.n77 VSS 0.02615f
+C119 MM10.G.n78 VSS 0.02615f
+C120 MM15.D0.n0 VSS 4.92373f
+C121 MM15.D0.n1 VSS 2.23313f
+C122 MM15.D0.n2 VSS 2.361f
+C123 MM15.D0.n3 VSS 2.36101f
+C124 MM15.D0.n4 VSS 2.361f
+C125 MM15.D0.n5 VSS 2.36104f
+C126 MM15.D0.n6 VSS 2.36101f
+C127 MM15.D0.n7 VSS 2.36101f
+C128 MM15.D0.n8 VSS 0.79997f
+C129 MM15.D0.t0 VSS 0.7015f
+C130 MM15.D0.t1 VSS 0.51871f
+C131 VSS.t26 VSS 8.58455f
+C132 VSS.t1 VSS 9.8234f
+C133 VSS.t24 VSS 1.72052f
+C134 EG_AVDD.n0 VSS 3.4584f
+C135 EG_AVDD.n1 VSS 0.3979f
+C136 EG_AVDD.n2 VSS 0.03044f
+C137 EG_AVDD.n3 VSS 0.77303f
+C138 EG_AVDD.n4 VSS 0.0719f
+C139 EG_AVDD.n6 VSS 0.01556f
+C140 EG_AVDD.n7 VSS 0.70198f
+C141 EG_AVDD.n8 VSS 0.14529f
+C142 EG_AVDD.n9 VSS 0.02487f
+C143 EG_AVDD.n10 VSS 0.01556f
+C144 EG_AVDD.n11 VSS 0.62277f
+C145 EG_AVDD.n12 VSS 0.06677f
+C146 EG_AVDD.n13 VSS 0.02591f
+C147 EG_AVDD.t0 VSS 58.2786f
+C148 EG_AVDD.t22 VSS 6.69428f
+C149 EG_AVDD.n14 VSS 0.01556f
+C150 EG_AVDD.t136 VSS 0.48257f
+C151 EG_AVDD.n17 VSS 0.10407f
+C152 EG_AVDD.t103 VSS 0.80732f
+C153 EG_AVDD.n18 VSS 0.08795f
+C154 EG_AVDD.t57 VSS 0.80732f
+C155 EG_AVDD.n19 VSS 0.08795f
+C156 EG_AVDD.t4 VSS 0.80733f
+C157 EG_AVDD.n20 VSS 0.08795f
+C158 EG_AVDD.t65 VSS 0.80732f
+C159 EG_AVDD.n21 VSS 0.08795f
+C160 EG_AVDD.t84 VSS 0.80732f
+C161 EG_AVDD.n22 VSS 0.08795f
+C162 EG_AVDD.t77 VSS 0.80732f
+C163 EG_AVDD.n23 VSS 0.08795f
+C164 EG_AVDD.t58 VSS 0.80732f
+C165 EG_AVDD.n24 VSS 0.08795f
+C166 EG_AVDD.t152 VSS 0.48257f
+C167 EG_AVDD.n25 VSS 0.06954f
+C168 EG_AVDD.n26 VSS 0.02254f
+C169 EG_AVDD.n27 VSS 0.04006f
+C170 EG_AVDD.n28 VSS 0.02025f
+C171 EG_AVDD.n29 VSS 0.04006f
+C172 EG_AVDD.t139 VSS 0.48258f
+C173 EG_AVDD.n30 VSS 0.06954f
+C174 EG_AVDD.t100 VSS 0.80733f
+C175 EG_AVDD.n31 VSS 0.08794f
+C176 EG_AVDD.t153 VSS 0.80732f
+C177 EG_AVDD.n32 VSS 0.08795f
+C178 EG_AVDD.t48 VSS 0.80733f
+C179 EG_AVDD.n33 VSS 0.08795f
+C180 EG_AVDD.t19 VSS 0.80733f
+C181 EG_AVDD.n34 VSS 0.08794f
+C182 EG_AVDD.t146 VSS 0.80732f
+C183 EG_AVDD.n35 VSS 0.08795f
+C184 EG_AVDD.t68 VSS 0.80732f
+C185 EG_AVDD.n36 VSS 69.91351f
+C186 EG_AVDD.t18 VSS 0.80732f
+C187 EG_AVDD.n37 VSS 37.0544f
+C188 EG_AVDD.t16 VSS 0.48257f
+C189 EG_AVDD.n38 VSS 0.06954f
+C190 EG_AVDD.n39 VSS 0.02025f
+C191 EG_AVDD.n40 VSS 0.04006f
+C192 EG_AVDD.t12 VSS 7.16218f
+C193 EG_AVDD.n41 VSS 1.03438f
+C194 EG_AVDD.t9 VSS 7.16218f
+C195 EG_AVDD.t10 VSS 7.16218f
+C196 EG_AVDD.t1 VSS 7.16218f
+C197 EG_AVDD.t6 VSS 7.16218f
+C198 EG_AVDD.t2 VSS 7.16218f
+C199 EG_AVDD.t88 VSS 0.80732f
+C200 EG_AVDD.t80 VSS 0.80732f
+C201 EG_AVDD.n42 VSS 0.08795f
+C202 EG_AVDD.t106 VSS 0.80732f
+C203 EG_AVDD.n43 VSS 0.08795f
+C204 EG_AVDD.t78 VSS 0.80732f
+C205 EG_AVDD.n44 VSS 0.08795f
+C206 EG_AVDD.t83 VSS 0.48257f
+C207 EG_AVDD.n45 VSS 0.06955f
+C208 EG_AVDD.n46 VSS 0.04006f
+C209 EG_AVDD.n47 VSS 0.02498f
+C210 EG_AVDD.n48 VSS 0.0406f
+C211 EG_AVDD.n49 VSS 0.06589f
+C212 EG_AVDD.n50 VSS 0.03995f
+C213 EG_AVDD.n51 VSS 0.0386f
+C214 EG_AVDD.n52 VSS 0.03666f
+C215 EG_AVDD.n53 VSS 0.05745f
+C216 XIN.n0 VSS 2.15836f
+C217 XIN.n1 VSS 0.79144p
+C218 XIN.n3 VSS 0.73917f
+C219 XIN.n4 VSS 1.84859f
+C220 XIN.n5 VSS 0.27382f
+C221 XIN.n6 VSS 0.37411f
+.ends
+

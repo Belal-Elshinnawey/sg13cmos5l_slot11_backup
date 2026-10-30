@@ -1,0 +1,83 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/sg13cmos5l_ht_ip__hsxo_cpz2/schematic/xschem/sg13cmos5l_ht_ip__hsxo_cpz2.sch
+.subckt sg13cmos5l_ht_ip__hsxo_cpz2 XOUT XIN ENA STDBY DOUT AVDD DVDD VSS IBIAS
+*.PININFO DVDD:B VSS:B AVDD:B ENA:I STDBY:I XIN:I XOUT:O DOUT:O IBIAS:I
+x1 XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT VSS vittoz_pierce_osc
+x2 SG_DVDD AIN DOUT VSS schmitt_trigger_pullmid
+x3 DOUT SG_AVDD DVDD EG_IBIAS SG_DVDD AVDD IBIAS EG_AVDD ENA STDBY VSS power_gating
+.ends
+
+* expanding   symbol:  vittoz_pierce_osc.sym # of pins=7
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/schematic/xschem/vittoz_pierce_osc.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/vittoz_pierce_osc/schematic/xschem/vittoz_pierce_osc.sch
+.subckt vittoz_pierce_osc XOUT SG_AVDD EG_AVDD XIN EG_IBIAS AOUT VSS
+*.PININFO EG_AVDD:B VSS:B SG_AVDD:B XIN:I EG_IBIAS:I XOUT:O AOUT:O
+XR1 net1 net2 VSS rhigh w=0.5e-6 l=1.342e-5 m=1 b=0 mm_ok=1
+XR2 XOUT XIN VSS rhigh w=0.5e-6 l=5.305e-6 m=1 b=0 mm_ok=1
+XM11 PBIAS PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM10 net1 PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM9 XOUT PBIAS EG_AVDD EG_AVDD sg13_hv_pmos w=819.2u l=0.4u ng=128 m=1 mm_ok=1
+XM14 PBIAS net2 net3 VSS sg13_hv_nmos w=921.6u l=0.45u ng=128 m=1 mm_ok=1
+XM12 net1 net2 VSS VSS sg13_hv_nmos w=115.2u l=0.45u ng=16 m=1 mm_ok=1
+XM13 XOUT XIN VSS VSS sg13_hv_nmos w=28.8u l=0.45u ng=32 m=1 mm_ok=1
+XM15 net3 EG_IBIAS VSS VSS sg13_hv_nmos w=115.2u l=0.45u ng=16 m=1 mm_ok=1
+XM16 EG_IBIAS EG_IBIAS VSS VSS sg13_hv_nmos w=7.2u l=0.45u ng=4 m=1 mm_ok=1
+XM18 AOUT PBIAS SG_AVDD SG_AVDD sg13_hv_pmos w=102.4u l=0.4u ng=16 m=1 mm_ok=1
+XM17 AOUT XIN VSS VSS sg13_hv_nmos w=3.6u l=0.45u ng=4 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  schmitt_trigger_pullmid.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/schmitt_trigger_pullmid/schematic/xschem/schmitt_trigger_pullmid.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/schmitt_trigger_pullmid/schematic/xschem/schmitt_trigger_pullmid.sch
+.subckt schmitt_trigger_pullmid SG_DVDD AIN DOUT VSS
+*.PININFO SG_DVDD:B VSS:B AIN:I DOUT:O
+XR1 SG_DVDD MID VSS rhigh w=0.5e-6 l=3.412e-05 m=1 b=0 mm_ok=1
+XR2 MID VSS VSS rhigh w=0.5e-6 l=3.412e-05 m=1 b=0 mm_ok=1
+XR3 AIN MID VSS rhigh w=0.5e-6 l=2.7172e-04 m=1 b=0 mm_ok=1
+XM4 DOUT AIN DLT VSS sg13_lv_nmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+XM5 DHT AIN SG_DVDD SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+XM3 DOUT AIN DHT SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+XM7 VSS DOUT DHT SG_DVDD sg13_lv_pmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+XM6 DLT AIN VSS VSS sg13_lv_nmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+XM8 SG_DVDD DOUT DLT VSS sg13_lv_nmos w=1u l=0.3u ng=1 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  power_gating.sym # of pins=11
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/power_gating/schematic/xschem/power_gating.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/power_gating/schematic/xschem/power_gating.sch
+.subckt power_gating DOUT SG_AVDD DVDD EG_IBIAS SG_DVDD AVDD IBIAS EG_AVDD ENA STDBY VSS
+*.PININFO DVDD:B VSS:B AVDD:B ENA:I STDBY:I DOUT:O IBIAS:I EG_AVDD:B SG_AVDD:B SG_DVDD:B EG_IBIAS:O
+x3 AVDD ENA_B DVDD ENA ENA_H VSS ENA_BH level_shifter
+x4 AVDD STDBY_B DVDD STDBY STDBY_H VSS STDBY_BH level_shifter
+XM2 EG_IBIAS ENA_BH IBIAS AVDD sg13_hv_pmos w=25.6u l=0.4u ng=8 m=1 mm_ok=1
+XM1 SG_AVDD STDBY_H AVDD AVDD sg13_hv_pmos w=25.6u l=0.4u ng=8 m=1 mm_ok=1
+XM25 EG_AVDD ENA_BH AVDD AVDD sg13_hv_pmos w=25.6u l=0.4u ng=8 m=1 mm_ok=1
+XM9 SG_AVDD STDBY_H VSS VSS sg13_hv_nmos w=28.8u l=0.45u ng=8 m=1 mm_ok=1
+XM21 EG_AVDD ENA_BH VSS VSS sg13_hv_nmos w=28.8u l=0.45u ng=8 m=1 mm_ok=1
+XM27 SG_DVDD STDBY DVDD DVDD sg13_lv_pmos w=27.76u l=0.13u ng=8 m=1 mm_ok=1
+XM18 SG_DVDD STDBY VSS VSS sg13_lv_nmos w=27.76u l=0.13u ng=8 m=1 mm_ok=1
+XM4 DOUT STDBY VSS VSS sg13_lv_nmos w=27.76u l=0.13u ng=8 m=1 mm_ok=1
+XM3 VSS ENA_H IBIAS AVDD sg13_hv_pmos w=25.6u l=0.4u ng=8 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  level_shifter.sym # of pins=7
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/schematic/xschem/level_shifter.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/level_shifter/schematic/xschem/level_shifter.sch
+.subckt level_shifter AVDD LO_B DVDD LO HI VSS HI_B
+*.PININFO DVDD:B VSS:B AVDD:B LO:I LO_B:O HI:O HI_B:O
+XM1 IM_B IM AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM2 IM_B LO_BB VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM3 IM IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM4 IM LO_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM5 LO_B LO DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM6 LO_B LO VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM7 LO_BB LO_B DVDD DVDD sg13_lv_pmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM8 LO_BB LO_B VSS VSS sg13_lv_nmos w=0.87u l=0.13u ng=1 m=1 mm_ok=1
+XM9 HI IM_B AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM10 HI IM_B VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+XM11 HI_B HI AVDD AVDD sg13_hv_pmos w=0.8u l=0.4u ng=1 m=1 mm_ok=1
+XM12 HI_B HI VSS VSS sg13_hv_nmos w=0.9u l=0.45u ng=1 m=1 mm_ok=1
+.ends
+
