@@ -4,7 +4,7 @@
 MAKEFILE_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 # Variables
-TOP = sg13cmos5l_chipalooza_analog_project
+TOP = slot_3
 
 .DEFAULT_GOAL := help
 
@@ -123,17 +123,7 @@ sim-all: ## Simulate the macro
 
 
 # Build Targets
-build-counter: ## Lint, build, verify and simulate the counter macro
-	@$(MAKE) -C $(MACROS_DIR)/counter all
-.PHONY: build-counter
-
-build-inverter: ## Verify, build and simulate the inverter macro
-	@$(MAKE) -C $(MACROS_DIR)/inverter all
-.PHONY: build-inverter
-
-build-macros: ## Verify, build and simulate all macros (counter and inverter)
-	$(MAKE) build-counter
-	$(MAKE) build-inverter
+build-macros: ## Verify, build and simulate all macros
 #	ToDo: further macros
 .PHONY: build-macros
 
@@ -319,7 +309,8 @@ symbol-pex: ## Build the Xschem PEX symbol <CELL>_pex.sym from <CELL>.sym (usage
 			echo "ERROR: $(XSCHEM_SCH_DIR)/$(CELL).sym declares neither type=subcircuit nor type=primitive!"; \
 			exit 1; \
 		fi; \
-		echo "Wrote $(XSCHEM_SCH_DIR)/$(CELL)_pex.sym (copy of $(CELL).sym with type=primitive)."; \
+		sed -i -E 's/\[([0-9]+):([0-9]+)\]/[\1..\2]/g' $(XSCHEM_SCH_DIR)/$(CELL)_pex.sym; \
+		echo "Wrote $(XSCHEM_SCH_DIR)/$(CELL)_pex.sym (copy of $(CELL).sym with type=primitive, bus ranges converted to sak-pin-reorder.py's [A..B] syntax)."; \
 	fi
 .PHONY: symbol-pex
 
@@ -418,17 +409,7 @@ clean: ## Delete all generated files and folders of the TOP cell (final, netlist
 	rm -rf $(SCRIPTS_DIR)/__pycache__
 .PHONY: clean
 
-clean-counter: ## Delete all generated files and folders of the counter macro
-	@$(MAKE) -C $(MACROS_DIR)/counter clean
-.PHONY: clean-counter
-
-clean-inverter: ## Delete all generated files and folders of the inverter macro
-	@$(MAKE) -C $(MACROS_DIR)/inverter clean
-.PHONY: clean-inverter
-
-clean-macros: ## Delete all generated files and folders of all macros (counter and inverter)
-	$(MAKE) clean-counter
-	$(MAKE) clean-inverter
+clean-macros: ## Delete all generated files and folders of all macros
 #	ToDo: further macros
 .PHONY: clean-macros
 

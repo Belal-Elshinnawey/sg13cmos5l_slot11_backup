@@ -25,7 +25,3 @@ sim_build/
 /macros/counter/testbenches/xschem/simulations
 /macros/counter/flow/final
 /macros/counter/fpga/*/build/
-/macros/*/verification/cace/_runs
-/macros/*/verification/cace/_docs
-/macros/*/verification/cace/netlist
-/macros/*/verification/cace/templates/simulations
