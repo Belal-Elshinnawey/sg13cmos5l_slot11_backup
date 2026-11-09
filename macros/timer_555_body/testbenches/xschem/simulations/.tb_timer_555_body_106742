@@ -1,0 +1,42 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/timer_555_body/testbenches/xschem/tb_timer_555_body.sch
+**.subckt tb_timer_555_body
+v_avdd ?1 avdd_net ?1 GND  dc 3.3
+**** end_element
+v_avdd1v2 ?1 avdd1v2_net ?1 GND  dc 1.2
+**** end_element
+i_bias0 ?1 GND ?1 ibias0_net  dc 4e-6
+**** end_element
+i_bias1 ?1 GND ?1 ibias1_net  dc 4e-6
+**** end_element
+R1 ?1 avdd_net ?1 cap_net  10k m=1
+**** end_element
+C1 ?1 cap_net ?1 GND  1n m=1
+**** end_element
+x1 ?1 cap_net ?1 ff_q_net ?1 net1 ?1 cap_net ?1 ibias0_net ?1 cap_net ?1 avdd_net ?1 ff_qn_net ?1 avdd1v2_net ?1 GND ?1 ibias1_net  timer_555_body
+**** end_element
+**** begin user architecture code
+
+
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerRES.lib res_typ
+.include $PDK_ROOT/$PDK/libs.ref/sg13cmos5l_stdcell/spice/sg13cmos5l_stdcell.spice
+
+
+
+
+.op
+.tran 10n 200u
+.control
+  run
+  plot v(cap_net) v(ff_q_net) v(ff_qn_net)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  timer_555_body.sym # of pins=11
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/timer_555_body/schematic/xschem/timer_555_body.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/timer_555_body/schematic/xschem/timer_555_body.sch
+.subckt timer_555_body disch ff_q vctrl threshold ibias0 trigger AVDD ff_qn AVDD1V2 AVSS ibias1 

@@ -1,0 +1,140 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/comparator_body.sch
+.subckt comparator_body inp inn ibias outx AVDD AVSS
+*.PININFO outx:B inp:B inn:B ibias:B AVDD:B AVSS:B
+xM3[15] n1 n1 AVDD AVDD p1_4
+xM3[14] n1 n1 AVDD AVDD p1_4
+xM3[13] n1 n1 AVDD AVDD p1_4
+xM3[12] n1 n1 AVDD AVDD p1_4
+xM3[11] n1 n1 AVDD AVDD p1_4
+xM3[10] n1 n1 AVDD AVDD p1_4
+xM3[9] n1 n1 AVDD AVDD p1_4
+xM3[8] n1 n1 AVDD AVDD p1_4
+xM3[7] n1 n1 AVDD AVDD p1_4
+xM3[6] n1 n1 AVDD AVDD p1_4
+xM3[5] n1 n1 AVDD AVDD p1_4
+xM3[4] n1 n1 AVDD AVDD p1_4
+xM3[3] n1 n1 AVDD AVDD p1_4
+xM3[2] n1 n1 AVDD AVDD p1_4
+xM3[1] n1 n1 AVDD AVDD p1_4
+xM3[0] n1 n1 AVDD AVDD p1_4
+xM4[15] outx n1 AVDD AVDD p1_4
+xM4[14] outx n1 AVDD AVDD p1_4
+xM4[13] outx n1 AVDD AVDD p1_4
+xM4[12] outx n1 AVDD AVDD p1_4
+xM4[11] outx n1 AVDD AVDD p1_4
+xM4[10] outx n1 AVDD AVDD p1_4
+xM4[9] outx n1 AVDD AVDD p1_4
+xM4[8] outx n1 AVDD AVDD p1_4
+xM4[7] outx n1 AVDD AVDD p1_4
+xM4[6] outx n1 AVDD AVDD p1_4
+xM4[5] outx n1 AVDD AVDD p1_4
+xM4[4] outx n1 AVDD AVDD p1_4
+xM4[3] outx n1 AVDD AVDD p1_4
+xM4[2] outx n1 AVDD AVDD p1_4
+xM4[1] outx n1 AVDD AVDD p1_4
+xM4[0] outx n1 AVDD AVDD p1_4
+xM1[15] n1 inp tail AVSS n1_4
+xM1[14] n1 inp tail AVSS n1_4
+xM1[13] n1 inp tail AVSS n1_4
+xM1[12] n1 inp tail AVSS n1_4
+xM1[11] n1 inp tail AVSS n1_4
+xM1[10] n1 inp tail AVSS n1_4
+xM1[9] n1 inp tail AVSS n1_4
+xM1[8] n1 inp tail AVSS n1_4
+xM1[7] n1 inp tail AVSS n1_4
+xM1[6] n1 inp tail AVSS n1_4
+xM1[5] n1 inp tail AVSS n1_4
+xM1[4] n1 inp tail AVSS n1_4
+xM1[3] n1 inp tail AVSS n1_4
+xM1[2] n1 inp tail AVSS n1_4
+xM1[1] n1 inp tail AVSS n1_4
+xM1[0] n1 inp tail AVSS n1_4
+xM2[15] outx inn tail AVSS n1_4
+xM2[14] outx inn tail AVSS n1_4
+xM2[13] outx inn tail AVSS n1_4
+xM2[12] outx inn tail AVSS n1_4
+xM2[11] outx inn tail AVSS n1_4
+xM2[10] outx inn tail AVSS n1_4
+xM2[9] outx inn tail AVSS n1_4
+xM2[8] outx inn tail AVSS n1_4
+xM2[7] outx inn tail AVSS n1_4
+xM2[6] outx inn tail AVSS n1_4
+xM2[5] outx inn tail AVSS n1_4
+xM2[4] outx inn tail AVSS n1_4
+xM2[3] outx inn tail AVSS n1_4
+xM2[2] outx inn tail AVSS n1_4
+xM2[1] outx inn tail AVSS n1_4
+xM2[0] outx inn tail AVSS n1_4
+xM5[15] tail ibias AVSS AVSS n1_4
+xM5[14] tail ibias AVSS AVSS n1_4
+xM5[13] tail ibias AVSS AVSS n1_4
+xM5[12] tail ibias AVSS AVSS n1_4
+xM5[11] tail ibias AVSS AVSS n1_4
+xM5[10] tail ibias AVSS AVSS n1_4
+xM5[9] tail ibias AVSS AVSS n1_4
+xM5[8] tail ibias AVSS AVSS n1_4
+xM5[7] tail ibias AVSS AVSS n1_4
+xM5[6] tail ibias AVSS AVSS n1_4
+xM5[5] tail ibias AVSS AVSS n1_4
+xM5[4] tail ibias AVSS AVSS n1_4
+xM5[3] tail ibias AVSS AVSS n1_4
+xM5[2] tail ibias AVSS AVSS n1_4
+xM5[1] tail ibias AVSS AVSS n1_4
+xM5[0] tail ibias AVSS AVSS n1_4
+xMref[15] ibias ibias AVSS AVSS n1_4
+xMref[14] ibias ibias AVSS AVSS n1_4
+xMref[13] ibias ibias AVSS AVSS n1_4
+xMref[12] ibias ibias AVSS AVSS n1_4
+xMref[11] ibias ibias AVSS AVSS n1_4
+xMref[10] ibias ibias AVSS AVSS n1_4
+xMref[9] ibias ibias AVSS AVSS n1_4
+xMref[8] ibias ibias AVSS AVSS n1_4
+xMref[7] ibias ibias AVSS AVSS n1_4
+xMref[6] ibias ibias AVSS AVSS n1_4
+xMref[5] ibias ibias AVSS AVSS n1_4
+xMref[4] ibias ibias AVSS AVSS n1_4
+xMref[3] ibias ibias AVSS AVSS n1_4
+xMref[2] ibias ibias AVSS AVSS n1_4
+xMref[1] ibias ibias AVSS AVSS n1_4
+xMref[0] ibias ibias AVSS AVSS n1_4
+.ends
+
+* expanding   symbol:  p1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sch
+.subckt p1_4 D G S B
+*.PININFO D:B G:B S:B B:B
+xp1 D G S B p1_2
+xp2 D G S B p1_2
+.ends
+
+
+* expanding   symbol:  n1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sch
+.subckt n1_4 D G S B
+*.PININFO D:B G:B S:B B:B
+xp1 D G S B n1_2
+xp2 D G S B n1_2
+.ends
+
+
+* expanding   symbol:  p1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sch
+.subckt p1_2 D G S B
+*.PININFO G:B D:B S:B B:B
+XMbot D G X B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  n1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sch
+.subckt n1_2 D G S B
+*.PININFO G:B D:B S:B B:B
+XMbot D G X B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+

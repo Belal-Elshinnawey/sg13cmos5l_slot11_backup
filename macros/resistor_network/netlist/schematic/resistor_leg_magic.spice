@@ -1,0 +1,8 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/resistor_network/schematic/xschem/resistor_leg.sch
+.subckt resistor_leg pt VSS VDD p1 p2 pb
+*.PININFO pt:B pb:B p2:B p1:B VDD:B VSS:B
+XR1 pt p1 VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XR2 p1 p2 VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XR3 p2 pb VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XRdummy VSS VSS VDD rhigh w=0.5e-6 l=13.42e-6 m=24 b=0 mm_ok=1
+.ends

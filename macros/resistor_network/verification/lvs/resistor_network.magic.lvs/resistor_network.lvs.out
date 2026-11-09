@@ -1,0 +1,74 @@
+
+Circuit 1 cell rhigh and Circuit 2 cell rhigh are black boxes.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: rhigh                           |Circuit 2: rhigh                           
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes rhigh and rhigh are equivalent.
+Flattening unmatched subcell resistor_leg in circuit resistor_network (1)(4 instances)
+
+Class resistor_network (0):  Merged 179 parallel devices.
+Class resistor_network (0):  Merged 6 series devices.
+Class resistor_network (0):  Merged 3 parallel devices.
+Class resistor_network (1):  Merged 3 parallel devices.
+Class resistor_network (1):  Merged 6 series devices.
+Class resistor_network (1):  Merged 3 parallel devices.
+Subcircuit summary:
+Circuit 1: resistor_network                |Circuit 2: resistor_network                
+-------------------------------------------|-------------------------------------------
+rhigh (192->4)                             |rhigh (192->4)                             
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with property errors.
+rhigh:4 vs. resistor_leg:A/rhigh:R3:
+ w circuit1: 7.5e-06   circuit2: 8e-06   (delta=6.45%, cutoff=1%)
+ l circuit1: 5.368e-05   circuit2: 2.684e-05   (delta=66.7%, cutoff=1%)
+rhigh:4 vs. resistor_leg:A/rhigh:R3:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:4 vs. resistor_leg:A/rhigh:R3:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:0 vs. resistor_leg:A/rhigh:Rdummy:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:3 vs. resistor_leg:B/rhigh:R2:
+ w circuit1: 7.5e-06   circuit2: 8e-06   (delta=6.45%, cutoff=1%)
+ l circuit1: 5.368e-05   circuit2: 2.684e-05   (delta=66.7%, cutoff=1%)
+rhigh:3 vs. resistor_leg:B/rhigh:R2:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:3 vs. resistor_leg:B/rhigh:R2:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:2 vs. resistor_leg:A/rhigh:R1:
+ w circuit1: 1.6e-05   circuit2: 8e-06   (delta=66.7%, cutoff=1%)
+ l circuit1: 1.342e-05   circuit2: 2.684e-05   (delta=66.7%, cutoff=1%)
+rhigh:2 vs. resistor_leg:A/rhigh:R1:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:2 vs. resistor_leg:A/rhigh:R1:
+Property mm_ok in circuit2 has no matching property in circuit1
+
+Subcircuit pins:
+Circuit 1: resistor_network                |Circuit 2: resistor_network                
+-------------------------------------------|-------------------------------------------
+pt                                         |pt                                         
+pb                                         |pb                                         
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+p1                                         |p1                                         
+p2                                         |p2                                         
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes resistor_network and resistor_network are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ resistor_network

@@ -1,0 +1,557 @@
+
+Circuit 1 cell sg13_hv_nmos and Circuit 2 cell sg13_hv_nmos are black boxes.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+Warning: Equate pins:  cell sg13_hv_nmos is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: sg13_hv_nmos                    |Circuit 2: sg13_hv_nmos                    
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sg13_hv_nmos and sg13_hv_nmos are equivalent.
+Flattening unmatched subcell n1_4 in circuit mref_m5_diff (1)(32 instances)
+Flattening unmatched subcell n1_2 in circuit mref_m5_diff (1)(64 instances)
+
+Subcircuit summary:
+Circuit 1: mref_m5_diff                    |Circuit 2: mref_m5_diff                    
+-------------------------------------------|-------------------------------------------
+sg13_hv_nmos (128)                         |sg13_hv_nmos (128)                         
+Number of devices: 128                     |Number of devices: 128                     
+Number of nets: 67                         |Number of nets: 67                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 6 symmetries with property errors.
+sg13_hv_nmos:1 vs. n1_4:Mref[15]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:1 vs. n1_4:Mref[15]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:11 vs. n1_4:Mref[15]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:11 vs. n1_4:Mref[15]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:16 vs. n1_4:Mref[14]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:16 vs. n1_4:Mref[14]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:17 vs. n1_4:Mref[14]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:17 vs. n1_4:Mref[14]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:18 vs. n1_4:Mref[13]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:18 vs. n1_4:Mref[13]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:23 vs. n1_4:Mref[13]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:23 vs. n1_4:Mref[13]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:27 vs. n1_4:Mref[12]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:27 vs. n1_4:Mref[12]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:30 vs. n1_4:Mref[12]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:30 vs. n1_4:Mref[12]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:31 vs. n1_4:Mref[11]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:31 vs. n1_4:Mref[11]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:33 vs. n1_4:Mref[11]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:33 vs. n1_4:Mref[11]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:37 vs. n1_4:Mref[10]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:37 vs. n1_4:Mref[10]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:44 vs. n1_4:Mref[10]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:44 vs. n1_4:Mref[10]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:47 vs. n1_4:Mref[9]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:47 vs. n1_4:Mref[9]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:58 vs. n1_4:Mref[9]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:58 vs. n1_4:Mref[9]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:70 vs. n1_4:Mref[8]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:70 vs. n1_4:Mref[8]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:73 vs. n1_4:Mref[8]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:73 vs. n1_4:Mref[8]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:74 vs. n1_4:Mref[7]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:74 vs. n1_4:Mref[7]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:76 vs. n1_4:Mref[7]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:76 vs. n1_4:Mref[7]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:77 vs. n1_4:Mref[6]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:77 vs. n1_4:Mref[6]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:83 vs. n1_4:Mref[6]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:83 vs. n1_4:Mref[6]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:85 vs. n1_4:Mref[5]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:85 vs. n1_4:Mref[5]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:89 vs. n1_4:Mref[5]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:89 vs. n1_4:Mref[5]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:90 vs. n1_4:Mref[4]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:90 vs. n1_4:Mref[4]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:92 vs. n1_4:Mref[4]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:92 vs. n1_4:Mref[4]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:93 vs. n1_4:Mref[3]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:93 vs. n1_4:Mref[3]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:94 vs. n1_4:Mref[3]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:94 vs. n1_4:Mref[3]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:96 vs. n1_4:Mref[2]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:96 vs. n1_4:Mref[2]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:98 vs. n1_4:Mref[2]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:98 vs. n1_4:Mref[2]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:100 vs. n1_4:Mref[1]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:100 vs. n1_4:Mref[1]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:105 vs. n1_4:Mref[1]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:105 vs. n1_4:Mref[1]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:109 vs. n1_4:Mref[0]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:109 vs. n1_4:Mref[0]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:121 vs. n1_4:Mref[0]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:121 vs. n1_4:Mref[0]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:0 vs. n1_4:M5[15]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:0 vs. n1_4:M5[15]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:4 vs. n1_4:M5[15]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:4 vs. n1_4:M5[15]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:9 vs. n1_4:M5[14]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:9 vs. n1_4:M5[14]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:12 vs. n1_4:M5[14]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:12 vs. n1_4:M5[14]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:13 vs. n1_4:M5[13]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:13 vs. n1_4:M5[13]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:14 vs. n1_4:M5[13]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:14 vs. n1_4:M5[13]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:15 vs. n1_4:M5[12]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:15 vs. n1_4:M5[12]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:19 vs. n1_4:M5[12]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:19 vs. n1_4:M5[12]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:32 vs. n1_4:M5[11]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:32 vs. n1_4:M5[11]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:34 vs. n1_4:M5[11]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:34 vs. n1_4:M5[11]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:36 vs. n1_4:M5[10]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:36 vs. n1_4:M5[10]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:38 vs. n1_4:M5[10]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:38 vs. n1_4:M5[10]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:43 vs. n1_4:M5[9]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:43 vs. n1_4:M5[9]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:45 vs. n1_4:M5[9]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:45 vs. n1_4:M5[9]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:48 vs. n1_4:M5[8]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:48 vs. n1_4:M5[8]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:51 vs. n1_4:M5[8]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:51 vs. n1_4:M5[8]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:59 vs. n1_4:M5[7]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:59 vs. n1_4:M5[7]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:65 vs. n1_4:M5[7]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:65 vs. n1_4:M5[7]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:67 vs. n1_4:M5[6]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:67 vs. n1_4:M5[6]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:71 vs. n1_4:M5[6]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:71 vs. n1_4:M5[6]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:75 vs. n1_4:M5[5]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:75 vs. n1_4:M5[5]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:78 vs. n1_4:M5[5]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:78 vs. n1_4:M5[5]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:81 vs. n1_4:M5[4]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:81 vs. n1_4:M5[4]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:88 vs. n1_4:M5[4]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:88 vs. n1_4:M5[4]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:97 vs. n1_4:M5[3]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:97 vs. n1_4:M5[3]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:99 vs. n1_4:M5[3]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:99 vs. n1_4:M5[3]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:104 vs. n1_4:M5[2]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:104 vs. n1_4:M5[2]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:107 vs. n1_4:M5[2]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:107 vs. n1_4:M5[2]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:116 vs. n1_4:M5[1]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:116 vs. n1_4:M5[1]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:117 vs. n1_4:M5[1]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:117 vs. n1_4:M5[1]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:119 vs. n1_4:M5[0]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:119 vs. n1_4:M5[0]/n1_2:p1/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:125 vs. n1_4:M5[0]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:125 vs. n1_4:M5[0]/n1_2:p2/sg13_hv_nmos:Mbot:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:25 vs. n1_4:M5[15]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:25 vs. n1_4:M5[15]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:122 vs. n1_4:M5[15]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:122 vs. n1_4:M5[15]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:113 vs. n1_4:M5[14]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:113 vs. n1_4:M5[14]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:26 vs. n1_4:M5[14]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:26 vs. n1_4:M5[14]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:24 vs. n1_4:M5[13]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:24 vs. n1_4:M5[13]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:46 vs. n1_4:M5[13]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:46 vs. n1_4:M5[13]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:20 vs. n1_4:M5[12]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:20 vs. n1_4:M5[12]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:124 vs. n1_4:M5[12]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:124 vs. n1_4:M5[12]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:40 vs. n1_4:M5[11]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:40 vs. n1_4:M5[11]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:42 vs. n1_4:M5[11]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:42 vs. n1_4:M5[11]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:62 vs. n1_4:M5[10]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:62 vs. n1_4:M5[10]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:55 vs. n1_4:M5[10]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:55 vs. n1_4:M5[10]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:49 vs. n1_4:M5[9]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:49 vs. n1_4:M5[9]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:53 vs. n1_4:M5[9]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:53 vs. n1_4:M5[9]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:72 vs. n1_4:M5[8]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:72 vs. n1_4:M5[8]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:35 vs. n1_4:M5[8]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:35 vs. n1_4:M5[8]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:66 vs. n1_4:M5[7]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:66 vs. n1_4:M5[7]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:68 vs. n1_4:M5[7]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:68 vs. n1_4:M5[7]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:39 vs. n1_4:M5[6]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:39 vs. n1_4:M5[6]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:103 vs. n1_4:M5[6]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:103 vs. n1_4:M5[6]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:111 vs. n1_4:M5[5]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:111 vs. n1_4:M5[5]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:86 vs. n1_4:M5[5]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:86 vs. n1_4:M5[5]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:118 vs. n1_4:M5[4]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:118 vs. n1_4:M5[4]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:61 vs. n1_4:M5[4]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:61 vs. n1_4:M5[4]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:126 vs. n1_4:M5[3]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:126 vs. n1_4:M5[3]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:108 vs. n1_4:M5[3]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:108 vs. n1_4:M5[3]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:3 vs. n1_4:M5[2]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:3 vs. n1_4:M5[2]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:8 vs. n1_4:M5[2]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:8 vs. n1_4:M5[2]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:79 vs. n1_4:M5[1]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:79 vs. n1_4:M5[1]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:120 vs. n1_4:M5[1]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:120 vs. n1_4:M5[1]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:22 vs. n1_4:M5[0]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:22 vs. n1_4:M5[0]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:28 vs. n1_4:M5[0]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:28 vs. n1_4:M5[0]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:10 vs. n1_4:Mref[15]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:10 vs. n1_4:Mref[15]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:41 vs. n1_4:Mref[15]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:41 vs. n1_4:Mref[15]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:21 vs. n1_4:Mref[14]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:21 vs. n1_4:Mref[14]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:52 vs. n1_4:Mref[14]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:52 vs. n1_4:Mref[14]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:123 vs. n1_4:Mref[13]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:123 vs. n1_4:Mref[13]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:29 vs. n1_4:Mref[13]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:29 vs. n1_4:Mref[13]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:54 vs. n1_4:Mref[12]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:54 vs. n1_4:Mref[12]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:6 vs. n1_4:Mref[12]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:6 vs. n1_4:Mref[12]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:57 vs. n1_4:Mref[11]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:57 vs. n1_4:Mref[11]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:69 vs. n1_4:Mref[11]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:69 vs. n1_4:Mref[11]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:63 vs. n1_4:Mref[10]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:63 vs. n1_4:Mref[10]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:50 vs. n1_4:Mref[10]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:50 vs. n1_4:Mref[10]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:2 vs. n1_4:Mref[9]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:2 vs. n1_4:Mref[9]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:91 vs. n1_4:Mref[9]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:91 vs. n1_4:Mref[9]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:56 vs. n1_4:Mref[8]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:56 vs. n1_4:Mref[8]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:87 vs. n1_4:Mref[8]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:87 vs. n1_4:Mref[8]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:106 vs. n1_4:Mref[7]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:106 vs. n1_4:Mref[7]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:102 vs. n1_4:Mref[7]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:102 vs. n1_4:Mref[7]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:84 vs. n1_4:Mref[6]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:84 vs. n1_4:Mref[6]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:114 vs. n1_4:Mref[6]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:114 vs. n1_4:Mref[6]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:60 vs. n1_4:Mref[5]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:60 vs. n1_4:Mref[5]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:64 vs. n1_4:Mref[5]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:64 vs. n1_4:Mref[5]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:95 vs. n1_4:Mref[4]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:95 vs. n1_4:Mref[4]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:127 vs. n1_4:Mref[4]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:127 vs. n1_4:Mref[4]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:80 vs. n1_4:Mref[3]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:80 vs. n1_4:Mref[3]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:82 vs. n1_4:Mref[3]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:82 vs. n1_4:Mref[3]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:101 vs. n1_4:Mref[2]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:101 vs. n1_4:Mref[2]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:110 vs. n1_4:Mref[2]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:110 vs. n1_4:Mref[2]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:112 vs. n1_4:Mref[1]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:112 vs. n1_4:Mref[1]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:5 vs. n1_4:Mref[1]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:5 vs. n1_4:Mref[1]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:115 vs. n1_4:Mref[0]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:115 vs. n1_4:Mref[0]/n1_2:p1/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:7 vs. n1_4:Mref[0]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+sg13_hv_nmos:7 vs. n1_4:Mref[0]/n1_2:p2/sg13_hv_nmos:Mtop:
+Property mm_ok in circuit2 has no matching property in circuit1
+
+Subcircuit pins:
+Circuit 1: mref_m5_diff                    |Circuit 2: mref_m5_diff                    
+-------------------------------------------|-------------------------------------------
+avss                                       |avss                                       
+tail                                       |tail                                       
+ibias                                      |ibias                                      
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes mref_m5_diff and mref_m5_diff are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ mref_m5_diff

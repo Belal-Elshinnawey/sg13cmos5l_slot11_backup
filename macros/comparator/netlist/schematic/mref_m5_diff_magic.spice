@@ -1,0 +1,56 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/mref_m5_diff.sch
+.subckt mref_m5_diff ibias tail avss
+*.PININFO ibias:B tail:B avss:B
+xMref[15] ibias ibias avss avss n1_4
+xMref[14] ibias ibias avss avss n1_4
+xMref[13] ibias ibias avss avss n1_4
+xMref[12] ibias ibias avss avss n1_4
+xMref[11] ibias ibias avss avss n1_4
+xMref[10] ibias ibias avss avss n1_4
+xMref[9] ibias ibias avss avss n1_4
+xMref[8] ibias ibias avss avss n1_4
+xMref[7] ibias ibias avss avss n1_4
+xMref[6] ibias ibias avss avss n1_4
+xMref[5] ibias ibias avss avss n1_4
+xMref[4] ibias ibias avss avss n1_4
+xMref[3] ibias ibias avss avss n1_4
+xMref[2] ibias ibias avss avss n1_4
+xMref[1] ibias ibias avss avss n1_4
+xMref[0] ibias ibias avss avss n1_4
+xM5[15] tail ibias avss avss n1_4
+xM5[14] tail ibias avss avss n1_4
+xM5[13] tail ibias avss avss n1_4
+xM5[12] tail ibias avss avss n1_4
+xM5[11] tail ibias avss avss n1_4
+xM5[10] tail ibias avss avss n1_4
+xM5[9] tail ibias avss avss n1_4
+xM5[8] tail ibias avss avss n1_4
+xM5[7] tail ibias avss avss n1_4
+xM5[6] tail ibias avss avss n1_4
+xM5[5] tail ibias avss avss n1_4
+xM5[4] tail ibias avss avss n1_4
+xM5[3] tail ibias avss avss n1_4
+xM5[2] tail ibias avss avss n1_4
+xM5[1] tail ibias avss avss n1_4
+xM5[0] tail ibias avss avss n1_4
+.ends
+
+* expanding   symbol:  n1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sch
+.subckt n1_4 D G S B
+*.PININFO D:B G:B S:B B:B
+xp1 D G S B n1_2
+xp2 D G S B n1_2
+.ends
+
+
+* expanding   symbol:  n1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sch
+.subckt n1_2 D G S B
+*.PININFO G:B D:B S:B B:B
+XMbot D G X B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+

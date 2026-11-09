@@ -1,0 +1,36 @@
+* Extracted by KLayout with SG13CMOS5L LVS runset on : 04/11/2026 10:29
+
+.SUBCKT level_up_shifter
+M$1 \$1 \$1 \$1 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$2 \$1 \$10 \$11 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$3 \$11 \$11 \$11 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$4 \$1 \$1 \$1 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$5 \$1 \$11 \$13 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$6 \$13 \$13 \$13 \$1 sg13_lv_nmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$7 \$2 \$3 \$5 \$1 sg13_hv_nmos L=0.5u W=10u AS=3.4p AD=3.4p PS=20.68u
++ PD=20.68u rfmode=0
+M$8 \$6 \$4 \$2 \$1 sg13_hv_nmos L=0.5u W=10u AS=3.4p AD=3.4p PS=20.68u
++ PD=20.68u rfmode=0
+M$9 \$29 \$29 \$29 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$10 \$29 \$10 \$11 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$11 \$11 \$11 \$11 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$12 \$29 \$29 \$29 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$13 \$29 \$11 \$13 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$14 \$13 \$13 \$13 \$29 sg13_lv_pmos L=0.13u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$15 \$64 \$6 \$5 \$64 sg13_hv_pmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+M$16 \$6 \$5 \$64 \$64 sg13_hv_pmos L=0.5u W=1u AS=0.34p AD=0.34p PS=2.68u
++ PD=2.68u rfmode=0
+.ENDS level_up_shifter

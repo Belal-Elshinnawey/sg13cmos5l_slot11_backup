@@ -1,0 +1,30 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/testbenches/xschem/tb_comparator_slice_pex.sch
+**.subckt tb_comparator_slice_pex
+v_avdd avdd_net GND dc 3.3
+v_inn inn_net GND dc 1.65
+v_inp inp_net GND pulse(0 3.3 0 100n 100n 20u 40u)
+i_bias GND ibias_net dc 4e-6
+v_avdd1v2 avdd1v2_net GND dc 1.2
+x1 inp_net inn_net ibias_net out_net avdd_net GND avdd1v2_net comparator_slice_pex
+**** begin user architecture code
+
+
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerRES.lib res_typ
+.include ../../../netlist/pex/comparator_slice_magic_pex_3.spice
+
+
+
+
+.op
+.tran 100n 100u
+.control
+  run
+  plot v(out_net) v(inp_net) v(inn_net)
+.endc
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

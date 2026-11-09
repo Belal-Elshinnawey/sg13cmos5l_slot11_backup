@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>Snap all shapes and instance placements in the design to the 5nm grid</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <priority>0</priority>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name>my_macros</group-name>
+ <menu-path>tools_menu.end</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text>
+import pya
+
+GRID_NM = 5   # target manufacturing grid, in nanometers
+
+
+def snap_val(v, grid_dbu):
+    return int(round(v / float(grid_dbu)) * grid_dbu)
+
+
+def snap_box(box, grid_dbu):
+    nb = pya.Box(snap_val(box.left, grid_dbu), snap_val(box.bottom, grid_dbu),
+                 snap_val(box.right, grid_dbu), snap_val(box.top, grid_dbu))
+    return nb, (nb != box)
+
+
+def snap_points(points, grid_dbu):
+    new_pts = [pya.Point(snap_val(p.x, grid_dbu), snap_val(p.y, grid_dbu)) for p in points]
+    changed = any(np_.x != p.x or np_.y != p.y for np_, p in zip(new_pts, points))
+    return new_pts, changed
+
+
+def snap_shapes_in_cell(cell, layout, grid_dbu):
+    # Explicit delete+insert into a single, directly-held shape container per layer --
+    # no reliance on shape.box=/.polygon=/.path= setter semantics (unverified how they
+    # behave when the assigned type doesn't exactly match the shape's original internal
+    # representation, e.g. a SimplePolygon read via .polygon and written back as a plain
+    # Polygon) -- a prior version of this using those setters corrupted a layer (a thick
+    # oxide marker shape ended up swapped with Metal4), so this avoids that ambiguity
+    # entirely: the new geometry is always inserted into the exact same container object
+    # that the original shape was read from.
+    fixed = 0
+    for li in layout.layer_indexes():
+        container = cell.shapes(li)
+        for shape in list(container.each()):
+            new_geom = None
+
+            if shape.is_box():
+                nb, changed = snap_box(shape.box, grid_dbu)
+                if changed:
+                    new_geom = nb
+            elif shape.is_polygon() or shape.is_simple_polygon():
+                poly = shape.polygon
+                hull_pts, hull_changed = snap_points(list(poly.each_point_hull()), grid_dbu)
+                hole_pts_list = []
+                holes_changed = False
+                for h in range(poly.holes()):
+                    hpts, hchanged = snap_points(list(poly.each_point_hole(h)), grid_dbu)
+                    hole_pts_list.append(hpts)
+                    holes_changed = holes_changed or hchanged
+                if hull_changed or holes_changed:
+                    new_poly = pya.Polygon(hull_pts)
+                    for hpts in hole_pts_list:
+                        new_poly.insert_hole(hpts)
+                    new_geom = new_poly
+            elif shape.is_path():
+                path = shape.path
+                pts, pts_changed = snap_points(list(path.each_point()), grid_dbu)
+                new_width = snap_val(path.width, grid_dbu)
+                width_changed = (new_width != path.width)
+                if pts_changed or width_changed:
+                    new_geom = pya.Path(pts, new_width, path.bgn_ext, path.end_ext, path.round)
+            elif shape.is_text():
+                text = shape.text
+                disp = text.trans.disp
+                ndx = snap_val(disp.x, grid_dbu)
+                ndy = snap_val(disp.y, grid_dbu)
+                if ndx != disp.x or ndy != disp.y:
+                    # compose a pure-translation correction onto the EXISTING transform
+                    # rather than reconstructing rot/mirror from raw components -- avoids
+                    # relying on a Trans(rot, x, y) overload that doesn't actually exist
+                    # and silently misinterprets its arguments.
+                    correction = pya.Trans(ndx - disp.x, ndy - disp.y)
+                    new_geom = pya.Text(text.string, correction * text.trans)
+
+            if new_geom is not None:
+                shape.delete()
+                container.insert(new_geom)
+                fixed += 1
+    return fixed
+
+
+def snap_instance_offsets(cell, grid_dbu):
+    fixed = 0
+    for inst in cell.each_inst():
+        ct = inst.cplx_trans
+        dx, dy = ct.disp.x, ct.disp.y
+        ndx = snap_val(dx, grid_dbu)
+        ndy = snap_val(dy, grid_dbu)
+        if ndx != dx or ndy != dy:
+            new_ct = pya.ICplxTrans(ct.mag, ct.angle, ct.is_mirror(), pya.Vector(ndx, ndy))
+            inst.cplx_trans = new_ct
+            fixed += 1
+    return fixed
+
+
+def main():
+    lv = pya.Application.instance().main_window().current_view()
+    if lv is None:
+        pya.MessageBox.warning("snap_grid_hierarchy", "No layout open.", pya.MessageBox.Ok)
+        return
+
+    layout = lv.active_cellview().layout()
+    top_cell = lv.active_cellview().cell
+
+    grid_dbu = int(round((GRID_NM * 1e-3) / layout.dbu))
+    if grid_dbu &lt; 1:
+        grid_dbu = 1
+
+    cell_indices = set([top_cell.cell_index()])
+    cell_indices.update(top_cell.called_cells())
+
+    total_shapes_fixed = 0
+    total_inst_fixed = 0
+    for ci in cell_indices:
+        cell = layout.cell(ci)
+        total_shapes_fixed += snap_shapes_in_cell(cell, layout, grid_dbu)
+        total_inst_fixed += snap_instance_offsets(cell, grid_dbu)
+
+    pya.MessageBox.info("snap_grid_hierarchy",
+                         "Checked %d cells (top + all called cells).\n"
+                         "Shapes snapped to %dnm grid: %d\n"
+                         "Instance placements snapped: %d"
+                         % (len(cell_indices), GRID_NM, total_shapes_fixed, total_inst_fixed),
+                         pya.MessageBox.Ok)
+
+
+main()
+</text>
+</klayout-macro>

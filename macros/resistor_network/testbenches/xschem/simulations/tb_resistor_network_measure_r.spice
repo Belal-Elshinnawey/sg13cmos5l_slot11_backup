@@ -1,0 +1,48 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/resistor_network/testbenches/xschem/tb_resistor_network_measure_r.sch
+**.subckt tb_resistor_network_measure_r
+v_vdd vdd_net GND dc {xvdd}
+xA vdd_net GND vdd_net a_p1 tap1 n_ab resistor_leg_pex
+xB n_ab GND vdd_net tap2 b_p2 GND resistor_leg_pex
+xC vdd_net GND vdd_net c_p1 tap1 n_cd resistor_leg_pex
+xD n_cd GND vdd_net tap2 d_p2 GND resistor_leg_pex
+**** begin user architecture code
+
+
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerRES.lib res_typ
+.include ../../../netlist/pex/resistor_leg_magic_pex_3.spice
+
+
+
+
+.op
+.control
+  run
+  let itest = -i(v_vdd)
+  let r_top = (v(vdd_net) - v(tap1)) / itest
+  let r_mid = (v(tap1) - v(tap2)) / itest
+  let r_bot = v(tap2) / itest
+  let rtotal = v(vdd_net) / itest
+  print itest
+  print r_top
+  print r_mid
+  print r_bot
+  print rtotal
+  print v(tap1)
+  print v(tap2)
+  print v(a_p1)
+  print v(b_p2)
+  print v(c_p1)
+  print v(d_p2)
+.endc
+
+
+
+
+.param xvdd = 3.3
+
+
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end

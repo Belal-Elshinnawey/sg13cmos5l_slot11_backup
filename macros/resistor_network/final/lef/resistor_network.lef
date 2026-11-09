@@ -1,0 +1,79 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO resistor_network
+  CLASS BLOCK ;
+  FOREIGN resistor_network ;
+  ORIGIN 36.325 50.055 ;
+  SIZE 28.960 BY 186.360 ;
+  PIN p1
+    PORT
+      LAYER Metal3 ;
+        RECT -33.650 120.420 -10.050 122.920 ;
+    END
+  END p1
+  PIN pb
+    PORT
+      LAYER Metal3 ;
+        RECT -34.650 -35.925 -9.040 -33.425 ;
+    END
+  END pb
+  PIN pt
+    PORT
+      LAYER Metal3 ;
+        RECT -25.550 115.445 -18.140 117.945 ;
+    END
+  END pt
+  PIN p2
+    PORT
+      LAYER Metal3 ;
+        RECT -25.900 -16.695 -17.790 -14.195 ;
+    END
+  END p2
+  PIN VDD
+    USE POWER ;
+    PORT
+      LAYER Metal2 ;
+        RECT -36.085 34.995 -33.585 49.355 ;
+    END
+    PORT
+      LAYER Metal2 ;
+        RECT -10.105 34.995 -7.605 49.355 ;
+    END
+  END VDD
+  PIN VSS
+    USE GROUND ;
+    PORT
+      LAYER Metal2 ;
+        RECT -31.280 41.130 -12.410 45.140 ;
+    END
+  END VSS
+  OBS
+      LAYER GatPoly ;
+        RECT -36.085 -49.815 -7.605 136.065 ;
+      LAYER Metal1 ;
+        RECT -36.085 -49.815 -7.605 136.065 ;
+      LAYER Metal2 ;
+        RECT -36.085 49.565 -7.605 128.310 ;
+        RECT -33.375 45.350 -10.315 49.565 ;
+        RECT -33.375 40.920 -31.490 45.350 ;
+        RECT -12.200 40.920 -10.315 45.350 ;
+        RECT -33.375 34.785 -10.315 40.920 ;
+        RECT -36.085 -43.970 -7.605 34.785 ;
+      LAYER Metal3 ;
+        RECT -35.150 120.210 -33.860 120.420 ;
+        RECT -9.840 120.210 -8.540 120.420 ;
+        RECT -35.150 118.155 -8.540 120.210 ;
+        RECT -35.150 115.235 -25.760 118.155 ;
+        RECT -17.930 115.235 -8.540 118.155 ;
+        RECT -35.150 -13.985 -8.540 115.235 ;
+        RECT -35.150 -16.905 -26.110 -13.985 ;
+        RECT -17.580 -16.905 -8.540 -13.985 ;
+        RECT -35.150 -33.215 -8.540 -16.905 ;
+        RECT -35.150 -33.425 -34.860 -33.215 ;
+        RECT -8.830 -33.425 -8.540 -33.215 ;
+  END
+END resistor_network
+END LIBRARY
+

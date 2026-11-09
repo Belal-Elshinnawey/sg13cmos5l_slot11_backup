@@ -4,7 +4,7 @@
 MAKEFILE_DIR := $(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 
 # Variables
-TOP = slot_3
+TOP = slot_11
 
 .DEFAULT_GOAL := help
 
@@ -123,8 +123,27 @@ sim-all: ## Simulate the macro
 
 
 # Build Targets
-build-macros: ## Verify, build and simulate all macros
-#	ToDo: further macros
+build-resistor_network: ## Verify, build and simulate the resistor_network macro
+	@$(MAKE) -C $(MACROS_DIR)/resistor_network all
+.PHONY: build-resistor_network
+
+build-comparator: ## Verify, build and simulate the comparator macro
+	@$(MAKE) -C $(MACROS_DIR)/comparator all
+.PHONY: build-comparator
+
+build-timer_555_body: ## Verify, build and simulate the timer_555_body macro
+	@$(MAKE) -C $(MACROS_DIR)/timer_555_body all
+.PHONY: build-timer_555_body
+
+build-level_shifter: ## Verify, build and simulate the level_shifter macro
+	@$(MAKE) -C $(MACROS_DIR)/level_shifter all
+.PHONY: build-level_shifter
+
+build-macros: ## Verify, build and simulate all macros (resistor_network, comparator, timer_555_body, level_shifter)
+	$(MAKE) build-resistor_network
+	$(MAKE) build-comparator
+	$(MAKE) build-timer_555_body
+	$(MAKE) build-level_shifter
 .PHONY: build-macros
 
 build-top: ## Build TOP cell (check PR boundary, Verilog, LEF, LIB, copy GDS, and render images)
@@ -409,8 +428,27 @@ clean: ## Delete all generated files and folders of the TOP cell (final, netlist
 	rm -rf $(SCRIPTS_DIR)/__pycache__
 .PHONY: clean
 
-clean-macros: ## Delete all generated files and folders of all macros
-#	ToDo: further macros
+clean-resistor_network: ## Delete all generated files and folders of the resistor_network macro
+	@$(MAKE) -C $(MACROS_DIR)/resistor_network clean
+.PHONY: clean-resistor_network
+
+clean-comparator: ## Delete all generated files and folders of the comparator macro
+	@$(MAKE) -C $(MACROS_DIR)/comparator clean
+.PHONY: clean-comparator
+
+clean-timer_555_body: ## Delete all generated files and folders of the timer_555_body macro
+	@$(MAKE) -C $(MACROS_DIR)/timer_555_body clean
+.PHONY: clean-timer_555_body
+
+clean-level_shifter: ## Delete all generated files and folders of the level_shifter macro
+	@$(MAKE) -C $(MACROS_DIR)/level_shifter clean
+.PHONY: clean-level_shifter
+
+clean-macros: ## Delete all generated files and folders of all macros (resistor_network, comparator, timer_555_body, level_shifter)
+	$(MAKE) clean-resistor_network
+	$(MAKE) clean-comparator
+	$(MAKE) clean-timer_555_body
+	$(MAKE) clean-level_shifter
 .PHONY: clean-macros
 
 clean-all: ## Delete all generated files and folders of the macros and the TOP cell

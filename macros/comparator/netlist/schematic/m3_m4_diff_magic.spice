@@ -1,0 +1,56 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/m3_m4_diff.sch
+.subckt m3_m4_diff avdd n1 outx
+*.PININFO n1:B outx:B avdd:B
+xM3[15] n1 n1 avdd avdd p1_4
+xM3[14] n1 n1 avdd avdd p1_4
+xM3[13] n1 n1 avdd avdd p1_4
+xM3[12] n1 n1 avdd avdd p1_4
+xM3[11] n1 n1 avdd avdd p1_4
+xM3[10] n1 n1 avdd avdd p1_4
+xM3[9] n1 n1 avdd avdd p1_4
+xM3[8] n1 n1 avdd avdd p1_4
+xM3[7] n1 n1 avdd avdd p1_4
+xM3[6] n1 n1 avdd avdd p1_4
+xM3[5] n1 n1 avdd avdd p1_4
+xM3[4] n1 n1 avdd avdd p1_4
+xM3[3] n1 n1 avdd avdd p1_4
+xM3[2] n1 n1 avdd avdd p1_4
+xM3[1] n1 n1 avdd avdd p1_4
+xM3[0] n1 n1 avdd avdd p1_4
+xM4[15] outx n1 avdd avdd p1_4
+xM4[14] outx n1 avdd avdd p1_4
+xM4[13] outx n1 avdd avdd p1_4
+xM4[12] outx n1 avdd avdd p1_4
+xM4[11] outx n1 avdd avdd p1_4
+xM4[10] outx n1 avdd avdd p1_4
+xM4[9] outx n1 avdd avdd p1_4
+xM4[8] outx n1 avdd avdd p1_4
+xM4[7] outx n1 avdd avdd p1_4
+xM4[6] outx n1 avdd avdd p1_4
+xM4[5] outx n1 avdd avdd p1_4
+xM4[4] outx n1 avdd avdd p1_4
+xM4[3] outx n1 avdd avdd p1_4
+xM4[2] outx n1 avdd avdd p1_4
+xM4[1] outx n1 avdd avdd p1_4
+xM4[0] outx n1 avdd avdd p1_4
+.ends
+
+* expanding   symbol:  p1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sch
+.subckt p1_4 D G S B
+*.PININFO D:B G:B S:B B:B
+xp1 D G S B p1_2
+xp2 D G S B p1_2
+.ends
+
+
+* expanding   symbol:  p1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sch
+.subckt p1_2 D G S B
+*.PININFO G:B D:B S:B B:B
+XMbot D G X B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+

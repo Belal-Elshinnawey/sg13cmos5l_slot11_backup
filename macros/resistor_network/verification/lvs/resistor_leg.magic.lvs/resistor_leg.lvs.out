@@ -1,0 +1,53 @@
+
+Circuit 1 cell rhigh and Circuit 2 cell rhigh are black boxes.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+Warning: Equate pins:  cell rhigh is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: rhigh                           |Circuit 2: rhigh                           
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes rhigh and rhigh are equivalent.
+
+Class resistor_leg (0):  Merged 44 parallel devices.
+Subcircuit summary:
+Circuit 1: resistor_leg                    |Circuit 2: resistor_leg                    
+-------------------------------------------|-------------------------------------------
+rhigh (48->4)                              |rhigh (48->4)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely with property errors.
+rhigh:2 vs. rhigh:R3:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:0 vs. rhigh:R1:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:3 vs. rhigh:R2:
+Property mm_ok in circuit2 has no matching property in circuit1
+rhigh:1 vs. rhigh:Rdummy:
+Property mm_ok in circuit2 has no matching property in circuit1
+
+Subcircuit pins:
+Circuit 1: resistor_leg                    |Circuit 2: resistor_leg                    
+-------------------------------------------|-------------------------------------------
+VDD                                        |VDD                                        
+pt                                         |pt                                         
+pb                                         |pb                                         
+p1                                         |p1                                         
+p2                                         |p2                                         
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes resistor_leg and resistor_leg are equivalent.
+
+Final result: Circuits match uniquely.
+Property errors were found.
+
+The following cells had property errors:
+ resistor_leg

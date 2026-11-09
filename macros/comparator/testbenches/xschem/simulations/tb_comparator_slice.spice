@@ -1,0 +1,125 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/testbenches/xschem/tb_comparator_slice.sch
+**.subckt tb_comparator_slice
+v_avdd avdd_net GND dc 3.3
+v_inn inn_net GND dc 1.65
+v_inp inp_net GND pulse(0 3.3 0 100n 100n 20u 40u)
+i_bias GND ibias_net dc 4e-6
+x1[1] inp_net inn_net ibias_net out_net avdd_net GND comparator_slice
+x1[0] inp_net inn_net ibias_net out_net avdd_net GND comparator_slice
+**** begin user architecture code
+
+
+.lib $PDK_ROOT/$PDK/libs.tech/ngspice/models/cornerMOShv.lib mos_tt
+
+
+
+
+.op
+.tran 100n 100u
+.control
+  run
+  plot v(out_net) v(inp_net) v(inn_net)
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  comparator_slice.sym # of pins=6
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/comparator_slice.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/comparator_slice.sch
+.subckt comparator_slice inp inn ibias out AVDD AVSS
+*.iopin inp
+*.iopin inn
+*.iopin ibias
+*.iopin out
+*.iopin AVDD
+*.iopin AVSS
+xM3[3] n1 n1 AVDD AVDD p1_4
+xM3[2] n1 n1 AVDD AVDD p1_4
+xM3[1] n1 n1 AVDD AVDD p1_4
+xM3[0] n1 n1 AVDD AVDD p1_4
+xM4[3] outx n1 AVDD AVDD p1_4
+xM4[2] outx n1 AVDD AVDD p1_4
+xM4[1] outx n1 AVDD AVDD p1_4
+xM4[0] outx n1 AVDD AVDD p1_4
+xM1[3] n1 inp tail AVSS n1_4
+xM1[2] n1 inp tail AVSS n1_4
+xM1[1] n1 inp tail AVSS n1_4
+xM1[0] n1 inp tail AVSS n1_4
+xM2[3] outx inn tail AVSS n1_4
+xM2[2] outx inn tail AVSS n1_4
+xM2[1] outx inn tail AVSS n1_4
+xM2[0] outx inn tail AVSS n1_4
+xM5[3] tail ibias AVSS AVSS n1_4
+xM5[2] tail ibias AVSS AVSS n1_4
+xM5[1] tail ibias AVSS AVSS n1_4
+xM5[0] tail ibias AVSS AVSS n1_4
+xMref[3] ibias ibias AVSS AVSS n1_4
+xMref[2] ibias ibias AVSS AVSS n1_4
+xMref[1] ibias ibias AVSS AVSS n1_4
+xMref[0] ibias ibias AVSS AVSS n1_4
+xMinvp[3] out outx AVDD AVDD p1_4
+xMinvp[2] out outx AVDD AVDD p1_4
+xMinvp[1] out outx AVDD AVDD p1_4
+xMinvp[0] out outx AVDD AVDD p1_4
+xMinvn[3] out outx AVSS AVSS n1_4
+xMinvn[2] out outx AVSS AVSS n1_4
+xMinvn[1] out outx AVSS AVSS n1_4
+xMinvn[0] out outx AVSS AVSS n1_4
+.ends
+
+
+* expanding   symbol:  p1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_4.sch
+.subckt p1_4 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+xp1 D G S B p1_2
+xp2 D G S B p1_2
+.ends
+
+
+* expanding   symbol:  n1_4.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_4.sch
+.subckt n1_4 D G S B
+*.iopin D
+*.iopin G
+*.iopin S
+*.iopin B
+xp1 D G S B n1_2
+xp2 D G S B n1_2
+.ends
+
+
+* expanding   symbol:  p1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/p1_2.sch
+.subckt p1_2 D G S B
+*.iopin G
+*.iopin D
+*.iopin S
+*.iopin B
+XMbot D G X B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_pmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+
+
+* expanding   symbol:  n1_2.sym # of pins=4
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sch
+.subckt n1_2 D G S B
+*.iopin G
+*.iopin D
+*.iopin S
+*.iopin B
+XMbot D G X B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+.ends
+
+.GLOBAL GND
+.end

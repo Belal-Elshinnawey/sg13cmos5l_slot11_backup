@@ -1,0 +1,10 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/comparator/schematic/xschem/n1_2.sch
+**.subckt n1_2 D G S B
+*.iopin G
+*.iopin D
+*.iopin S
+*.iopin B
+XMbot D G X B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+XMtop X G S B sg13_hv_nmos w=2.5e-6 l=1e-6 ng=1 m=1 mm_ok=1
+**.ends
+.end

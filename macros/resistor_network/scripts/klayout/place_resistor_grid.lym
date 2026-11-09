@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>Place an unrouted grid of resistor PCell fingers (rows x cols, given w/l), no wiring</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>false</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>true</show-in-menu>
+ <group-name>resistor_network_macros</group-name>
+ <menu-path>tools_menu.end</menu-path>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text><![CDATA[
+import pya
+
+# --- PCell identity: adjust these two if they don't match this PDK's actual
+# KLayout library/PCell registration names (these match the xschem symbol
+# path "sg13cmos5l_pr/rhigh.sym" used in the resistor_network schematic, but
+# the KLayout-side library name is not independently verified here) ---
+PCELL_LIB_NAME = "SG13_dev"
+PCELL_NAME = "rhigh"
+
+view = pya.LayoutView.current()
+if view is None:
+    pya.MessageBox.warning("Place Resistor Grid", "No layout is open.", pya.MessageBox.Ok)
+else:
+    cv = view.active_cellview()
+    layout = cv.layout()
+    cell = cv.cell
+    dbu = layout.dbu
+
+    tech_name = cv.layout().technology_name if hasattr(cv.layout(), "technology_name") else None
+    try:
+        tech_name = cv.technology
+    except Exception:
+        pass
+
+    lib = pya.Library.library_by_name(PCELL_LIB_NAME)
+    if lib is None:
+        all_libs = []
+        for name in pya.Library.library_names():
+            l = pya.Library.library_by_name(name)
+            pcells = []
+            if l is not None:
+                try:
+                    pcells = [l.layout().pcell_name(i) for i in l.layout().pcell_ids()]
+                except Exception:
+                    pcells = ["<error listing pcells>"]
+            all_libs.append("%s  [pcells: %s]" % (name, ", ".join(pcells) if pcells else "none"))
+        pya.MessageBox.warning(
+            "Place Resistor Grid",
+            "PCell library '%s' not found (current layout technology: %s).\n\nLibraries actually registered in this session:\n\n%s"
+            % (PCELL_LIB_NAME, tech_name, "\n".join(all_libs) if all_libs else "(none registered at all)"),
+            pya.MessageBox.Ok,
+        )
+    else:
+        pcell_decl = lib.layout().pcell_declaration(PCELL_NAME)
+        if pcell_decl is None:
+            pya.MessageBox.warning(
+                "Place Resistor Grid",
+                "PCell '%s' not found in library '%s'. Check PCELL_NAME at the top of this macro." % (PCELL_NAME, PCELL_LIB_NAME),
+                pya.MessageBox.Ok,
+            )
+        else:
+            # --- prompt for array dimensions and finger geometry ---
+            rows = pya.QInputDialog.getInt(None, "Place Resistor Grid", "Rows:", 4, 1, 1000)
+            cols = pya.QInputDialog.getInt(None, "Place Resistor Grid", "Columns:", 6, 1, 1000)
+            w_um = pya.QInputDialog.getDouble(None, "Place Resistor Grid", "Finger width w (um):", 0.5, 0.001, 1000.0, 4)
+            l_um = pya.QInputDialog.getDouble(None, "Place Resistor Grid", "Finger length l (um):", 13.42, 0.001, 1000.0, 4)
+            pitch_x_um = pya.QInputDialog.getDouble(None, "Place Resistor Grid", "Column pitch (um):", w_um + 1.0, 0.001, 10000.0, 4)
+            pitch_y_um = pya.QInputDialog.getDouble(None, "Place Resistor Grid", "Row pitch (um):", l_um + 1.0, 0.001, 10000.0, 4)
+
+            param_dict = {"w": w_um * 1e-6, "l": l_um * 1e-6}
+            # Other schematic-side params seen on this PCell (model, body, b,
+            # m, mm_ok) are left at their PCell defaults here -- this macro
+            # only places plain unit fingers (m=1 each, one instance per grid
+            # cell), since the actual A/B/C/dummy net assignment and any
+            # body-tie connection happens during routing, not placement.
+
+            layout.start_changes()
+            placed = 0
+            for row in range(rows):
+                for col in range(cols):
+                    pv = layout.add_pcell_variant(lib, pcell_decl.id(), param_dict)
+                    x = int(round(col * pitch_x_um / dbu))
+                    y = int(round(row * pitch_y_um / dbu))
+                    cell.insert(pya.CellInstArray(pv, pya.Trans(x, y)))
+                    placed += 1
+            layout.end_changes()
+
+            pya.MessageBox.info(
+                "Place Resistor Grid",
+                "Placed %d unrouted finger(s) in a %d x %d grid (w=%gum, l=%gum). No routing added."
+                % (placed, rows, cols, w_um, l_um),
+                pya.MessageBox.Ok,
+            )
+]]></text>
+</klayout-macro>

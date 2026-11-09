@@ -1,0 +1,20 @@
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/resistor_network/schematic/xschem/resistor_network.sch
+.subckt resistor_network pt VSS VDD p1 p2 pb
+*.PININFO pt:B VDD:B VSS:B p1:B p2:B pb:B
+xA pt VSS VDD a_p1 p1 n_ab resistor_leg
+xB n_ab VSS VDD p2 b_p2 pb resistor_leg
+xC pt VSS VDD c_p1 p1 n_cd resistor_leg
+xD n_cd VSS VDD p2 d_p2 pb resistor_leg
+.ends
+
+* expanding   symbol:  resistor_leg.sym # of pins=6
+** sym_path: /foss/designs/sg13cmos5l_slot3_backup/macros/resistor_network/schematic/xschem/resistor_leg.sym
+** sch_path: /foss/designs/sg13cmos5l_slot3_backup/macros/resistor_network/schematic/xschem/resistor_leg.sch
+.subckt resistor_leg pt VSS VDD p1 p2 pb
+*.PININFO pt:B pb:B p2:B p1:B VDD:B VSS:B
+XR1 pt p1 VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XR2 p1 p2 VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XR3 p2 pb VDD rhigh w=0.5e-6 l=13.42e-6 m=8 b=0 mm_ok=1
+XRdummy VSS VSS VDD rhigh w=0.5e-6 l=13.42e-6 m=24 b=0 mm_ok=1
+.ends
+

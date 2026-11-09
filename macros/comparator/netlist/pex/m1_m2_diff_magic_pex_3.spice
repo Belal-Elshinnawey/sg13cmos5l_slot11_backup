@@ -1,0 +1,853 @@
+* PEX produced on Sun Nov  8 08:15:48 PM CET 2026 using /foss/tools/sak/sak-pex.sh with m=3 and s=1 (extresist threshold=10000 mOhm, minres=1000 mOhm, mindelay=1 ps)
+* NGSPICE file created from m1_m2_diff_pex.ext - technology: ihp-sg13cmos5l
+
+.subckt m1_m2_diff_pex n1 outx inp inn tail avss
+X0 n1 inp a_n920_7113# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X1 a_n1819_n9030# inp tail.t27 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X2 a_n1819_1742# inp tail.t0 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X3 tail.t29 inp a_n920_7113# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X4 a_n1819_8353# inn tail.t39 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X5 a_n1233_5873# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X6 a_n1233_n3640# inn outx.t24 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X7 a_n1233_n1160# inn outx.t18 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X8 n1 inp a_n336_n4880# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X9 n1 inp a_n336_n2400# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X10 outx.t10 inn a_n920_502# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X11 outx.t4 inn a_n920_2982# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X12 a_n1233_n7790# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X13 a_n1819_4222# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X14 a_n1233_n7790# inp tail.t22 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X15 tail.t19 inp a_n336_n4880# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X16 a_n1819_4222# inp tail.t2 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X17 a_n1819_n3640# inp tail.t18 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X18 a_n1819_n1160# inp tail.t13 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X19 a_n1233_1742# inn outx.t5 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X20 tail.t60 inn a_n336_n9030# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X21 a_n1233_8353# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X22 a_n1819_n7790# inn tail.t52 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X23 tail.t35 inn a_n920_5873# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X24 a_n1819_n7790# inn outx.t20 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X25 a_n1233_4222# inn tail.t33 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X26 a_n1233_4222# inn outx.t1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X27 a_n1233_9593# inn tail.t48 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X28 a_n1233_n2400# inp tail.t11 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X29 tail.t3 inp a_n920_1742# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X30 a_n1233_n6550# inn tail.t61 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X31 a_n1819_2982# inn tail.t46 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X32 tail.t38 inn a_n920_8353# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X33 a_n1819_9593# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X34 a_n1819_9593# inp tail.t12 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X35 a_n1233_n4880# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X36 a_n1233_n2400# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X37 a_n1819_n2400# inn outx.t12 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X38 n1 inp a_n920_4222# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X39 a_n1819_n6550# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X40 a_n1233_n4880# inp tail.t17 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X41 tail.t51 inn a_n336_n3640# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X42 tail.t30 inp a_n920_4222# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X43 a_n1233_n9030# inn tail.t57 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X44 a_n1233_2982# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X45 tail.t28 inp a_n336_n10270# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X46 a_n1819_n4880# inn tail.t55 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X47 a_n1819_n2400# inn tail.t44 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X48 a_n1819_n4880# inn outx.t23 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X49 a_n1233_9593# inn outx.t16 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X50 a_n1819_n9030# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X51 n1 inp a_n336_502# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X52 n1 inp a_n336_n10270# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X53 a_n1819_n1160# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X54 tail.t36 inn a_n920_2982# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X55 tail.t14 inp a_n920_9593# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X56 a_n1233_n3640# inn tail.t56 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X57 a_n1233_n1160# inn tail.t50 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X58 a_n1233_n10270# inp tail.t24 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X59 tail.t23 inp a_n920_n6550# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X60 a_n1819_n3640# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X61 a_n1819_n10270# inn outx.t27 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X62 n1 inp a_n920_n1160# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X63 tail.t26 inp a_n920_n9030# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X64 tail.t20 inp a_n920_n3640# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X65 tail.t15 inp a_n920_n1160# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X66 tail.t54 inn a_n920_n7790# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X67 outx.t22 inn a_n920_n7790# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X68 a_n1233_502# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X69 outx.t11 inn a_n920_n2400# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X70 n1 inp a_n920_9593# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X71 tail.t6 inp a_n336_8353# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X72 tail.t7 inp a_n336_5873# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X73 n1 inp a_n920_n6550# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X74 outx.t26 inn a_n337_n6550# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X75 tail.t41 inn a_n337_4222# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X76 tail.t53 inn a_n920_n4880# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X77 tail.t43 inn a_n920_n2400# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X78 tail.t34 inn a_n336_1742# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X79 outx.t9 inn a_n337_4222# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X80 outx.t21 inn a_n920_n4880# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X81 n1 inp a_n920_n9030# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X82 tail.t42 inn a_n920_502# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X83 outx.t15 inn a_n337_9593# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X84 outx.t17 inn a_n337_n1160# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X85 tail.t40 inn a_n336_7113# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X86 outx.t8 inn a_n336_7113# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X87 tail.t62 inn a_n920_n10270# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X88 n1 inp a_n920_n3640# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X89 tail.t8 inp a_n336_502# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X90 tail.t10 inp a_n336_2982# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X91 outx.t30 inn a_n920_n10270# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X92 tail.t47 inn a_n337_9593# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X93 n1 inp a_n336_5873# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X94 tail.t58 inn a_n337_n6550# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X95 tail.t49 inn a_n337_n1160# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X96 outx.t2 inn a_n336_1742# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X97 n1 inp a_n336_8353# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X98 a_n1819_8353# inn outx.t7 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X99 a_n1819_5873# inn outx.t13 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X100 a_n1819_1742# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X101 a_n1233_8353# inp tail.t9 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X102 a_n1233_5873# inp tail.t4 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X103 a_n1233_n10270# inp n1 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X104 a_n1233_1742# inn tail.t37 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X105 outx.t28 inn a_n336_n9030# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X106 n1 inp a_n336_2982# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X107 a_n1819_n10270# inn tail.t59 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X108 outx.t6 inn a_n920_8353# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X109 a_n1819_7113# inp n1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X110 outx.t3 inn a_n920_5873# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X111 a_n1819_7113# inp tail.t1 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X112 outx.t19 inn a_n336_n3640# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X113 a_n1819_502# inn outx.t31 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X114 n1 inp a_n920_1742# avss.t1 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X115 a_n1819_2982# inn outx.t14 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X116 a_n1233_n6550# inn outx.t29 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X117 n1 inp a_n336_n7790# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X118 a_n1233_7113# inn tail.t32 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X119 tail.t25 inp a_n336_n7790# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X120 a_n1233_7113# inn outx.t0 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X121 a_n1819_n6550# inp tail.t21 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X122 a_n1819_5873# inn tail.t45 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X123 a_n1233_n9030# inn outx.t25 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X124 a_n1819_502# inn tail.t63 avss.t0 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X125 a_n1233_502# inp tail.t31 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X126 a_n1233_2982# inp tail.t5 avss.t2 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+X127 tail.t16 inp a_n336_n2400# avss.t3 sg13_hv_nmos ad=0.85p pd=5.68u as=0.85p ps=5.68u w=2.5u l=1u
+R0 outx.n16 outx.t23 4.82988
+R1 outx.n13 outx.t31 4.82988
+R2 outx.n10 outx.t13 4.82988
+R3 outx.n14 outx.t27 4.82988
+R4 outx.n12 outx.t10 4.62396
+R5 outx.n11 outx.t3 4.62396
+R6 outx.n17 outx.t21 4.62396
+R7 outx.n15 outx.t30 4.62396
+R8 outx.n6 outx.t12 4.3582
+R9 outx.n7 outx.t14 4.3582
+R10 outx.n4 outx.t7 4.3582
+R11 outx.n8 outx.t20 4.3582
+R12 outx.n12 outx.t2 4.35747
+R13 outx.n11 outx.t8 4.35747
+R14 outx.n17 outx.t19 4.35747
+R15 outx.n15 outx.t28 4.35747
+R16 outx.n5 outx.n9 4.46428
+R17 outx.n5 outx.n2 4.26498
+R18 outx.n1 outx.n0 4.26498
+R19 outx.n6 outx.t18 4.11722
+R20 outx.n16 outx.t24 4.11722
+R21 outx.n7 outx.t1 4.11722
+R22 outx.n13 outx.t5 4.11722
+R23 outx.n10 outx.t0 4.11722
+R24 outx.n8 outx.t29 4.11722
+R25 outx.n14 outx.t25 4.11722
+R26 outx.n4 outx.t16 4.11657
+R27 outx.n2 outx.t4 4.1162
+R28 outx.n0 outx.t6 4.1162
+R29 outx.n18 outx.t11 4.1162
+R30 outx.n3 outx.t22 4.1162
+R31 outx.n2 outx.t9 3.97994
+R32 outx.n0 outx.t15 3.97994
+R33 outx.n5 outx.t17 3.97994
+R34 outx.n3 outx.t26 3.97994
+R35 outx.n0 outx.n11 2.42923
+R36 outx.n5 outx.n6 1.84762
+R37 outx.n1 outx.n7 1.84762
+R38 outx.n9 outx.n8 2.04275
+R39 outx.n2 outx.n12 1.49914
+R40 outx.n18 outx.n17 1.49914
+R41 outx.n3 outx.n15 1.49914
+R42 outx.n0 outx.n4 2.23373
+R43 outx.n8 outx.n14 2.0069
+R44 outx.n4 outx.n10 2.0069
+R45 outx.n7 outx.n13 2.0069
+R46 outx.n6 outx.n16 2.0069
+R47 outx.n18 outx.n5 1.32494
+R48 outx.n2 outx.n1 1.31413
+R49 outx.n9 outx.n3 1.20193
+R50 outx outx.n0 0.0005
+R51 tail.n5 tail.t54 5.47994
+R52 tail.n6 tail.t59 5.47994
+R53 tail.n5 tail.t52 5.47994
+R54 tail.n5 tail.t21 5.69729
+R55 tail.n6 tail.t62 5.47994
+R56 tail.n5 tail.t26 5.47994
+R57 tail.n5 tail.t23 5.47994
+R58 tail.n7 tail.t15 5.47994
+R59 tail.n2 tail.t30 5.47994
+R60 tail.n13 tail.t14 5.47994
+R61 tail.n13 tail.t38 5.47994
+R62 tail.n13 tail.t29 5.47994
+R63 tail.n12 tail.t35 5.77826
+R64 tail.n3 tail.t45 5.47994
+R65 tail.n13 tail.t1 5.61246
+R66 tail.n13 tail.t39 5.47994
+R67 tail.n13 tail.t12 6.11854
+R68 tail.n2 tail.t36 5.47994
+R69 tail.n8 tail.t3 5.47994
+R70 tail.n1 tail.t42 5.47994
+R71 tail.n1 tail.t63 5.47994
+R72 tail.n2 tail.t0 5.47994
+R73 tail.n2 tail.t46 5.47994
+R74 tail.n10 tail.t2 5.92917
+R75 tail.n7 tail.t43 5.47994
+R76 tail.n9 tail.t20 5.47994
+R77 tail.n5 tail.t53 5.47994
+R78 tail.n5 tail.t55 5.47994
+R79 tail.n7 tail.t18 5.47994
+R80 tail.n7 tail.t44 5.47994
+R81 tail.n11 tail.t13 5.92915
+R82 tail.n5 tail.t61 5.4798
+R83 tail.n5 tail.t57 5.4798
+R84 tail.n5 tail.t28 5.4798
+R85 tail.n5 tail.t60 5.4798
+R86 tail.n5 tail.t25 5.4798
+R87 tail.n5 tail.t58 5.4798
+R88 tail.n5 tail.t24 5.4798
+R89 tail.n5 tail.t22 5.65089
+R90 tail.n13 tail.t7 5.4798
+R91 tail.n13 tail.t40 5.4798
+R92 tail.n13 tail.t6 5.4798
+R93 tail.n14 tail.t47 5.4798
+R94 tail.n13 tail.t9 5.4798
+R95 tail.n13 tail.t32 5.4798
+R96 tail.n13 tail.t4 5.4798
+R97 tail.n3 tail.t8 5.4798
+R98 tail.n3 tail.t34 5.4798
+R99 tail.n3 tail.t10 5.4798
+R100 tail.n3 tail.t41 5.4798
+R101 tail.n3 tail.t33 5.4798
+R102 tail.n10 tail.t5 5.53837
+R103 tail.n2 tail.t37 5.4798
+R104 tail.n8 tail.t31 5.4798
+R105 tail.n1 tail.t19 5.4798
+R106 tail.n1 tail.t51 5.4798
+R107 tail.n1 tail.t16 5.4798
+R108 tail.n1 tail.t49 5.4798
+R109 tail.n1 tail.t50 5.4798
+R110 tail.n11 tail.t11 5.5384
+R111 tail.n7 tail.t56 5.4798
+R112 tail.n9 tail.t17 5.4798
+R113 tail.n14 tail.t48 5.47917
+R114 tail.t27 tail.n6 6.04925
+R115 tail.n3 tail.n2 1.60445
+R116 tail.n1 tail.n0 1.26454
+R117 tail.n4 tail.n7 0.295125
+R118 tail.n2 tail.n0 0.294743
+R119 tail.n9 tail.n1 1.07169
+R120 tail.n3 tail.n8 1.07169
+R121 tail.n2 tail.n10 1.05302
+R122 tail.n12 tail.n3 1.04742
+R123 tail.n13 tail.n12 0.921169
+R124 tail.n7 tail.n1 0.907261
+R125 tail.n14 tail.n13 0.894419
+R126 tail.n5 tail.n4 0.569224
+R127 tail.n9 tail.n4 0.110549
+R128 tail.n8 tail.n0 0.110865
+R129 tail.n11 tail.n7 1.05312
+R130 tail.n6 tail.n5 1.01207
+R131 tail tail.n0 0.0005
+R132 avss.n2 avss.n4 17.0005
+R133 avss.n2 avss.n12 17.0005
+R134 avss.n2 avss.n13 17.0005
+R135 avss.n2 avss.n21 17.0005
+R136 avss.n2 avss.n22 17.0005
+R137 avss.n2 avss.n0 0.0678419
+R138 avss.n31 avss.n3 17.0005
+R139 avss.n1 avss.n3 0.0851884
+R140 avss.n18 avss.n17 8.48064
+R141 avss.n17 avss.n16 8.48064
+R142 avss.n4 avss.t3 8.37119
+R143 avss.n7 avss.n6 7.3233
+R144 avss.n8 avss.n7 7.3233
+R145 avss.n10 avss.n9 7.3233
+R146 avss.n15 avss.n14 7.3233
+R147 avss.n19 avss.n18 7.3233
+R148 avss.n24 avss.n23 7.3233
+R149 avss.n27 avss.n26 7.3233
+R150 avss.n29 avss.n28 7.3233
+R151 avss.n30 avss.n29 7.3233
+R152 avss.n0 avss.n3 0.0681213
+R153 avss.n28 avss.n27 7.3233
+R154 avss.n26 avss.n25 7.3233
+R155 avss.n25 avss.n24 7.3233
+R156 avss.n20 avss.n19 7.3233
+R157 avss.n16 avss.n15 7.3233
+R158 avss.n11 avss.n10 7.3233
+R159 avss.n9 avss.n8 7.3233
+R160 avss.n6 avss.n5 7.3233
+R161 avss.t2 avss.n21 7.27339
+R162 avss.n2 avss.n6 6.67055
+R163 avss.n2 avss.n8 6.67055
+R164 avss.n2 avss.n10 6.67055
+R165 avss.n2 avss.n15 6.67055
+R166 avss.n2 avss.n19 6.67055
+R167 avss.n2 avss.n24 6.67055
+R168 avss.n2 avss.n26 6.67055
+R169 avss.n2 avss.n28 6.67055
+R170 avss.n2 avss.n30 6.67055
+R171 avss.n29 avss.n3 6.67055
+R172 avss.n27 avss.n3 6.67055
+R173 avss.n25 avss.n3 6.67055
+R174 avss.n23 avss.n3 6.67055
+R175 avss.n20 avss.n3 6.67055
+R176 avss.n18 avss.n3 6.67055
+R177 avss.n16 avss.n3 6.67055
+R178 avss.n14 avss.n3 6.67055
+R179 avss.n11 avss.n3 6.67055
+R180 avss.n9 avss.n3 6.67055
+R181 avss.n7 avss.n3 6.67055
+R182 avss.n5 avss.n3 6.67055
+R183 avss.n2 avss.n1 0.085458
+R184 avss.t1 avss.n12 6.31282
+R185 avss.n2 avss.n17 6.09188
+R186 avss.n0 avss.t0 10.983
+R187 avss.t0 avss.n31 3.70556
+R188 avss.n21 avss.n20 3.6619
+R189 avss.n12 avss.n11 3.6619
+R190 avss.n31 avss.n30 3.6619
+R191 avss.n23 avss.n22 3.6619
+R192 avss.n14 avss.n13 3.6619
+R193 avss.n5 avss.n4 3.6619
+R194 avss.t3 avss.n1 6.30867
+R195 avss.n13 avss.t1 3.01944
+R196 avss.n22 avss.t2 2.05887
+R197 avss avss.n0 0.0005
+C0 a_n1819_n4880# outx 0.25799f
+C1 n1 a_n336_8353# 0.08041f
+C2 inn a_n1819_n6550# 0.06672f
+C3 a_n1233_502# n1 0.26593f
+C4 tail a_n920_9593# 0.14466f
+C5 n1 a_n1233_4222# 0.1094f
+C6 inn a_n920_n7790# 0.24262f
+C7 tail outx 22.5876f
+C8 tail a_n920_n9030# 0.14106f
+C9 tail a_n336_502# 0.20803f
+C10 a_n1819_2982# n1 0.05357f
+C11 a_n920_4222# inp 0.24243f
+C12 inn a_n1233_n2400# 0.05196f
+C13 a_n920_7113# tail 0.14106f
+C14 inn a_n336_n7790# 0.05498f
+C15 a_n336_n4880# outx 0.18269f
+C16 a_n920_n7790# a_n1233_n7790# 0.11313f
+C17 inn a_n920_n6550# 0.06056f
+C18 a_n336_n2400# n1 0.08041f
+C19 a_n336_n9030# outx 0.25863f
+C20 n1 a_n1233_7113# 0.13167f
+C21 inn a_n1819_n4880# 0.25776f
+C22 a_n1233_n10270# n1 0.26593f
+C23 tail a_n337_n6550# 0.20341f
+C24 tail a_n920_5873# 0.14603f
+C25 inn tail 12.3076f
+C26 a_n336_n10270# inp 0.24262f
+C27 a_n920_8353# n1 0.13132f
+C28 tail a_n1233_n7790# 0.13993f
+C29 a_n1233_5873# inp 0.24243f
+C30 a_n1819_n9030# tail 0.20836f
+C31 inn a_n336_n9030# 0.24244f
+C32 tail a_n1819_9593# 0.20977f
+C33 tail a_n1819_n3640# 0.20836f
+C34 a_n920_8353# a_n1233_8353# 0.11313f
+C35 n1 a_n337_n1160# 0.05226f
+C36 a_n336_8353# inp 0.24697f
+C37 a_n1233_502# inp 0.24243f
+C38 a_n1233_4222# inp 0.05326f
+C39 a_n1819_n7790# n1 0.05355f
+C40 tail a_n920_n3640# 0.14106f
+C41 a_n920_1742# tail 0.14106f
+C42 a_n1233_n6550# a_n920_n6550# 0.11313f
+C43 a_n1819_2982# inp 0.05339f
+C44 tail a_n1233_9593# 0.14833f
+C45 a_n336_n2400# inp 0.24697f
+C46 a_n336_1742# tail 0.20161f
+C47 a_n1233_n6550# tail 0.14833f
+C48 a_n1233_7113# inp 0.05326f
+C49 a_n1233_n10270# inp 0.24243f
+C50 a_n336_n3640# tail 0.20161f
+C51 a_n336_n10270# outx 0.18188f
+C52 a_n920_2982# n1 0.13132f
+C53 inn a_n920_4222# 0.06056f
+C54 tail a_n920_n1160# 0.14466f
+C55 a_n1819_502# n1 0.06147f
+C56 a_n920_8353# inp 0.05326f
+C57 outx a_n336_8353# 0.18347f
+C58 a_n1819_n10270# tail 0.20116f
+C59 n1 a_n1233_n1160# 0.1094f
+C60 a_n337_n1160# inp 0.05763f
+C61 tail a_n1233_2982# 0.13993f
+C62 a_n1233_4222# outx 0.09117f
+C63 a_n1819_n7790# inp 0.05339f
+C64 a_n1233_n9030# n1 0.13167f
+C65 a_n1819_2982# outx 0.258f
+C66 tail a_n920_502# 0.14603f
+C67 a_n1233_n3640# n1 0.13167f
+C68 a_n920_5873# a_n1233_5873# 0.11313f
+C69 n1 a_n920_n2400# 0.13132f
+C70 inn a_n1233_5873# 0.06056f
+C71 a_n1233_8353# n1 0.26126f
+C72 a_n336_n2400# outx 0.18347f
+C73 a_n337_9593# tail 0.20341f
+C74 outx a_n1233_7113# 0.08298f
+C75 inn a_n336_8353# 0.05498f
+C76 inn a_n1233_502# 0.06056f
+C77 inn a_n1233_4222# 0.25344f
+C78 a_n920_7113# a_n1233_7113# 0.11313f
+C79 inn a_n1819_2982# 0.24694f
+C80 a_n1819_n1160# n1 0.08715f
+C81 a_n920_2982# inp 0.05326f
+C82 a_n920_8353# outx 0.08299f
+C83 a_n1819_502# inp 0.05339f
+C84 inn a_n336_n2400# 0.05498f
+C85 inn a_n1233_7113# 0.24262f
+C86 tail a_n920_n10270# 0.14603f
+C87 a_n1819_8353# tail 0.20129f
+C88 a_n1233_n4880# tail 0.13977f
+C89 n1 a_n1819_4222# 0.08732f
+C90 inn a_n1233_n10270# 0.06056f
+C91 a_n336_2982# tail 0.20847f
+C92 n1 a_n1819_5873# 0.06147f
+C93 outx a_n337_n1160# 0.26946f
+C94 a_n1233_n1160# inp 0.05326f
+C95 n1 a_n920_n4880# 0.1361f
+C96 a_n336_7113# n1 0.0543f
+C97 a_n1819_n7790# outx 0.258f
+C98 n1 inp 9.01609f
+C99 tail a_n1819_n2400# 0.20129f
+C100 a_n1233_n9030# inp 0.05326f
+C101 a_n1819_1742# tail 0.20836f
+C102 inn a_n920_8353# 0.24262f
+C103 a_n1233_n3640# inp 0.05326f
+C104 a_n920_n2400# inp 0.05326f
+C105 a_n1233_8353# inp 0.2424f
+C106 a_n1233_1742# n1 0.13167f
+C107 inn a_n337_n1160# 0.25325f
+C108 inn a_n1819_n7790# 0.24694f
+C109 a_n337_4222# tail 0.20341f
+C110 a_n920_2982# outx 0.08299f
+C111 n1 a_n1819_7113# 0.08245f
+C112 a_n1819_n1160# inp 0.24262f
+C113 tail a_n336_5873# 0.20803f
+C114 a_n1819_n6550# tail 0.20977f
+C115 a_n1819_502# outx 0.25799f
+C116 tail a_n920_n7790# 0.14595f
+C117 a_n1819_4222# inp 0.24262f
+C118 a_n920_9593# n1 0.23772f
+C119 a_n1819_5873# inp 0.05339f
+C120 outx a_n1233_n1160# 0.09117f
+C121 tail a_n1233_n2400# 0.13993f
+C122 n1 outx 11.0959f
+C123 tail a_n336_n7790# 0.20847f
+C124 a_n920_n4880# inp 0.05326f
+C125 a_n920_n9030# n1 0.25945f
+C126 a_n336_502# n1 0.09597f
+C127 inn a_n920_2982# 0.24262f
+C128 a_n1233_502# a_n920_502# 0.11313f
+C129 a_n336_7113# inp 0.05776f
+C130 tail a_n920_n6550# 0.14466f
+C131 a_n920_7113# n1 0.25945f
+C132 a_n1233_n9030# outx 0.08298f
+C133 tail a_n1819_n4880# 0.20116f
+C134 a_n1233_n9030# a_n920_n9030# 0.11313f
+C135 a_n1233_n3640# outx 0.08298f
+C136 outx a_n920_n2400# 0.08299f
+C137 inn a_n1819_502# 0.25776f
+C138 a_n1233_1742# inp 0.05326f
+C139 a_n337_n6550# n1 0.05226f
+C140 inn a_n1233_n1160# 0.25344f
+C141 n1 a_n920_5873# 0.1361f
+C142 inn n1 9.65093f
+C143 a_n336_n4880# tail 0.20803f
+C144 a_n336_n9030# tail 0.20161f
+C145 a_n1233_n9030# inn 0.24262f
+C146 a_n1819_n1160# outx 0.18066f
+C147 a_n1819_7113# inp 0.24262f
+C148 a_n1233_n3640# inn 0.24262f
+C149 inn a_n920_n2400# 0.24262f
+C150 a_n1233_n7790# n1 0.26126f
+C151 inn a_n1233_8353# 0.05196f
+C152 a_n1819_n9030# n1 0.08245f
+C153 n1 a_n1819_9593# 0.08245f
+C154 a_n1819_n3640# n1 0.08245f
+C155 outx a_n1819_4222# 0.18066f
+C156 outx a_n1819_5873# 0.25799f
+C157 a_n920_9593# inp 0.24243f
+C158 n1 a_n920_n3640# 0.25945f
+C159 outx a_n920_n4880# 0.08299f
+C160 a_n920_1742# n1 0.25945f
+C161 a_n336_7113# outx 0.25863f
+C162 outx inp 6.15677f
+C163 a_n920_n9030# inp 0.24243f
+C164 a_n336_502# inp 0.24697f
+C165 a_n1819_n1160# inn 0.06672f
+C166 n1 a_n1233_9593# 0.1094f
+C167 a_n1233_n3640# a_n920_n3640# 0.11313f
+C168 a_n1233_n10270# a_n920_n10270# 0.11313f
+C169 a_n920_7113# inp 0.24243f
+C170 a_n1233_1742# outx 0.08298f
+C171 a_n336_1742# n1 0.0543f
+C172 a_n1233_n6550# n1 0.1094f
+C173 inn a_n1819_4222# 0.06672f
+C174 inn a_n1819_5873# 0.25776f
+C175 a_n920_4222# tail 0.14466f
+C176 a_n337_n6550# inp 0.05763f
+C177 a_n336_n3640# n1 0.0543f
+C178 inn a_n920_n4880# 0.25344f
+C179 a_n920_5873# inp 0.05326f
+C180 a_n920_n1160# a_n1233_n1160# 0.11313f
+C181 inn a_n336_7113# 0.24244f
+C182 inn inp 7.42712f
+C183 a_n920_2982# a_n1233_2982# 0.11313f
+C184 a_n920_n1160# n1 0.23772f
+C185 outx a_n1819_7113# 0.1814f
+C186 a_n1233_n7790# inp 0.2424f
+C187 a_n1819_n9030# inp 0.24262f
+C188 inn a_n1233_1742# 0.24262f
+C189 a_n1819_9593# inp 0.24262f
+C190 a_n1819_n3640# inp 0.24262f
+C191 a_n336_n10270# tail 0.20803f
+C192 a_n1819_n10270# n1 0.06147f
+C193 a_n1233_2982# n1 0.26126f
+C194 tail a_n1233_5873# 0.13977f
+C195 a_n920_n3640# inp 0.24243f
+C196 a_n920_1742# inp 0.24243f
+C197 a_n336_502# outx 0.18271f
+C198 inn a_n1819_7113# 0.05941f
+C199 n1 a_n920_502# 0.1361f
+C200 a_n1233_9593# inp 0.05326f
+C201 tail a_n336_8353# 0.20847f
+C202 tail a_n1233_502# 0.13977f
+C203 tail a_n1233_4222# 0.14833f
+C204 a_n337_9593# n1 0.05226f
+C205 a_n920_1742# a_n1233_1742# 0.11313f
+C206 a_n336_1742# inp 0.05776f
+C207 a_n1233_n6550# inp 0.05326f
+C208 a_n337_n6550# outx 0.26946f
+C209 a_n1819_2982# tail 0.20129f
+C210 inn a_n920_9593# 0.06056f
+C211 a_n336_n3640# inp 0.05776f
+C212 outx a_n920_5873# 0.08299f
+C213 inn outx 9.39795f
+C214 inn a_n920_n9030# 0.05173f
+C215 a_n336_n2400# tail 0.20847f
+C216 tail a_n1233_7113# 0.14669f
+C217 inn a_n920_7113# 0.05173f
+C218 a_n920_n1160# inp 0.24243f
+C219 a_n1233_n10270# tail 0.13977f
+C220 a_n1819_n9030# outx 0.1814f
+C221 a_n920_n10270# n1 0.1361f
+C222 outx a_n1819_9593# 0.18066f
+C223 a_n1819_8353# n1 0.05355f
+C224 a_n1819_n3640# outx 0.1814f
+C225 a_n1233_n4880# n1 0.26593f
+C226 a_n336_2982# n1 0.08041f
+C227 inn a_n337_n6550# 0.25325f
+C228 a_n1819_n10270# inp 0.05339f
+C229 inn a_n920_5873# 0.25344f
+C230 a_n1233_2982# inp 0.2424f
+C231 a_n920_8353# tail 0.14595f
+C232 a_n920_9593# a_n1233_9593# 0.11313f
+C233 n1 a_n1819_n2400# 0.05356f
+C234 a_n1819_1742# n1 0.08245f
+C235 outx a_n1233_9593# 0.09117f
+C236 a_n920_502# inp 0.05326f
+C237 inn a_n1233_n7790# 0.05196f
+C238 inn a_n1819_n9030# 0.05941f
+C239 tail a_n337_n1160# 0.20341f
+C240 inn a_n1819_9593# 0.06672f
+C241 inn a_n1819_n3640# 0.05941f
+C242 tail a_n1819_n7790# 0.20129f
+C243 a_n337_9593# inp 0.05329f
+C244 a_n336_1742# outx 0.25863f
+C245 a_n920_4222# a_n1233_4222# 0.11313f
+C246 a_n1233_n6550# outx 0.09117f
+C247 a_n336_n3640# outx 0.25863f
+C248 inn a_n920_n3640# 0.05173f
+C249 a_n920_1742# inn 0.05173f
+C250 a_n337_4222# n1 0.05226f
+C251 inn a_n1233_9593# 0.25344f
+C252 n1 a_n336_5873# 0.09597f
+C253 a_n1819_n6550# n1 0.08703f
+C254 a_n336_1742# inn 0.24244f
+C255 a_n1233_n4880# a_n920_n4880# 0.11313f
+C256 a_n920_n7790# n1 0.13132f
+C257 a_n920_n10270# inp 0.05326f
+C258 inn a_n1233_n6550# 0.25344f
+C259 a_n1819_8353# inp 0.05339f
+C260 a_n1233_n4880# inp 0.24243f
+C261 a_n336_2982# inp 0.24697f
+C262 a_n920_2982# tail 0.14595f
+C263 a_n1819_n10270# outx 0.25799f
+C264 inn a_n336_n3640# 0.24244f
+C265 n1 a_n1233_n2400# 0.26126f
+C266 a_n336_n7790# n1 0.08041f
+C267 tail a_n1819_502# 0.20116f
+C268 a_n920_n6550# n1 0.23772f
+C269 inn a_n920_n1160# 0.06056f
+C270 a_n920_n2400# a_n1233_n2400# 0.11313f
+C271 a_n1819_n4880# n1 0.06147f
+C272 outx a_n920_502# 0.08299f
+C273 a_n1819_n2400# inp 0.05339f
+C274 a_n1819_1742# inp 0.24262f
+C275 tail a_n1233_n1160# 0.14833f
+C276 tail n1 16.6977f
+C277 a_n337_9593# outx 0.2698f
+C278 a_n1819_n10270# inn 0.25776f
+C279 a_n1233_n9030# tail 0.14669f
+C280 inn a_n1233_2982# 0.05196f
+C281 a_n1233_n3640# tail 0.14669f
+C282 tail a_n920_n2400# 0.14595f
+C283 a_n336_n4880# n1 0.09597f
+C284 a_n1233_8353# tail 0.13993f
+C285 a_n336_n9030# n1 0.0543f
+C286 a_n337_4222# inp 0.05763f
+C287 inn a_n920_502# 0.25344f
+C288 a_n336_5873# inp 0.24697f
+C289 a_n1819_n6550# inp 0.24262f
+C290 a_n337_9593# inn 0.25325f
+C291 a_n920_n10270# outx 0.08299f
+C292 a_n1819_8353# outx 0.258f
+C293 a_n920_n7790# inp 0.05326f
+C294 a_n336_2982# outx 0.18347f
+C295 a_n1819_n1160# tail 0.20977f
+C296 a_n1233_n2400# inp 0.2424f
+C297 a_n336_n7790# inp 0.24697f
+C298 a_n920_n6550# inp 0.24243f
+C299 outx a_n1819_n2400# 0.258f
+C300 a_n1819_1742# outx 0.1814f
+C301 a_n1819_n4880# inp 0.05339f
+C302 tail a_n1819_4222# 0.20977f
+C303 tail a_n1819_5873# 0.20116f
+C304 inn a_n920_n10270# 0.25344f
+C305 tail a_n920_n4880# 0.14603f
+C306 inn a_n1819_8353# 0.24694f
+C307 a_n1233_n4880# inn 0.06056f
+C308 a_n336_7113# tail 0.20161f
+C309 a_n336_2982# inn 0.05498f
+C310 tail inp 11.7906f
+C311 a_n920_4222# n1 0.23772f
+C312 a_n336_n4880# inp 0.24697f
+C313 a_n337_4222# outx 0.26946f
+C314 a_n1233_1742# tail 0.14669f
+C315 a_n336_n9030# inp 0.05776f
+C316 inn a_n1819_n2400# 0.24694f
+C317 inn a_n1819_1742# 0.05941f
+C318 outx a_n336_5873# 0.18276f
+C319 a_n1819_n6550# outx 0.18066f
+C320 a_n336_n10270# n1 0.09631f
+C321 a_n920_n7790# outx 0.08299f
+C322 tail a_n1819_7113# 0.20836f
+C323 n1 a_n1233_5873# 0.26593f
+C324 a_n336_n7790# outx 0.18262f
+C325 inn a_n337_4222# 0.25325f
+C326 outx avss 13.2343f
+C327 tail avss 14.2045f
+C328 n1 avss 28.15775f
+C329 a_n336_n10270# avss 0.13622f
+C330 a_n920_n10270# avss 0.11418f
+C331 a_n1233_n10270# avss 0.11416f
+C332 a_n1819_n10270# avss 0.11587f
+C333 a_n336_n9030# avss 0.11572f
+C334 a_n920_n9030# avss 0.11449f
+C335 a_n1233_n9030# avss 0.1145f
+C336 a_n1819_n9030# avss 0.11617f
+C337 a_n336_n7790# avss 0.11572f
+C338 a_n920_n7790# avss 0.11449f
+C339 a_n1233_n7790# avss 0.1145f
+C340 a_n1819_n7790# avss 0.11617f
+C341 a_n337_n6550# avss 0.11512f
+C342 a_n920_n6550# avss 0.11413f
+C343 a_n1233_n6550# avss 0.1142f
+C344 a_n1819_n6550# avss 0.11583f
+C345 a_n336_n4880# avss 0.12682f
+C346 a_n920_n4880# avss 0.11418f
+C347 a_n1233_n4880# avss 0.11416f
+C348 a_n1819_n4880# avss 0.11587f
+C349 a_n336_n3640# avss 0.11572f
+C350 a_n920_n3640# avss 0.11449f
+C351 a_n1233_n3640# avss 0.1145f
+C352 a_n1819_n3640# avss 0.11617f
+C353 a_n336_n2400# avss 0.11572f
+C354 a_n920_n2400# avss 0.11449f
+C355 a_n1233_n2400# avss 0.1145f
+C356 a_n1819_n2400# avss 0.11617f
+C357 a_n337_n1160# avss 0.11512f
+C358 a_n920_n1160# avss 0.11413f
+C359 a_n1233_n1160# avss 0.1142f
+C360 a_n1819_n1160# avss 0.11583f
+C361 a_n336_502# avss 0.12673f
+C362 a_n920_502# avss 0.11418f
+C363 a_n1233_502# avss 0.11416f
+C364 a_n1819_502# avss 0.11587f
+C365 a_n336_1742# avss 0.11572f
+C366 a_n920_1742# avss 0.11449f
+C367 a_n1233_1742# avss 0.1145f
+C368 a_n1819_1742# avss 0.11617f
+C369 a_n336_2982# avss 0.11572f
+C370 a_n920_2982# avss 0.11449f
+C371 a_n1233_2982# avss 0.1145f
+C372 a_n1819_2982# avss 0.11617f
+C373 a_n337_4222# avss 0.11512f
+C374 a_n920_4222# avss 0.11413f
+C375 a_n1233_4222# avss 0.1142f
+C376 a_n1819_4222# avss 0.11583f
+C377 a_n336_5873# avss 0.12659f
+C378 a_n920_5873# avss 0.11418f
+C379 a_n1233_5873# avss 0.11416f
+C380 a_n1819_5873# avss 0.11587f
+C381 a_n336_7113# avss 0.11572f
+C382 a_n920_7113# avss 16.10633f
+C383 a_n1233_7113# avss 0.1145f
+C384 a_n1819_7113# avss 0.11617f
+C385 a_n336_8353# avss 0.11572f
+C386 a_n920_8353# avss 0.11449f
+C387 a_n1233_8353# avss 0.1145f
+C388 a_n1819_8353# avss 16.97572f
+C389 a_n337_9593# avss 0.11969f
+C390 a_n920_9593# avss 0.11413f
+C391 a_n1233_9593# avss 0.1142f
+C392 a_n1819_9593# avss 0.11583f
+C393 tail.n1 avss 6.44593f
+C394 tail.n2 avss 4.22358f
+C395 tail.n3 avss 5.6557f
+C396 tail.n5 avss 13.4279f
+C397 tail.n6 avss 2.58964f
+C398 tail.n7 avss 4.22358f
+C399 tail.n8 avss 1.80861f
+C400 tail.n9 avss 1.80861f
+C401 tail.n10 avss 1.69988f
+C402 tail.n11 avss 1.69988f
+C403 tail.n12 avss 0.7451f
+C404 tail.n13 avss 10.1321f
+C405 tail.n14 avss 1.89489f
+C406 tail.t50 avss 0.27767f
+C407 tail.t11 avss 0.28719f
+C408 tail.t56 avss 0.27767f
+C409 tail.t17 avss 0.27767f
+C410 tail.t53 avss 0.27767f
+C411 tail.t51 avss 0.27767f
+C412 tail.t43 avss 0.27767f
+C413 tail.t49 avss 0.27767f
+C414 tail.t31 avss 0.27767f
+C415 tail.t37 avss 0.27767f
+C416 tail.t5 avss 0.28719f
+C417 tail.t4 avss 0.27767f
+C418 tail.t32 avss 0.27767f
+C419 tail.t9 avss 0.27767f
+C420 tail.t14 avss 0.27767f
+C421 tail.t6 avss 0.27767f
+C422 tail.t29 avss 0.27767f
+C423 tail.t7 avss 0.27767f
+C424 tail.t35 avss 0.31824f
+C425 tail.t40 avss 0.27767f
+C426 tail.t38 avss 0.27767f
+C427 tail.t47 avss 0.27767f
+C428 tail.t48 avss 0.27768f
+C429 tail.t12 avss 0.36916f
+C430 tail.t39 avss 17.13722f
+C431 tail.t1 avss 0.29583f
+C432 tail.t45 avss 0.27767f
+C433 tail.t30 avss 0.27767f
+C434 tail.t10 avss 0.27767f
+C435 tail.t3 avss 0.27767f
+C436 tail.t8 avss 0.27767f
+C437 tail.t42 avss 0.27767f
+C438 tail.t34 avss 0.27767f
+C439 tail.t36 avss 0.27767f
+C440 tail.t41 avss 0.27767f
+C441 tail.t33 avss 0.27767f
+C442 tail.t2 avss 0.34408f
+C443 tail.t46 avss 0.27767f
+C444 tail.t0 avss 0.27767f
+C445 tail.t63 avss 0.27767f
+C446 tail.t15 avss 0.27767f
+C447 tail.t16 avss 0.27767f
+C448 tail.t20 avss 0.27767f
+C449 tail.t19 avss 0.27767f
+C450 tail.t61 avss 0.27767f
+C451 tail.t52 avss 0.27767f
+C452 tail.t22 avss 0.30491f
+C453 tail.t54 avss 0.27767f
+C454 tail.t58 avss 0.27767f
+C455 tail.t60 avss 0.27767f
+C456 tail.t26 avss 0.27767f
+C457 tail.t57 avss 0.27767f
+C458 tail.t59 avss 0.27767f
+C459 tail.t24 avss 0.27767f
+C460 tail.t62 avss 0.27767f
+C461 tail.t28 avss 0.27767f
+C462 tail.t27 avss 0.35002f
+C463 tail.t25 avss 0.27767f
+C464 tail.t23 avss 0.27767f
+C465 tail.t21 avss 0.31111f
+C466 tail.t55 avss 0.27767f
+C467 tail.t18 avss 0.27767f
+C468 tail.t44 avss 0.27767f
+C469 tail.t13 avss 0.34408f
+C470 outx.n0 avss 4.8036f
+C471 outx.n1 avss 2.72007f
+C472 outx.n2 avss 3.61892f
+C473 outx.n3 avss 2.1867f
+C474 outx.n4 avss 2.41766f
+C475 outx.n5 avss 5.2544f
+C476 outx.n6 avss 2.20539f
+C477 outx.n7 avss 2.20539f
+C478 outx.n8 avss 2.30102f
+C479 outx.n9 avss 2.65191f
+C480 outx.t13 avss 0.4284f
+C481 outx.t0 avss 0.30187f
+C482 outx.n10 avss 1.94348f
+C483 outx.t7 avss 0.32446f
+C484 outx.t16 avss 0.30188f
+C485 outx.t3 avss 0.40345f
+C486 outx.t8 avss 0.32436f
+C487 outx.n11 avss 1.93365f
+C488 outx.t6 avss 0.3018f
+C489 outx.t15 avss 0.29184f
+C490 outx.t10 avss 0.40345f
+C491 outx.t2 avss 0.32436f
+C492 outx.n12 avss 1.93365f
+C493 outx.t4 avss 0.3018f
+C494 outx.t31 avss 0.4284f
+C495 outx.t5 avss 0.30187f
+C496 outx.n13 avss 1.94348f
+C497 outx.t14 avss 0.32446f
+C498 outx.t1 avss 0.30187f
+C499 outx.t9 avss 0.29184f
+C500 outx.t27 avss 0.4284f
+C501 outx.t25 avss 0.30187f
+C502 outx.n14 avss 1.94348f
+C503 outx.t20 avss 0.32446f
+C504 outx.t29 avss 0.30187f
+C505 outx.t30 avss 0.40345f
+C506 outx.t28 avss 0.32436f
+C507 outx.n15 avss 1.93365f
+C508 outx.t22 avss 0.3018f
+C509 outx.t26 avss 0.29184f
+C510 outx.t23 avss 0.4284f
+C511 outx.t24 avss 0.30187f
+C512 outx.n16 avss 1.94348f
+C513 outx.t12 avss 0.32446f
+C514 outx.t18 avss 0.30187f
+C515 outx.t21 avss 0.40345f
+C516 outx.t19 avss 0.32436f
+C517 outx.n17 avss 1.93365f
+C518 outx.t11 avss 0.3018f
+C519 outx.n18 avss 1.16622f
+C520 outx.t17 avss 0.29184f
+.ends
+
